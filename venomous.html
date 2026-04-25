@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venomous Snakes - Snakes of Virginia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo"><span>🐍</span> Snakes of Virginia</a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="venomous.html" class="active">Venomous</a></li>
+      <li><a href="non-venomous.html">Non-Venomous</a></li>
+      <li><a href="safety.html">Safety & Resources</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header venomous">
+    <h1>⚠️ Venomous Snakes of Virginia</h1>
+    <p>Virginia has only 3 venomous species. All are pit vipers with a heat-sensing pit between the eye and nostril used to locate prey.</p>
+  </section>
+
+  <div class="container">
+    <div class="intro-text">
+      These pit viper species have a heat-sensing pit located between the eye and nostril that is used to aid in prey location, allowing prey capture in dark spaces like rodent burrows. While they should be treated with respect, they are rarely aggressive toward humans.
+    </div>
+
+    <!-- Eastern Copperhead -->
+    <div class="snake-card">
+      <div>
+        <h2>Eastern Copperhead <span class="badge badge-venomous">Venomous</span></h2>
+        <p style="color:var(--text-light); margin-top:0.5rem;">The most common venomous snake found in Virginia.</p>
+      </div>
+      <div class="snake-images">
+        <img src="images/copperhead-1.jpeg" alt="Eastern Copperhead">
+        <img src="images/copperhead-2.jpeg" alt="Eastern Copperhead pattern detail">
+      </div>
+      <div class="detail-grid">
+        <div class="detail-item warning">
+          <h4>Head</h4>
+          <p>Coppery-red head, often triangular shaped</p>
+        </div>
+        <div class="detail-item warning">
+          <h4>Body Pattern</h4>
+          <p>Hourglass-shaped bands that resemble Hershey's Kisses &mdash; narrow near the backbone, wide on the sides</p>
+        </div>
+        <div class="detail-item">
+          <h4>Color</h4>
+          <p>Juveniles are colored and patterned as adults, but the tip of the tail is sulfur yellow</p>
+        </div>
+        <div class="detail-item">
+          <h4>Where Found</h4>
+          <p>Found almost <strong>all across Virginia</strong></p>
+        </div>
+      </div>
+      <div class="fun-fact">
+        <strong>⚡ Commonly Confused With:</strong> Harmless Water Snakes, Corn Snakes, and sometimes juvenile Eastern Ratsnakes
+      </div>
+    </div>
+
+    <!-- Northern Cottonmouth -->
+    <div class="snake-card">
+      <div>
+        <h2>Northern Cottonmouth <span class="aka">aka Water Moccasin</span> <span class="badge badge-venomous">Venomous</span></h2>
+        <p style="color:var(--text-light); margin-top:0.5rem;">Opens its mouth wide when threatened, appearing white like cotton!</p>
+      </div>
+      <div class="snake-images">
+        <img src="images/cottonmouth-1.jpeg" alt="Northern Cottonmouth">
+        <img src="images/cottonmouth-2.png" alt="Northern Cottonmouth detail">
+      </div>
+      <div class="detail-grid">
+        <div class="detail-item warning">
+          <h4>Head</h4>
+          <p>Dark with a mask above their eye &mdash; like the "Mask of Zorro!"</p>
+        </div>
+        <div class="detail-item warning">
+          <h4>Body Pattern</h4>
+          <p>Dark, thick-bodied with a Christmas Tree-like (or dumbbell) pattern, broader at the bottom, narrow on top. Some may appear dark with no patterns.</p>
+        </div>
+        <div class="detail-item">
+          <h4>Size</h4>
+          <p>Can grow up to <strong>50&ndash;60 inches</strong>, usually with a thick large body</p>
+        </div>
+        <div class="detail-item">
+          <h4>Prey</h4>
+          <p>Fish, reptiles, amphibians (frogs), small mammals, and invertebrates</p>
+        </div>
+        <div class="detail-item">
+          <h4>Where Found</h4>
+          <p>Near <strong>Virginia Beach area</strong> (South East Virginia)</p>
+        </div>
+        <div class="detail-item">
+          <h4>Juveniles</h4>
+          <p>Have sulfur-yellow tail tip with brighter pattern colors</p>
+        </div>
+      </div>
+      <div class="fun-fact">
+        <strong>⚡ Commonly Confused With:</strong> The harmless Northern Watersnake
+      </div>
+    </div>
+
+    <!-- Timber Rattlesnake -->
+    <div class="snake-card">
+      <div>
+        <h2>Timber Rattlesnake <span class="aka">aka Canebrake</span> <span class="badge badge-venomous">Venomous</span></h2>
+        <p style="color:var(--text-light); margin-top:0.5rem;">Has a rattle on its tail and black zig-zag patterns (like inverted V shapes).</p>
+      </div>
+      <div class="snake-images">
+        <img src="images/rattlesnake-1.png" alt="Timber Rattlesnake">
+        <img src="images/rattlesnake-2.png" alt="Timber Rattlesnake detail">
+      </div>
+      <div class="detail-grid">
+        <div class="detail-item warning">
+          <h4>Body Pattern</h4>
+          <p>Highly variable in color, most possess a series of zigzag-shaped blotches (chevrons) and crossbands on dorsum</p>
+        </div>
+        <div class="detail-item">
+          <h4>Size</h4>
+          <p>Can grow up to <strong>6 feet</strong> in length</p>
+        </div>
+        <div class="detail-item">
+          <h4>Prey</h4>
+          <p>Squirrels, rats, mice, cottontail rabbits, six-lined racerunners, skinks, and birds</p>
+        </div>
+        <div class="detail-item">
+          <h4>Where Found</h4>
+          <p>Mostly in <strong>North Eastern Virginia mountains</strong> and some areas near South West Virginia</p>
+        </div>
+      </div>
+      <div class="fun-fact">
+        <strong>🎵 Fun Fact:</strong> The rattle is made of special hollow scales (keratin) on the tail tip. These scales are loosely connected. When the rattlesnake vibrates its tail, the scales rapidly strike each other, causing a buzzing sound.
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Slithering Friends &mdash; Snakes of Virginia &bull; Site Managed by Sravan and Sachin Jayakanthan</p>
+    <p style="margin-top:0.5rem;">Photo credits: <a href="https://www.virginiaherpetologicalsociety.com" target="_blank">Virginia Herpetological Society</a></p>
+  </footer>
+</body>
+</html>

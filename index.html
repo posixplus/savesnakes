@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slithering Friends - Snakes of Virginia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo"><span>🐍</span> Snakes of Virginia</a>
+    <div class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="venomous.html">Venomous</a></li>
+      <li><a href="non-venomous.html">Non-Venomous</a></li>
+      <li><a href="safety.html">Safety & Resources</a></li>
+    </ul>
+  </nav>
+
+  <section style="padding:0;">
+    <img src="images/cover.png" alt="Slithering Friends - Snakes of Virginia by Jayakanthan Narayan" style="width:100%; display:block;">
+  </section>
+
+  <div class="container">
+
+    <img src="images/meet-snakes.png" alt="Meet the Snakes" style="width:100%; border-radius:14px; margin-bottom:1.5rem; box-shadow:0 3px 15px rgba(0,0,0,0.12);">
+
+    <div class="info-box" style="text-align:center; margin-bottom: 2.5rem;">
+      <img src="images/snakes-help.png" alt="How snakes help the world" style="width:100%; border-radius:14px; margin-bottom:1.5rem;">
+      <h2>🌿 How Snakes Help the World</h2>
+      <p style="max-width:700px; margin:0 auto; color:var(--text-light); font-size:1.05rem;">
+        Snakes play a vital role in our ecosystem. They control rodent and pest populations, serve as food for birds of prey and other animals, and help maintain the balance of nature. Understanding them is the first step to appreciating them!
+      </p>
+    </div>
+
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:0.5rem;">Explore the Guide</h2>
+    <p style="text-align:center; color:var(--text-light); margin-bottom:1rem;">Click a section to learn more</p>
+
+    <div class="section-grid">
+      <div class="section-card venomous">
+        <div class="icon">⚠️</div>
+        <h3>Venomous Snakes</h3>
+        <p>Virginia has only 3 venomous species. Learn to identify the Eastern Copperhead, Northern Cottonmouth, and Timber Rattlesnake.</p>
+        <a href="venomous.html" class="btn btn-danger">Learn More</a>
+      </div>
+
+      <div class="section-card">
+        <div class="icon">🌿</div>
+        <h3>Non-Venomous Snakes</h3>
+        <p>Meet the helpful, harmless snakes you're most likely to see in your yard &mdash; from Rat Snakes to Garter Snakes.</p>
+        <a href="non-venomous.html" class="btn btn-forest">Learn More</a>
+      </div>
+
+      <div class="section-card safety">
+        <div class="icon">🛡️</div>
+        <h3>Safety & Resources</h3>
+        <p>How to snake-proof your yard, what to do if bitten, free rescue services in Richmond, and helpful links.</p>
+        <a href="safety.html" class="btn btn-copper">Learn More</a>
+      </div>
+    </div>
+
+    <div class="info-box" style="margin-top: 2.5rem; text-align: center;">
+      <h2>🔑 Quick Facts About Virginia Snakes</h2>
+      <div class="detail-grid" style="margin-top:1.25rem;">
+        <div class="detail-item">
+          <h4>Total Venomous Species</h4>
+          <p><strong>Only 3</strong> out of 30+ species in Virginia are venomous</p>
+        </div>
+        <div class="detail-item">
+          <h4>Heat-Sensing Pit</h4>
+          <p>All 3 venomous species are <strong>pit vipers</strong> with a heat-sensing pit between their eye and nostril</p>
+        </div>
+        <div class="detail-item">
+          <h4>Best Practice</h4>
+          <p>Even if you can identify a snake, <strong>leave it alone</strong> and let it go on its way!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Slithering Friends &mdash; Snakes of Virginia &bull; Site Managed by Sravan and Sachin Jayakanthan</p>
+    <p style="margin-top:0.5rem;">Photo credits: <a href="https://www.virginiaherpetologicalsociety.com" target="_blank">Virginia Herpetological Society</a></p>
+  </footer>
+</body>
+</html>

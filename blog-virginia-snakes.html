@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding Virginia's Snakes: Facts and Identification | SaveSnakes.org</title>
+  <meta name="description" content="Virginia is home to around 30 snake species. Learn how to identify venomous and non-venomous snakes, safety tips, and their role in the ecosystem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body { font-family: 'Hanken Grotesk', system-ui, sans-serif; background: #f5efe3; color: #25312a; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #d99a3a; color: #1b1205; }
+    :root {
+      --green-deep: #1d3f29; --green-mid: #2b5a3a; --green-soft: #4d7c4e;
+      --green-pale: #eef4e6; --cream: #f5efe3; --cream-warm: #ece2cf;
+      --text: #25312a; --text-muted: #5f6c5e; --border: #e4dac4; --honey: #d99a3a;
+    }
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 999; background: rgba(29,63,41,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px clamp(18px,4vw,40px); }
+    .nav-brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .nav-brand-icon { width: 38px; height: 38px; background: #2b5a3a; border: 2px solid #d99a3a; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .nav-brand-text { font-family: 'Spectral', serif; font-size: 19px; font-weight: 700; color: #fff; letter-spacing: 0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { font-size: 14px; font-weight: 500; white-space: nowrap; color: rgba(255,255,255,0.82); text-decoration: none; padding: 8px 12px; border-radius: 7px; transition: color 0.15s, background 0.15s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.09); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 6px; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: rgba(255,255,255,0.85); }
+    /* Drawer */
+    .drawer-bg { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.45); }
+    .drawer-bg.open { display: block; }
+    .drawer { position: fixed; top: 0; right: -300px; width: 280px; height: 100vh; z-index: 1001; background: #1d3f29; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; transition: right 0.28s ease; }
+    .drawer.open { right: 0; }
+    .drawer-close { background: none; border: none; color: rgba(255,255,255,0.6); font-size: 1.2rem; cursor: pointer; align-self: flex-end; padding: 4px; margin-bottom: 1rem; }
+    .drawer a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 0.7rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .drawer a:hover { color: #fff; }
+    /* Hero */
+    .post-hero { background: #1d3f29; padding: clamp(3rem,6vw,5rem) 2rem clamp(2.5rem,4vw,3.5rem); text-align: center; position: relative; overflow: hidden; }
+    .post-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 120%, rgba(217,154,58,0.22) 0%, transparent 65%); pointer-events: none; }
+    .post-hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-bottom: 1.3rem; font-size: 0.82rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+    .breadcrumb a:hover { color: rgba(255,255,255,0.9); }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .post-category { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #f0d9ad; background: rgba(217,154,58,0.16); border: 1px solid rgba(217,154,58,0.4); padding: 0.32rem 0.95rem; border-radius: 100px; margin-bottom: 1.3rem; }
+    .post-title { font-family: 'Spectral', serif; font-size: clamp(2rem, 4.2vw, 3rem); font-weight: 600; color: #fff; line-height: 1.16; margin-bottom: 1.3rem; letter-spacing: -0.01em; }
+    .post-meta { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+    .post-meta-dot { width: 3px; height: 3px; background: rgba(255,255,255,0.35); border-radius: 50%; }
+    /* Article */
+    .article-wrap { max-width: 820px; margin: 0 auto; padding: clamp(2.5rem,5vw,3.8rem) 2rem 5rem; }
+    .toc { background: #eef4e6; border-left: 4px solid #d99a3a; border-radius: 0 10px 10px 0; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; }
+    .toc-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #2b5a3a; margin-bottom: 0.8rem; }
+    .toc ol { padding-left: 1.1rem; }
+    .toc li { margin-bottom: 0.35rem; }
+    .toc a { font-size: 0.88rem; color: #2b5a3a; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .intro { font-size: 1.16rem; color: #4a5648; line-height: 1.85; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+    .intro strong { color: #25312a; }
+    .article-section { margin-bottom: 3.2rem; }
+    .article-section:last-child { margin-bottom: 0; }
+    h2.section-h { font-family: 'Spectral', serif; font-size: clamp(1.6rem,3vw,2rem); font-weight: 600; color: #1d3f29; margin-bottom: 0.5rem; padding-top: 0.5rem; }
+    .section-divider { width: 48px; height: 3px; background: #d99a3a; border-radius: 2px; margin-bottom: 1.3rem; }
+    h3.snake-h { font-family: 'Spectral', serif; font-size: 1.3rem; font-weight: 600; color: #2b5a3a; margin: 2.2rem 0 0.8rem; display: flex; align-items: center; gap: 0.6rem; }
+    h3.snake-h::before { content: ''; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #d99a3a; flex-shrink: 0; }
+    p.body-text { font-size: 1.02rem; color: #4a5648; line-height: 1.85; margin-bottom: 1rem; }
+    p.body-text strong { color: #25312a; }
+    /* Images */
+    .article-img-wrap { margin: 1.4rem 0; }
+    .article-img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 1.4rem 0; }
+    figure { margin: 0; }
+    figure img { width: 100%; border-radius: 12px; display: block; border: 1px solid var(--border); }
+    figcaption { font-size: 0.78rem; color: #8a957f; margin-top: 0.45rem; line-height: 1.4; font-style: italic; text-align: center; }
+    .img-full figure img { width: 100%; height: auto; max-height: none; object-fit: contain; }
+    /* Snake cards */
+    .snake-card { background: #fffdf8; border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; margin-bottom: 1.6rem; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
+    .snake-card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+    .snake-name { font-family: 'Spectral', serif; font-size: 1.2rem; font-weight: 600; color: #1d3f29; }
+    .badge { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 100px; }
+    .badge-venomous { background: #f7e6cd; color: #a8651a; border: 1px solid rgba(184,122,34,0.4); }
+    .badge-safe { background: #e6f0da; color: #3a6b2e; border: 1px solid rgba(90,124,66,0.35); }
+    .snake-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 1rem; }
+    .fact-item { display: flex; gap: 0.4rem; align-items: flex-start; font-size: 0.9rem; color: #5f6c5e; line-height: 1.55; }
+    .fact-label { font-weight: 700; color: #25312a; font-size: 0.82rem; white-space: nowrap; }
+    .snake-funfact { background: #eef4e6; border-radius: 9px; padding: 0.8rem 1.1rem; margin-top: 0.8rem; font-size: 0.88rem; color: #2b5a3a; line-height: 1.6; }
+    .snake-funfact strong { font-weight: 700; }
+    .snake-lookalike { background: #fdf0d8; border-radius: 9px; padding: 0.8rem 1.1rem; margin-top: 0.6rem; font-size: 0.88rem; color: #8a5a12; line-height: 1.6; border-left: 3px solid #d99a3a; }
+    /* Callouts */
+    .callout { border-radius: 14px; padding: 1.6rem; margin: 1.6rem 0; }
+    .callout-warning { background: #fdf0d8; border: 1px solid #ecca7d; border-left: 4px solid #d99a3a; }
+    .callout-info { background: #eef4e6; border: 1px solid rgba(90,124,66,0.25); border-left: 4px solid #4d7c4e; }
+    .callout-danger { background: #fbeae6; border: 1px solid #f0c0b4; border-left: 4px solid #c0492b; }
+    .callout-title { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .callout-warning .callout-title { color: #9a6c00; }
+    .callout-info .callout-title { color: #2b5a3a; }
+    .callout-danger .callout-title { color: #b03a1f; }
+    .callout ul, .callout ol { padding-left: 1.2rem; }
+    .callout li { font-size: 0.95rem; color: #4a5648; margin-bottom: 0.45rem; line-height: 1.65; }
+    .callout a { color: inherit; font-weight: 600; }
+    /* ID table */
+    .id-table { width: 100%; border-collapse: collapse; margin: 1.4rem 0; font-size: 0.9rem; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 14px rgba(0,0,0,0.05); }
+    .id-table th { background: #1d3f29; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.03em; }
+    .id-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); color: #5f6c5e; vertical-align: top; background: #fffdf8; }
+    .id-table tr:last-child td { border-bottom: none; }
+    .id-table tr:nth-child(even) td { background: #f7f2e6; }
+    .id-table .danger { color: #b03a1f; font-weight: 700; }
+    .id-table .safe { color: #3a6b2e; font-weight: 700; }
+    /* Agency + links */
+    .agency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 1.1rem 0; }
+    .agency-card { background: #fffdf8; border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+    .agency-name { font-size: 0.92rem; font-weight: 700; color: #25312a; margin-bottom: 0.35rem; }
+    .agency-phone { font-size: 0.9rem; color: #b87a22; font-weight: 700; text-decoration: none; }
+    .agency-phone:hover { text-decoration: underline; }
+    .agency-desc { font-size: 0.83rem; color: #5f6c5e; margin-top: 0.35rem; line-height: 1.55; }
+    .link-list { list-style: none; padding: 0; margin: 0.6rem 0; }
+    .link-list li { margin-bottom: 0.9rem; }
+    .link-list a { font-size: 0.95rem; color: #2b5a3a; font-weight: 600; text-decoration: none; }
+    .link-list a:hover { text-decoration: underline; }
+    .link-list .link-desc { font-size: 0.86rem; color: #5f6c5e; margin-top: 0.2rem; font-weight: 400; line-height: 1.5; }
+    /* CTA + footer */
+    .post-cta { background: #1d3f29; border-radius: 18px; padding: 2.8rem; margin-top: 3.2rem; text-align: center; }
+    .post-cta h3 { font-family: 'Spectral', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin-bottom: 0.7rem; }
+    .post-cta p { font-size: 1rem; color: rgba(255,255,255,0.72); margin-bottom: 1.6rem; max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .btn { display: inline-flex; align-items: center; gap: 7px; padding: 0.9rem 1.8rem; font-family: 'Hanken Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; border: none; cursor: pointer; text-decoration: none; border-radius: 10px; transition: 0.18s; }
+    .btn-primary { background: #d99a3a; color: #1b1205; }
+    .btn-primary:hover { background: #e8aa4d; }
+    .post-footer-strip { border-top: 1px solid var(--border); padding: 1.6rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; max-width: 820px; margin: 0 auto; }
+    .post-stats { font-size: 0.85rem; color: #8a957f; display: flex; gap: 1.3rem; }
+    .back-link { font-size: 0.9rem; font-weight: 700; color: #2b5a3a; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 640px) {
+      .id-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .snake-facts { grid-template-columns: 1fr; }
+      .agency-grid { grid-template-columns: 1fr; }
+      .article-img-pair { grid-template-columns: 1fr; }
+      .article-wrap { padding: 2.2rem 1.2rem 4rem; }
+    }
+
+    /* Site footer override */
+    body > footer { background: #15241a !important; }
+
+  </style>
+</head>
+<body>
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5efe3" stroke-width="2.2" stroke-linecap="round"><path d="M3 20 C5 11 9 7 13 12 C17 17 21 13 22 5"/><circle cx="22" cy="4.4" r="1.2" fill="#d99a3a" stroke="none"/></svg>
+    </div>
+    <span class="nav-brand-text">SaveSnakes.org</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#snakes">Meet the Snakes</a>
+    <a href="blog-coexist-richmond.html">Helpful Tips</a>
+    <a href="index.html#safety">Safety</a>
+    <a href="index.html#updates">Latest Updates</a>
+    <a href="index.html#mission">Mission</a>
+    <a href="index.html#follow">Follow Us</a>
+    <a href="index.html#contact" style="background:#d99a3a;color:#1b1205;font-weight:700;border-radius:8px;padding:8px 16px;margin-left:6px;">Get Help</a>
+  </div>
+  <button class="hamburger" onclick="openDrawer()" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="drawer-bg" id="drawerBg" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <button class="drawer-close" onclick="closeDrawer()">✕</button>
+  <a href="index.html#home" onclick="closeDrawer()">Home</a>
+  <a href="index.html#services" onclick="closeDrawer()">Services</a>
+  <a href="index.html#snakes" onclick="closeDrawer()">Meet the Snakes</a>
+  <a href="blog-coexist-richmond.html" onclick="closeDrawer()">Helpful Tips</a>
+  <a href="index.html#safety" onclick="closeDrawer()">Safety</a>
+  <a href="index.html#updates" onclick="closeDrawer()">Latest Updates</a>
+  <a href="index.html#mission" onclick="closeDrawer()">Mission</a>
+  <a href="index.html#follow" onclick="closeDrawer()">Follow Us</a>
+  <a href="index.html#contact" onclick="closeDrawer()">Get Help</a>
+</div>
+
+<header class="post-hero">
+  <div class="post-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="index.html#updates">Latest Updates</a>
+      <span class="breadcrumb-sep">›</span>
+      <span style="color:rgba(255,255,255,0.75)">Virginia Snakes</span>
+    </nav>
+    <span class="post-category">Education</span>
+    <h1 class="post-title">Understanding Virginia's Snakes:<br/>Facts and Identification</h1>
+    <div class="post-meta">
+      <span>By SaveSnakes.org</span>
+      <span class="post-meta-dot"></span>
+      <span>Sep 5, 2025</span>
+      <span class="post-meta-dot"></span>
+      <span>6 min read</span>
+      <span class="post-meta-dot"></span>
+      <span>Updated Sep 7, 2025</span>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ ARTICLE ═══ -->
+<main>
+  <article class="article-wrap">
+
+    <!-- Table of Contents -->
+  
+
+    <!-- Intro -->
+    <p class="intro">
+      Virginia is home to a diverse range of wildlife, and snakes are among the most fascinating
+      creatures you can encounter. Whether you are a nature enthusiast, a hiker, or simply curious
+      about the local fauna, understanding Virginia's snakes can enhance your outdoor experiences.
+      Virginia boasts around <strong>30 species of snakes</strong>, with a mix of both venomous
+      and non-venomous varieties. Knowing how to identify these snakes can help you appreciate
+      their role in the ecosystem and ensure your safety during outdoor activities.
+    </p>
+
+    <!-- ─── SECTION 1: Venomous ─── -->
+    <section class="article-section" id="venomous">
+      <h2 class="section-h">Venomous Snakes in Virginia</h2>
+      <div class="section-divider"></div>
+      <p class="body-text">
+        There are only <strong>3 venomous snakes in Virginia</strong>. These pit viper species have
+        a heat-sensing pit located between the eye and nostril - used to aid in prey location and
+        allow prey capture in dark spaces, like rodent burrows.
+      </p>
+
+      <div class="callout callout-warning">
+        <p class="callout-title">⚠️ Virginia's Venomous Species</p>
+        <ul>
+          <li><strong>Eastern Copperhead</strong> - Most common venomous snake in Virginia.</li>
+          <li><strong>Northern Cottonmouth</strong> (Water Moccasin) - Found near Virginia Beach area (South East Virginia).</li>
+          <li><strong>Timber Rattlesnake</strong> (Cane Brake) - Found in North Eastern Virginia on mountains and some areas near South West Virginia.</li>
+        </ul>
+      </div>
+
+      <!-- ── Copperhead ── -->
+      <h3 class="snake-h">Eastern Copperhead</h3>
+
+      <!-- Copperhead image 1: Head -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_4eeb477aac2b40ce876f7d8e68ba1ca8~mv2.png"
+               alt="Eastern Copperhead head close-up" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <!-- Copperhead image 2: Body -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_5e9870b365b24a6f8cf2e891a34e87bf~mv2.png"
+               alt="Eastern Copperhead body pattern" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <!-- Copperhead image 3: Color -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_d0181ad102de4018a527271b4183b26b~mv2.png"
+               alt="Eastern Copperhead color variation" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="snake-card">
+        <div class="snake-card-head">
+          <span class="snake-name">Eastern Copperhead</span>
+          <span class="badge badge-venomous">⚠ Venomous</span>
+        </div>
+        <div class="snake-facts">
+          <div class="fact-item"><span class="fact-label">Head:&nbsp;</span> Coppery-red, often triangular shaped</div>
+          <div class="fact-item"><span class="fact-label">Body:&nbsp;</span> Hourglass-shaped bands (like Hershey's Kisses or an hourglass) - narrow near backbone, wide on sides</div>
+          <div class="fact-item"><span class="fact-label">Color:&nbsp;</span> Adults are patterned; juveniles have sulfur-yellow tail tips</div>
+          <div class="fact-item"><span class="fact-label">Range:&nbsp;</span> Found almost all of Virginia</div>
+        </div>
+        <div class="snake-lookalike">
+          ⚠ <strong>Often confused with:</strong> Water Snakes, Corn Snakes, and Juvenile Eastern Ratsnakes. Key difference - copperheads have hourglass bands and coppery-orange triangular heads; juveniles have bright yellow tail tips.
+        </div>
+      </div>
+
+      <!-- Copperhead images 4 & 5 -->
+      <div class="article-img-pair">
+        <figure>
+          <img src="images/067bc5_228ccd93357e49de90fead4c91ca99d6~mv2.png"
+               alt="Eastern Copperhead in natural habitat" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/067bc5_cddf763de5f84fe4a642cceaa1ef3905~mv2.png"
+               alt="Eastern Copperhead" loading="lazy" />
+        </figure>
+      </div>
+
+      <!-- Copperhead image 6: Where found -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_db41699b9bbb451dbe6c05c60546944b~mv2.png"
+               alt="Eastern Copperhead habitat" loading="lazy" />
+        </figure>
+      </div>
+
+      <!-- ── Cottonmouth ── -->
+      <h3 class="snake-h">Northern Cottonmouth (Water Moccasin)</h3>
+
+      <!-- Cottonmouth images 1 & 2: Head pair -->
+      <div class="article-img-pair">
+        <figure>
+          <img src="images/067bc5_4457e465e2734fe29b867ee6e5a3e42e~mv2.png"
+               alt="Northern Cottonmouth head" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="images/067bc5_63bbec86a7cc44d8837b9728e7df147e~mv2.png"
+               alt="Northern Cottonmouth head close-up" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <!-- Cottonmouth image 3: Body -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_f144b5339e4547d9a7392d6e42c65c8d~mv2.png"
+               alt="Northern Cottonmouth body pattern" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="snake-card">
+        <div class="snake-card-head">
+          <span class="snake-name">Northern Cottonmouth</span>
+          <span class="badge badge-venomous">⚠ Venomous</span>
+        </div>
+        <div class="snake-facts">
+          <div class="fact-item"><span class="fact-label">Head:&nbsp;</span> Dark mask above the eye - "Mask of Zorro!"</div>
+          <div class="fact-item"><span class="fact-label">Body:&nbsp;</span> Dark, thick-bodied with Christmas Tree / Dumbbell pattern (broader at bottom, narrow on top). Some appear dark with no pattern.</div>
+          <div class="fact-item"><span class="fact-label">Size:&nbsp;</span> Up to 50-60 inches; usually thick and large-bodied</div>
+          <div class="fact-item"><span class="fact-label">Prey:&nbsp;</span> Fish, reptiles, amphibians (frogs), small mammals, invertebrates</div>
+        </div>
+        <div class="snake-funfact">
+          <strong>Juveniles</strong> have a sulfur-yellow tail tip and brighter pattern colors.
+        </div>
+        <div class="snake-lookalike">
+          ⚠ <strong>Often confused with:</strong> The harmless Northern Water Snake. Cottonmouths have thick blocky heads; water snakes have dark lines on the edge of each lip scale.
+        </div>
+      </div>
+
+      <!-- Cottonmouth image 4: Getty -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_8ed6da943042407d997bdea40bb0204e~mv2.png"
+               alt="Northern Cottonmouth" loading="lazy" />
+          <figcaption>Creator: Kristian Bell | Credit: Getty Images | Copyright: © Kristian Bell</figcaption>
+        </figure>
+      </div>
+
+      <!-- ── Timber Rattlesnake ── -->
+      <h3 class="snake-h">Timber Rattlesnake (Canebrake)</h3>
+
+      <!-- Rattlesnake image 1: Body -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_7aa7755cd2d54ad2b16be16a6740b064~mv2.png"
+               alt="Timber Rattlesnake body pattern" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <!-- Rattlesnake image 2: Size -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_39947141c7994f93bf0593355263c9c4~mv2.png"
+               alt="Timber Rattlesnake size reference" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="snake-card">
+        <div class="snake-card-head">
+          <span class="snake-name">Timber Rattlesnake</span>
+          <span class="badge badge-venomous">⚠ Venomous</span>
+        </div>
+        <div class="snake-facts">
+          <div class="fact-item"><span class="fact-label">Body:&nbsp;</span> Highly variable; most have zigzag-shaped blotches (chevrons) and crossbands</div>
+          <div class="fact-item"><span class="fact-label">Size:&nbsp;</span> Up to 6 feet in length</div>
+          <div class="fact-item"><span class="fact-label">Range:&nbsp;</span> North Eastern Virginia mountains, some areas near South West Virginia</div>
+          <div class="fact-item"><span class="fact-label">Prey:&nbsp;</span> Squirrels, rats, mice, cottontail rabbits, skinks, birds</div>
+        </div>
+        <div class="snake-funfact">
+          <strong>🎶 Fun fact:</strong> The rattle is made of special hollow scales of keratin on the tip of the tail. When the rattlesnake vibrates its tail, the loosely connected scales rapidly strike each other, creating that distinctive buzzing sound.
+        </div>
+      </div>
+
+      <!-- Rattlesnake image 3 -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_25b6dcc4778649a697a3bd076483f35e~mv2.png"
+               alt="Timber Rattlesnake" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 2: Non-Venomous ─── -->
+    <section class="article-section" id="non-venomous">
+      <h2 class="section-h">Non-Venomous Snakes in Virginia</h2>
+      <div class="section-divider"></div>
+      <p class="body-text">
+        Virginia has many non-venomous snakes. Let's learn about the most common ones seen in our
+        neighborhoods. <strong>Remember:</strong> Even if you can identify a snake, leave it to go
+        on its way! Never handle any snakes if possible. If bitten by a non-venomous snake, just
+        wash the wound with soap and water.
+      </p>
+
+      <div class="callout callout-info">
+        <p class="callout-title">🐍 The 5 Most Common Non-Venomous Snakes</p>
+        <ul>
+          <li>Eastern Rat Snake (aka Black Rat Snake)</li>
+          <li>Eastern Garter Snake</li>
+          <li>Dekay's Brown Snake</li>
+          <li>Eastern Kingsnake</li>
+          <li>Northern Water Snake</li>
+        </ul>
+      </div>
+
+      <!-- ── Eastern Rat Snake ── -->
+      <h3 class="snake-h">Eastern Rat Snake (Black Rat Snake)</h3>
+
+      <!-- Rat Snake images 1 & 2 -->
+      <div class="article-img-pair">
+        <figure>
+          <img src="images/067bc5_4ee75b9ba0ca4f4d93bce9af45710f18~mv2.png"
+               alt="Eastern Rat Snake" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+        <figure>
+          <img src="images/067bc5_1ee1452299104e78ab12891d2f84c052~mv2.png"
+               alt="Eastern Rat Snake pattern" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="snake-card">
+        <div class="snake-card-head">
+          <span class="snake-name">🐍 Eastern Rat Snake (Black Rat Snake)</span>
+          <span class="badge badge-safe">✓ Non-Venomous</span>
+        </div>
+        <div class="snake-facts">
+          <div class="fact-item"><span class="fact-label">Appearance:&nbsp;</span> Long (up to 6 feet), shiny black with white chin and belly</div>
+          <div class="fact-item"><span class="fact-label">Juveniles:&nbsp;</span> Gray with darker brown blotches - looks patterned; adults are solid shiny black</div>
+          <div class="fact-item"><span class="fact-label">Where:&nbsp;</span> Climbing trees, attics, barns, or near wood piles</div>
+          <div class="fact-item"><span class="fact-label">&nbsp;</span>&nbsp;</div>
+        </div>
+        <div class="snake-funfact"><strong>🌟 Fun fact:</strong> Great climbers and help control rodents!</div>
+        <div class="snake-lookalike">⚠ <strong>Misidentified as:</strong> Juvenile Copperhead. Key difference - copperheads have hourglass bands, coppery triangular heads, and bright yellow tail tips. Rat snakes don't have yellow tail tips.</div>
+      </div>
+
+      <!-- Rat Snake image 3: Misidentified -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_b087a261c9f04038bff03ab928fb8ae5~mv2.png"
+               alt="Eastern Rat Snake often misidentified" loading="lazy" />
+        </figure>
+      </div>
+
+      <!-- ── Eastern Garter Snake ── -->
+      <h3 class="snake-h">Eastern Garter Snake</h3>
+
+      <!-- Garter Snake images 1 & 2 -->
+      <div class="article-img-pair">
+        <figure>
+          <img src="images/067bc5_faf951b44c4649aa9451a0da60f0b6a5~mv2.png"
+               alt="Eastern Garter Snake" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+        <figure>
+          <img src="images/067bc5_2fec635eceee4bc983b0ba6ae1c96be2~mv2.png"
+               alt="Eastern Garter Snake pattern" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="snake-card">
+        <div class="snake-card-head">
+          <span class="snake-name">🐍 Eastern Garter Snake</span>
+          <span class="badge badge-safe">✓ Non-Venomous</span>
+        </div>
+        <div class="snake-facts">
+          <div class="fact-item"><span class="fact-label">Appearance:&nbsp;</span> Thin, 1.5 to 3 feet long, olive, brown, or black with yellowish stripes down the back</div>
+          <div class="fact-item"><span class="fact-label">Juveniles:&nbsp;</span> Thinner and more vibrant in color; adult stripes can fade or become duller with age</div>
+          <div class="fact-item"><span class="fact-label">Where:&nbsp;</span> Lawns, gardens, parks - often near water</div>
+          <div class="fact-item"><span class="fact-label">&nbsp;</span>&nbsp;</div>
+        </div>
+        <div class="snake-funfact"><strong>🌟 Fun fact:</strong> They give birth to live young - not eggs like many other snakes! They can also release a smelly musk if picked up, as a defense.</div>
+        <div class="snake-lookalike">⚠ <strong>Lookalike:</strong> Ribbon snakes - more slender, white markings around the eyes, and a longer tail.</div>
+      </div>
+
+      <!-- ── Dekay's Brown Snake ── -->
+      <h3 class="snake-h">Dekay's Brown Snake</h3>
+
+      <!-- Dekay's images 1 & 2 -->
+      <div class="article-img-pair">
+        <figure>
+          <img src="images/067bc5_2a49f25cecd5412aad5b8a638b487b03~mv2.png"
+               alt="Dekay's Brown Snake" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+        <figure>
+          <img src="images/067bc5_c92a134b4efc46beb6fcb01d109717e6~mv2.png"
+               alt="Dekay's Brown Snake close-up" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="snake-card">
+        <div class="snake-card-head">
+          <span class="snake-name">🐍 Dekay's Brown Snake</span>
+          <span class="badge badge-safe">✓ Non-Venomous</span>
+        </div>
+        <div class="snake-facts">
+          <div class="fact-item"><span class="fact-label">Appearance:&nbsp;</span> Small (8-15 inches), brown or gray with two rows of small dark spots</div>
+          <div class="fact-item"><span class="fact-label">Juveniles:&nbsp;</span> Brown or gray with a whitish ring around the neck</div>
+          <div class="fact-item"><span class="fact-label">Where:&nbsp;</span> Under rocks, mulch, garden debris</div>
+          <div class="fact-item"><span class="fact-label">Food:&nbsp;</span> Slugs, snails, earthworms, soft-bodied insects - great for gardens!</div>
+        </div>
+        <div class="snake-funfact"><strong>🌟 Fun fact:</strong> Very shy, totally harmless, and often mistaken for worms.</div>
+      </div>
+
+      <!-- Dekay's image 3 -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_2e77ca09bf6b452e8e5d5525865da6d4~mv2.png"
+               alt="Dekay's Brown Snake in habitat" loading="lazy" />
+        </figure>
+      </div>
+
+      <!-- ── Eastern Kingsnake ── -->
+      <h3 class="snake-h">Eastern Kingsnake</h3>
+
+      <!-- Kingsnake images 1 & 2 -->
+      <div class="article-img-pair">
+        <figure>
+          <img src="images/067bc5_83bae90ef0af46e28b4679edf8b40593~mv2.png"
+               alt="Eastern Kingsnake" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+        <figure>
+          <img src="images/067bc5_186dde2cdbb54cddb78230d7a900f194~mv2.png"
+               alt="Eastern Kingsnake banding" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="snake-card">
+        <div class="snake-card-head">
+          <span class="snake-name">🐍 Eastern Kingsnake</span>
+          <span class="badge badge-safe">✓ Non-Venomous</span>
+        </div>
+        <div class="snake-facts">
+          <div class="fact-item"><span class="fact-label">Appearance:&nbsp;</span> Glossy black with thin white or yellow chain-like bands</div>
+          <div class="fact-item"><span class="fact-label">Size:&nbsp;</span> About 3-5 feet long, robust and confident in movement</div>
+          <div class="fact-item"><span class="fact-label">Where:&nbsp;</span> Wooded areas, fields, backyards</div>
+          <div class="fact-item"><span class="fact-label">&nbsp;</span>&nbsp;</div>
+        </div>
+        <div class="snake-funfact"><strong>🌟 Fun fact:</strong> Immune to venom from copperheads - and actually eats them!</div>
+        <div class="snake-lookalike">⚠ <strong>Lookalike:</strong> Black racer or rat snake. Kingsnakes have distinct banding; racers are thinner, faster, and may flee quickly.</div>
+      </div>
+
+      <!-- Kingsnake images 3 & 4: pair feeding on copperhead -->
+      <div class="article-img-pair">
+        <figure>
+          <img src="images/067bc5_add91b8e53924cb6833586a6c28f8741~mv2.png"
+               alt="Non-venomous King Snake feeding on Venomous copperhead" loading="lazy" />
+          <figcaption>Non-venomous King Snake feeding on Venomous copperhead!</figcaption>
+        </figure>
+        <figure>
+          <img src="images/067bc5_cc97d63266d14aae992e7e8f7431035d~mv2.png"
+               alt="Non-venomous King Snake feeding on Venomous copperhead" loading="lazy" />
+          <figcaption>Non-venomous King Snake feeding on Venomous copperhead!</figcaption>
+        </figure>
+      </div>
+
+      <!-- ── Northern Water Snake ── -->
+      <h3 class="snake-h">Northern Water Snake</h3>
+
+      <!-- Water Snake image 1 -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_1ec9c60d596943288438ac8083bcb406~mv2.png"
+               alt="Northern Water Snake" loading="lazy" />
+          <figcaption>Pic: Jayakanthan</figcaption>
+        </figure>
+      </div>
+
+      <!-- Water Snake images 2 & 3 -->
+      <div class="article-img-pair">
+        <figure>
+          <img src="images/067bc5_60871dd315144165b203a9e49608c466~mv2.png"
+               alt="Northern Water Snake pattern" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+        <figure>
+          <img src="images/067bc5_65c70874388647ae8c20ab88549a4943~mv2.png"
+               alt="Northern Water Snake near water" loading="lazy" />
+          <figcaption>Pic: virginiaherpetologicalsociety.com</figcaption>
+        </figure>
+      </div>
+
+      <div class="snake-card">
+        <div class="snake-card-head">
+          <span class="snake-name">🐍 Northern Water Snake</span>
+          <span class="badge badge-safe">✓ Non-Venomous</span>
+        </div>
+        <div class="snake-facts">
+          <div class="fact-item"><span class="fact-label">Appearance:&nbsp;</span> Thick-bodied, brown or reddish with darker bands</div>
+          <div class="fact-item"><span class="fact-label">Juveniles:&nbsp;</span> Tan or light gray with very clear red or brown bands</div>
+          <div class="fact-item"><span class="fact-label">Adults:&nbsp;</span> Can appear dark brown or almost black, especially when wet</div>
+          <div class="fact-item"><span class="fact-label">Where:&nbsp;</span> Near creeks, ponds, or rivers</div>
+        </div>
+        <div class="snake-funfact"><strong>🌟 Fun fact:</strong> They are very protective and can bite when picked up, but are totally non-venomous.</div>
+        <div class="snake-lookalike">⚠ <strong>Often mistaken for:</strong> Cottonmouth (Water Moccasin). How to tell: Cottonmouths have thick blocky heads; Water Snakes have dark lines on the edge of each labial (lip) scale.</div>
+      </div>
+
+      <!-- Water Snake image 4 -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_33fdbc0dc5404fa4808f905f99c0b31e~mv2.png"
+               alt="Northern Water Snake in habitat" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 3: Identification ─── -->
+    <section class="article-section" id="identification">
+      <h2 class="section-h">How to Identify Snakes</h2>
+      <div class="section-divider"></div>
+
+      <!-- How to Identify section image -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_d744c45c39dd4061b2872c9ebc831579~mv2.png"
+               alt="How to identify snakes" loading="lazy" />
+        </figure>
+      </div>
+
+      <p class="body-text">
+        Identifying snakes can be challenging, but there are key features to look for. Here is a
+        quick reference guide:
+      </p>
+
+      <table class="id-table">
+        <thead>
+          <tr>
+            <th>Snake</th>
+            <th>Status</th>
+            <th>Key ID Feature</th>
+            <th>Where Found</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Eastern Copperhead</td><td class="danger">Venomous</td><td>Hourglass bands, copper-red head</td><td>Statewide</td></tr>
+          <tr><td>Northern Cottonmouth</td><td class="danger">Venomous</td><td>Dark eye mask, thick body</td><td>SE Virginia</td></tr>
+          <tr><td>Timber Rattlesnake</td><td class="danger">Venomous</td><td>Rattle, zigzag blotches</td><td>NE + SW mountains</td></tr>
+          <tr><td>Eastern Rat Snake</td><td class="safe">Non-Venomous</td><td>Shiny black, white chin</td><td>Statewide</td></tr>
+          <tr><td>Eastern Garter Snake</td><td class="safe">Non-Venomous</td><td>Yellowish stripes, slender</td><td>Gardens, near water</td></tr>
+          <tr><td>Dekay's Brown Snake</td><td class="safe">Non-Venomous</td><td>Tiny, brown with dot rows</td><td>Under rocks/mulch</td></tr>
+          <tr><td>Eastern Kingsnake</td><td class="safe">Non-Venomous</td><td>Chain-like white/yellow bands</td><td>Wooded areas</td></tr>
+          <tr><td>Northern Water Snake</td><td class="safe">Non-Venomous</td><td>Brown bands, near water</td><td>Creeks, ponds</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-warning" style="margin-top:1.5rem;">
+        <p class="callout-title">⚠️ Identification Caveats</p>
+        <ul>
+          <li><strong>Head shape:</strong> Triangular heads are sometimes said to indicate venomous snakes, but this is NOT conclusive - do not rely on this alone.</li>
+          <li><strong>Eye pupils:</strong> Vertical pupils are sometimes associated with venomous snakes in the US, but this is NOT 100% guaranteed.</li>
+          <li><strong>Color patterns</strong> are the most reliable field guide, but juveniles can look different from adults.</li>
+          <li>Non-venomous snakes in the USA often have vertical dark bars on the jaw.</li>
+        </ul>
+      </div>
+
+      <!-- Head Shape image -->
+      <div class="article-img-wrap img-full" style="margin-top:1.5rem;">
+        <figure>
+          <img src="images/067bc5_7cf2fa196c694d65bc7aed4c61b8130a~mv2.png"
+               alt="Snake head shape comparison - venomous vs non-venomous" loading="lazy" />
+          <figcaption>Head shape comparison</figcaption>
+        </figure>
+      </div>
+
+      <!-- Eyes image -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_042084625ed645fb86e302966a628a55~mv2.png"
+               alt="Snake eye pupil comparison - round vs elliptical" loading="lazy" />
+          <figcaption>Eye shape comparison</figcaption>
+        </figure>
+      </div>
+
+      <!-- Snakes in USA image -->
+      <div class="article-img-wrap img-full">
+        <figure>
+          <img src="images/067bc5_6383b5d01eb2412d9ec87459935891ee~mv2.png"
+               alt="Snakes in the USA overview" loading="lazy" />
+          <figcaption>Snakes in USA</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 4: Safety ─── -->
+    <section class="article-section" id="safety">
+      <h2 class="section-h">Safety Tips When Encountering Snakes</h2>
+      <div class="section-divider"></div>
+      <div class="callout callout-info">
+        <p class="callout-title">✅ What to Do If You See a Snake</p>
+        <ul>
+          <li><strong>Stay Calm:</strong> Most snakes are not aggressive and will not attack unless provoked.</li>
+          <li><strong>Keep Your Distance:</strong> Give it space. Do not attempt to touch or capture it.</li>
+          <li><strong>Observe from Afar:</strong> Take a moment to observe from a safe distance to help identify the species.</li>
+          <li><strong>Never Handle:</strong> Even non-venomous snakes can bite. Observe, don't grab.</li>
+          <li><strong>Educate Yourself:</strong> Familiarize yourself with local snakes - knowledge is your best safety tool.</li>
+          <li><strong>Call for Help:</strong> If a snake is inside your home or property, call SaveSnakes.org for free removal.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 5: Ecosystem ─── -->
+    <section class="article-section" id="ecosystem">
+      <h2 class="section-h">The Role of Snakes in the Ecosystem</h2>
+      <div class="section-divider"></div>
+      <p class="body-text">
+        Snakes play a vital role in maintaining the balance of ecosystems. They help control
+        populations of rodents and other small animals, which can prevent overpopulation and the
+        spread of disease. Additionally, snakes serve as prey for larger animals, contributing to
+        the food chain.
+      </p>
+      <p class="body-text">
+        Understanding their role can help foster a greater appreciation for these often-misunderstood
+        creatures. A world with healthy snake populations is a world with balanced, thriving ecosystems.
+      </p>
+    </section>
+
+    <!-- ─── SECTION 6: Conclusion ─── -->
+    <section class="article-section" id="conclusion">
+      <h2 class="section-h">Embracing Virginia's Serpentine Residents</h2>
+      <div class="section-divider"></div>
+      <p class="body-text">
+        Virginia's snakes are an integral part of the state's natural heritage. By learning about
+        their characteristics, habitats, and behaviors, you can enhance your outdoor experiences
+        and contribute to the conservation of these fascinating reptiles.
+      </p>
+      <p class="body-text">
+        Next time you venture into the wild, take a moment to appreciate the snakes you encounter.
+        Whether they are slithering through the grass or basking in the sun, these creatures are a
+        testament to the beauty and diversity of Virginia's wildlife.
+      </p>
+
+      <div class="post-cta">
+        <h3>Need a Snake Removed?</h3>
+        <p>We provide free, humane snake relocation services in the Richmond, VA area. No need to harm the snake - we'll handle it safely.</p>
+        <a href="index.html#contact" class="btn btn-primary">Contact Us →</a>
+      </div>
+    </section>
+
+  </article>
+
+  <!-- ─── Article footer ─── -->
+  <div class="post-footer-strip">
+    <div class="post-stats">
+      <span>👁 88 views</span>
+      <span>💬 0 comments</span>
+    </div>
+    <a class="back-link" href="index.html#updates">← Back to Latest Updates</a>
+  </div>
+</main>
+
+<!-- ═══ SITE FOOTER ═══ -->
+<footer style="background:var(--green-deep); padding:2rem 2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:3rem;">
+  <p style="font-family:'Playfair Display',serif; color:#fff; font-size:0.95rem; font-weight:700;">SaveSnakes.org</p>
+  <p style="font-size:0.75rem; color:rgba(255,255,255,0.4);">© 2025 SaveSnakes.org · Richmond, VA · <a href="mailto:savesnakesorg@gmail.com" style="color:inherit;">savesnakesorg@gmail.com</a> · <a href="tel:+18044045594" style="color:inherit;">(804) 404-5594</a></p>
+</footer>
+
+<script>
+  function openDrawer() {
+    document.getElementById('drawer').classList.add('open');
+    document.getElementById('drawerBg').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('drawerBg').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
+
+</body>
+</html>

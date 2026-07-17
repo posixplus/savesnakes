@@ -25,6 +25,10 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXMX2NK1KR');</script>
 
 <style>
+/* was style-focus="" (Claude Design runtime attr) */
+.hp-form input:focus,.hp-form textarea:focus,.hp-form select:focus{border-color:#2b5a3a !important;}
+/* native select arrow + consistent box */
+.hp-form select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a8676' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") !important;background-repeat:no-repeat !important;background-position:right 12px center !important;background-size:18px !important;background-color:#fff !important;padding-right:40px !important;min-height:46px;}
 [data-hv="hvwa"]:hover{background:#1ebe5a;}
 /* --- drawer + scrim (were runtime-computed inline styles) --- */
 .hp-drawer{position:fixed;top:0;right:0;height:100vh;width:min(80vw,300px);background:#1d3f29;z-index:200;
@@ -321,7 +325,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <a href="#home" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Home</a>
         <a href="#services" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Services</a>
         <a href="#snakes" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Meet the Snakes</a>
-        <a href="blog-coexist-richmond.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Helpful Tips</a>
+        <a href="#guides" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Helpful Tips</a>
         <a href="#safety" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Safety</a>
         <a href="#updates" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Latest Updates</a>
         <a href="#mission" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Mission</a>
@@ -342,7 +346,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <a href="#home" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Home</a>
     <a href="#services" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Services</a>
     <a href="#snakes" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Meet the Snakes</a>
-    <a href="blog-coexist-richmond.html" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Helpful Tips</a>
+    <a href="#guides" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Helpful Tips</a>
     <a href="#safety" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Safety</a>
     <a href="#updates" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Latest Updates</a>
     <a href="#mission" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Mission</a>
@@ -920,35 +924,35 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
       <div style="background:#fffdf8;border:1px solid #e4dac4;border-radius:18px;padding:30px 30px;box-shadow:0 8px 28px rgba(0,0,0,0.05);">
         <p style="font-size:14.5px;color:#5f6c5e;margin:0 0 20px;">Fill out the form below and we'll get back to you as soon as possible.</p>
-        <form data-action="onSubmit" action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:16px;"><input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY_HERE"><input type="hidden" name="subject" value="New Get Help request from savesnakes.org"><input type="hidden" name="from_name" value="SaveSnakes.org website"><input type="checkbox" name="botcheck" class="hidden" style="display:none !important" tabindex="-1" autocomplete="off"><input type="hidden" name="redirect" value="https://savesnakes.org/thanks.html">
+        <form class="hp-form" data-action="onSubmit" action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:16px;"><input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY_HERE"><input type="hidden" name="subject" value="New Get Help request from savesnakes.org"><input type="hidden" name="from_name" value="SaveSnakes.org website"><input type="checkbox" name="botcheck" class="hidden" style="display:none !important" tabindex="-1" autocomplete="off"><input type="hidden" name="redirect" value="https://savesnakes.org/thanks.html">
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 140px), 1fr));gap:14px;">
             <div>
               <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Name *</label>
-              <input type="text" name="name" placeholder="Your full name" required="true" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;" style-focus="border-color:#2b5a3a">
+              <input type="text" name="name" placeholder="Your full name" required="true" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;">
             </div>
             <div>
               <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Phone</label>
-              <input type="tel" name="phone" placeholder="(804) 000-0000" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;" style-focus="border-color:#2b5a3a">
+              <input type="tel" name="phone" placeholder="(804) 000-0000" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;">
             </div>
           </div>
           <div>
             <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Email *</label>
-            <input type="email" name="email" placeholder="your@email.com" required="true" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;" style-focus="border-color:#2b5a3a">
+            <input type="email" name="email" placeholder="your@email.com" required="true" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;">
           </div>
           <div>
             <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Reason for Contact</label>
-            <sc-raw-select name="subject" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;" style-focus="border-color:#2b5a3a">
+            <select name="reason" id="reason" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;">
               <option value="">Select a reason…</option>
               <option value="Snake Relocation Request">Snake Relocation Request</option>
               <option value="Snake Identification">Snake Identification Help</option>
               <option value="General Question">General Question</option>
               <option value="Donate / Support">Donate / Support</option>
               <option value="Other">Other</option>
-            </sc-raw-select>
+            </select>
           </div>
           <div>
             <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Message *</label>
-            <textarea name="message" placeholder="Describe the situation or your question…" required="true" style="width:100%;min-height:112px;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;resize:vertical;" style-focus="border-color:#2b5a3a"></textarea>
+            <textarea name="message" placeholder="Describe the situation or your question…" required="true" style="width:100%;min-height:112px;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;resize:vertical;"></textarea>
           </div>
           <button type="submit" style="width:100%;justify-content:center;display:inline-flex;align-items:center;gap:8px;padding:15px;background:#d99a3a;color:#1b1205;font-weight:700;font-size:15.5px;border:none;border-radius:10px;cursor:pointer;" data-hv="hv2">Send Message</button>
           <p style="font-size:13px;color:#8a957f;margin:0;text-align:center;">We typically respond within 24 hours.</p>

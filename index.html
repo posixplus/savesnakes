@@ -33,11 +33,22 @@
 [data-hv="hvwa"]:hover{background:#1ebe5a;}
 [data-hv="hvsafe"]:hover{border-bottom-color:#2b5a3a;}
 [data-hv="hvcall2"]:hover{background:#22492f;}
-/* nav social icons */
-.hp-social{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;color:rgba(255,255,255,0.72);text-decoration:none;transition:.16s;position:relative;}
-.hp-social::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:44px;height:44px;}
-.hp-social:hover{color:#fff;background:rgba(255,255,255,0.10);}
-.hp-social-lg{width:44px;height:44px;background:rgba(255,255,255,0.06);}
+/* nav social icons - filled brand badges for visibility on the dark green bar */
+.hp-social{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;
+  border-radius:50%;text-decoration:none;position:relative;color:#fff;
+  transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;}
+.hp-social::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:44px;height:44px;}
+.hp-social svg{width:15px;height:15px;display:block;}
+.hp-social-fb{background:#1877F2;}
+.hp-social-ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%);}
+.hp-social-yt{background:#FF0000;}
+.hp-social:hover{transform:translateY(-2px);filter:brightness(1.12);
+  box-shadow:0 4px 14px rgba(0,0,0,0.35);}
+.hp-social:focus-visible{outline:3px solid #d99a3a;outline-offset:2px;}
+/* drawer: larger badges with labels alongside */
+.hp-social-lg{width:40px;height:40px;}
+.hp-social-lg svg{width:19px;height:19px;}
 
 /* --- drawer + scrim (were runtime-computed inline styles) --- */
 .hp-drawer{position:fixed;top:0;right:0;height:100vh;width:min(80vw,300px);background:#1d3f29;z-index:200;
@@ -339,7 +350,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <a href="#updates" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Latest Updates</a>
         <a href="#mission" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Mission</a>
         
-          <span style="display:inline-flex;align-items:center;gap:4px;"><a href="https://www.facebook.com/SaveSnakesOrg/" target="_blank" rel="noopener" aria-label="Facebook" class="hp-social" data-cta="social-facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" aria-label="Instagram" class="hp-social" data-cta="social-instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.4" cy="6.6" r="1.25"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" aria-label="YouTube" class="hp-social" data-cta="social-youtube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.5 7.2a2.8 2.8 0 0 0-1.9-2C18.9 4.7 12 4.7 12 4.7s-6.9 0-8.6.5a2.8 2.8 0 0 0-1.9 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 4.8 2.8 2.8 0 0 0 1.9 2c1.7.5 8.6.5 8.6.5s6.9 0 8.6-.5a2.8 2.8 0 0 0 1.9-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-4.8z"/><path d="M9.8 15.3V8.7l5.7 3.3z" fill="#1d3f29"/></svg></a></span>
+          <span style="display:inline-flex;align-items:center;gap:4px;"><a href="https://www.facebook.com/SaveSnakesOrg/" target="_blank" rel="noopener" aria-label="Facebook" class="hp-social hp-social-fb" data-cta="social-facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" aria-label="Instagram" class="hp-social hp-social-ig" data-cta="social-instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" aria-label="YouTube" class="hp-social hp-social-yt" data-cta="social-youtube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a></span>
         </div>
         <button class="hp-burger" data-action="openNav" aria-label="Open menu" style="background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;">
           <span style="display:block;width:24px;height:2px;background:#fff;border-radius:2px;"></span>
@@ -360,7 +371,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <a href="#updates" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Latest Updates</a>
     <a href="#mission" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Mission</a>
   
-    <span style="display:flex;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.12);"><a href="https://www.facebook.com/SaveSnakesOrg/" target="_blank" rel="noopener" aria-label="Facebook" class="hp-social hp-social-lg" data-cta="social-facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" aria-label="Instagram" class="hp-social hp-social-lg" data-cta="social-instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.4" cy="6.6" r="1.25"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" aria-label="YouTube" class="hp-social hp-social-lg" data-cta="social-youtube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.5 7.2a2.8 2.8 0 0 0-1.9-2C18.9 4.7 12 4.7 12 4.7s-6.9 0-8.6.5a2.8 2.8 0 0 0-1.9 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 4.8 2.8 2.8 0 0 0 1.9 2c1.7.5 8.6.5 8.6.5s6.9 0 8.6-.5a2.8 2.8 0 0 0 1.9-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-4.8z"/><path d="M9.8 15.3V8.7l5.7 3.3z" fill="#1d3f29"/></svg></a></span>
+    <span style="display:flex;gap:14px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.12);"><a href="https://www.facebook.com/SaveSnakesOrg/" target="_blank" rel="noopener" aria-label="Facebook" class="hp-social hp-social-lg hp-social-fb" data-cta="social-facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" aria-label="Instagram" class="hp-social hp-social-lg hp-social-ig" data-cta="social-instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" aria-label="YouTube" class="hp-social hp-social-lg hp-social-yt" data-cta="social-youtube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a></span>
   </aside>
 
   <!-- ══════════ HERO ══════════ -->

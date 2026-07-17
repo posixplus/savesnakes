@@ -30,6 +30,8 @@
 /* native select arrow + consistent box */
 .hp-form select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a8676' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") !important;background-repeat:no-repeat !important;background-position:right 12px center !important;background-size:18px !important;background-color:#fff !important;padding-right:40px !important;min-height:46px;}
 [data-hv="hvwa"]:hover{background:#1ebe5a;}
+[data-hv="hvsafe"]:hover{border-bottom-color:#2b5a3a;}
+[data-hv="hvcall2"]:hover{background:#22492f;}
 /* --- drawer + scrim (were runtime-computed inline styles) --- */
 .hp-drawer{position:fixed;top:0;right:0;height:100vh;width:min(80vw,300px);background:#1d3f29;z-index:200;
   display:flex;flex-direction:column;gap:2px;padding:22px;box-shadow:-12px 0 40px rgba(0,0,0,.3);
@@ -297,11 +299,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   @keyframes floatUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
   ::selection { background: #d99a3a; color: #1b1205; }
   .hp-burger { display: none; }
-  @media (max-width: 820px) {
+  @media (max-width: 1180px) {
     .hp-nav-links { display: none !important; }
     .hp-burger { display: inline-flex !important; }
   }
-  @media (min-width: 821px) {
+  @media (min-width: 1181px) {
     .hp-drawer, .hp-scrim { display: none !important; }
   }
 </style></head>
@@ -326,11 +328,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <a href="#services" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Services</a>
         <a href="#snakes" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Meet the Snakes</a>
         <a href="#guides" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Helpful Tips</a>
-        <a href="#safety" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Safety</a>
+        <a href="snakebite-help.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Snake Bite Help</a>
         <a href="#updates" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Latest Updates</a>
         <a href="#mission" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Mission</a>
         <a href="#follow" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Follow Us</a>
-        <a href="#contact" style="margin-left:8px;white-space:nowrap;font-size:14px;font-weight:700;color:#1b1205;background:#d99a3a;text-decoration:none;padding:9px 18px;border-radius:8px;" data-hv="hv2">Get Help</a>
+        <a href="tel:+18044045594" data-cta="call-nav" style="margin-left:8px;white-space:nowrap;font-size:14px;font-weight:700;color:#1b1205;background:#d99a3a;text-decoration:none;padding:9px 18px;border-radius:8px;" data-hv="hv2">Get Help</a>
         </div>
         <button class="hp-burger" data-action="openNav" aria-label="Open menu" style="background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px;">
           <span style="display:block;width:24px;height:2px;background:#fff;border-radius:2px;"></span>
@@ -347,11 +349,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <a href="#services" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Services</a>
     <a href="#snakes" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Meet the Snakes</a>
     <a href="#guides" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Helpful Tips</a>
-    <a href="#safety" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Safety</a>
+    <a href="snakebite-help.html" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Snake Bite Help</a>
     <a href="#updates" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Latest Updates</a>
     <a href="#mission" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Mission</a>
     <a href="#follow" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Follow Us</a>
-    <a href="#contact" data-action="closeNav" style="margin-top:14px;text-align:center;font-size:15px;font-weight:700;color:#1b1205;background:#d99a3a;text-decoration:none;padding:13px;border-radius:9px;">Get Help</a>
+    <a href="tel:+18044045594" data-cta="call-nav" data-action="closeNav" style="margin-top:14px;text-align:center;font-size:15px;font-weight:700;color:#1b1205;background:#d99a3a;text-decoration:none;padding:13px;border-radius:9px;">Get Help</a>
   </aside>
 
   <!-- ══════════ HERO ══════════ -->
@@ -700,6 +702,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
           </article>
         
       </div>
+      <p style="margin:30px 0 0;text-align:center;font-size:15.5px;color:#5f6c5e;">
+        Not sure which one you're looking at?
+        <a href="#safety" style="color:#2b5a3a;font-weight:700;text-decoration:none;border-bottom:2px solid rgba(43,90,58,0.3);padding-bottom:1px;" data-hv="hvsafe">Tell them apart &rarr;</a>
+      </p>
     </div>
   </section>
 
@@ -912,6 +918,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#1d3f29;margin:12px 0 16px;">Contact Us</h2>
         <p style="font-size:16.5px;line-height:1.7;color:#5f6c5e;margin:0 0 26px;max-width:380px;">Need a snake removed? Have a question? We're here to help. Reach us by phone or fill out the form.</p>
         <a href="tel:+18044045594" style="font-family:'Spectral',serif;font-weight:600;font-size:30px;color:#1d3f29;text-decoration:none;display:inline-block;margin-bottom:16px;" data-hv="hv8">(804) 404-5594</a>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:4px 0 22px;">
+          <a href="tel:+18044045594" data-cta="call" style="display:inline-flex;align-items:center;gap:9px;padding:14px 24px;background:#2b5a3a;color:#fff;font-weight:700;font-size:15px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;white-space:nowrap;" data-hv="hvcall2"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg><span>Call Now</span></a>
+          <a href="https://wa.me/18044045594?text=Hi%20SaveSnakes%2C%20I%20need%20help%20with%20a%20snake." target="_blank" rel="noopener" data-cta="whatsapp" aria-label="Message SaveSnakes on WhatsApp" style="display:inline-flex;align-items:center;gap:9px;padding:14px 22px;background:#25D366;color:#08300f;font-weight:700;font-size:15px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;white-space:nowrap;" data-hv="hvwa"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.700-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.9 2.2-.1 3.5a10 10 0 0 0 4.5 4.2c1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg><span>WhatsApp</span></a>
+        </div>
         <div style="display:flex;align-items:center;gap:10px;font-size:15px;color:#5f6c5e;margin-bottom:8px;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b87a22" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           <a href="mailto:savesnakesorg@gmail.com" style="color:inherit;text-decoration:none;" data-hv="hv9">savesnakesorg@gmail.com</a>

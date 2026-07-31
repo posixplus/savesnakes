@@ -171,6 +171,21 @@ a[href^="tel:"]::after,a[href^="mailto:"]::after{content:"";position:absolute;le
 a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2px;}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 
+    /* --- resource cards: give link groups the same visual weight as .callout,
+       so the lower half of the page stops reading as loose floating text --- */
+    .res-card { background: #fffdf8; border: 1px solid #e4dac4; border-left: 4px solid #4d7c4e; border-radius: 14px; padding: 1.4rem 1.6rem; margin: 1.6rem 0; box-shadow: 0 3px 14px rgba(21,36,26,0.05); }
+    .res-card-gold { border-left-color: #d99a3a; }
+    .res-card-head { display: flex; align-items: center; gap: 0.55rem; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2b5a3a; margin-bottom: 0.7rem; }
+    .res-card-gold .res-card-head { color: #9a6c00; }
+    .res-card-lead { font-size: 0.96rem; line-height: 1.7; color: #5f6c5e; margin-bottom: 0.5rem; }
+    .res-card .link-list { margin: 0; }
+    .res-card .link-list li { margin: 0; border-top: 1px solid #f0e7d6; }
+    .res-card .link-list li:first-child { border-top: none; }
+    .res-card .link-list li > div { padding: 0.72rem 0; }
+    .res-card .link-list a::after { content: ' \2197'; font-size: 0.82em; color: #a8b09c; }
+    .res-card .link-list a:hover::after { color: #2b5a3a; }
+    .res-card .link-desc { margin-top: 0.25rem; }
+    @media (max-width: 640px) { .res-card { padding: 1.15rem 1.15rem; } }
     /* --- nav parity with index.html -------------------------------
        index.html centres its nav inside a 1240px container; these pages
        were full-bleed, so the header visibly jumped when you navigated.
@@ -265,9 +280,9 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
         <p style="font-size:0.98rem;line-height:1.6;margin-bottom:0.5rem;"><strong><a href="https://www.facebook.com/share/GjR8QAWXjBweBGm4/" target="_blank" rel="noopener" style="color:#b03a1f;">National Snakebite Support - Facebook Group →</a></strong></p>
         <p style="font-size:0.9rem;color:#5f6c5e;line-height:1.6;margin:0;">For people or pets that have an active snake bite. Top toxicology doctors answer here. <strong>DO NOT comment on others' posts</strong> - join only if you need help with an active snake bite.</p>
       </div>
-      <p class="body-text" style="margin-top:1rem;">
-        The following articles outline proper snakebite management in a pre-hospital environment:
-      </p>
+      <div class="res-card res-card-gold">
+        <p class="res-card-head">&#128218; Pre-Hospital Management Reading</p>
+        <p class="res-card-lead">The following articles outline proper snakebite management in a pre-hospital environment:</p>
       <ul class="link-list">
         <li>
           <div>
@@ -288,6 +303,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
           </div>
         </li>
       </ul>
+      </div>
       <p class="body-text" style="margin-top:1rem;">
         Snakebites cause tissue injury, and improper use of ice can exacerbate that by causing
         thermal injury (frostbite). By knowing what to do in case of a snake bite, you can respond
@@ -295,18 +311,22 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
       </p>
     
       <h3 class="snake-h">Snakebite Management Resources</h3>
-      <p class="body-text" style="margin-bottom:0.4rem;"><strong>🧑 Human snakebite management</strong></p>
+      <div class="res-card">
+        <p class="res-card-head">&#129489; Human Snakebite Management</p>
       <ul class="link-list">
         <li><div><a href="https://www.nationalsnakebitesupport.org/nss-snakebite-management-education/pre-hospital-management-for-pit-viper-envenomaitons-human-hsg3b" target="_blank" rel="noopener">Pre-hospital management for North American pit vipers (Human)</a></div></li>
         <li><div><a href="https://www.nationalsnakebitesupport.org/nss-snakebite-management-education/inhospital-management-for-pit-viper-envenomaitons-human" target="_blank" rel="noopener">In-hospital management for North American pit vipers (Human)</a><p class="link-desc">Show this one to your doctor or hospital.</p></div></li>
         <li><div><a href="https://wsed.org/snakebite-management-pre-hospital/" target="_blank" rel="noopener">WSED - Snakebite Management Pre-Hospital</a></div></li>
         <li><div><a href="https://medium.com/natural-world/how-to-position-a-snakebite-9430fc988af" target="_blank" rel="noopener">How to Position a Snakebite</a></div></li>
       </ul>
-      <p class="body-text" style="margin:0.8rem 0 0.4rem;"><strong>🐾 Dog &amp; cat snakebite management</strong></p>
+      </div>
+      <div class="res-card">
+        <p class="res-card-head">&#128062; Dog &amp; Cat Snakebite Management</p>
       <ul class="link-list">
         <li><div><a href="https://www.nationalsnakebitesupport.org/nss-snakebite-management-education/pre-hospital-management-for-pit-viper-envenomaitons-dogs-and-cats" target="_blank" rel="noopener">Pre-hospital management for North American pit vipers (Dogs &amp; Cats)</a></div></li>
         <li><div><a href="https://www.nationalsnakebitesupport.org/nss-snakebite-management-education/dvm-pit-viper-treatment-algorithm-and-supplemental-information" target="_blank" rel="noopener">NSS veterinary treatment algorithm &amp; supplemental information</a></div></li>
       </ul>
+      </div>
       <div class="callout callout-info" style="margin-top:1rem;">
         <p class="callout-title">🏥 Hospital Recommendations</p>
         <p style="margin:0 0 0.5rem;"><a href="https://www.nationalsnakebitesupport.org/hospital-recommendations" target="_blank" rel="noopener" style="color:#2b5a3a;font-weight:700;">National Snakebite Support - Hospital Recommendations →</a></p>

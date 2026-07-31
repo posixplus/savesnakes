@@ -171,6 +171,21 @@ a[href^="tel:"]::after,a[href^="mailto:"]::after{content:"";position:absolute;le
 a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2px;}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 
+    /* --- resource cards: give link groups the same visual weight as .callout,
+       so the lower half of the page stops reading as loose floating text --- */
+    .res-card { background: #fffdf8; border: 1px solid #e4dac4; border-left: 4px solid #4d7c4e; border-radius: 14px; padding: 1.4rem 1.6rem; margin: 1.6rem 0; box-shadow: 0 3px 14px rgba(21,36,26,0.05); }
+    .res-card-gold { border-left-color: #d99a3a; }
+    .res-card-head { display: flex; align-items: center; gap: 0.55rem; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2b5a3a; margin-bottom: 0.7rem; }
+    .res-card-gold .res-card-head { color: #9a6c00; }
+    .res-card-lead { font-size: 0.96rem; line-height: 1.7; color: #5f6c5e; margin-bottom: 0.5rem; }
+    .res-card .link-list { margin: 0; }
+    .res-card .link-list li { margin: 0; border-top: 1px solid #f0e7d6; }
+    .res-card .link-list li:first-child { border-top: none; }
+    .res-card .link-list li > div { padding: 0.72rem 0; }
+    .res-card .link-list a::after { content: ' \2197'; font-size: 0.82em; color: #a8b09c; }
+    .res-card .link-list a:hover::after { color: #2b5a3a; }
+    .res-card .link-desc { margin-top: 0.25rem; }
+    @media (max-width: 640px) { .res-card { padding: 1.15rem 1.15rem; } }
     /* --- nav parity with index.html -------------------------------
        index.html centres its nav inside a 1240px container; these pages
        were full-bleed, so the header visibly jumped when you navigated.
@@ -246,7 +261,9 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
 <main>
   <article class="article-wrap">
     
-      <p class="body-text">Not sure what you're looking at? These community groups will help you identify a snake quickly - always include a clear photo and your location, and never handle a snake to get the shot.</p>
+      <div class="res-card">
+        <p class="res-card-head">&#128269; Snake ID Help &mdash; Community Groups</p>
+        <p class="res-card-lead">Not sure what you're looking at? These community groups will help you identify a snake quickly. Always include a clear photo and your location &mdash; and <strong style="color:#b03a1f;">never handle a snake to get the shot</strong>.</p>
       <ul class="link-list">
         <li>
           <div>
@@ -261,6 +278,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
           </div>
         </li>
       </ul>
+      </div>
     
 
     <div class="post-cta">

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Posts &amp; Updates | SaveSnakes.org</title>
+  <link rel="canonical" href="https://savesnakes.org/facebook.html">
+  <meta name="description" content="Rescue photos, snake ID help and community updates from the SaveSnakes.org Facebook page - a free, no-kill snake rescue serving Greater Richmond, Virginia.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SaveSnakes.org">
+  <meta property="og:title" content="Facebook Posts &amp; Updates | SaveSnakes.org">
+  <meta property="og:description" content="Rescue photos, snake ID help and community updates from the SaveSnakes.org Facebook page.">
+  <meta property="og:url" content="https://savesnakes.org/facebook.html">
+  <meta property="og:image" content="https://savesnakes.org/assets/site/i4184f6d2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXMX2NK1KR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXMX2NK1KR');</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 118px; }
+    body { font-family: 'Hanken Grotesk', system-ui, sans-serif; background: #f5efe3; color: #25312a; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #d99a3a; color: #1b1205; }
+    :root {
+      --green-deep: #1d3f29; --green-mid: #2b5a3a; --green-soft: #4d7c4e;
+      --green-pale: #eef4e6; --cream: #f5efe3; --cream-warm: #ece2cf;
+      --text: #25312a; --text-muted: #5f6c5e; --border: #e4dac4; --honey: #d99a3a;
+      --fb-blue: #1877F2;
+    }
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 999; background: rgba(29,63,41,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px clamp(18px,4vw,40px); }
+    .nav-brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .nav-brand-icon { width: 38px; height: 38px; background: #2b5a3a; border: 2px solid #d99a3a; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .nav-brand-text { font-family: 'Spectral', serif; font-size: 19px; font-weight: 700; color: #fff; letter-spacing: 0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { font-size: 14px; font-weight: 500; white-space: nowrap; color: rgba(255,255,255,0.82); text-decoration: none; padding: 8px 12px; border-radius: 7px; transition: color 0.15s, background 0.15s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.09); }
+    .nav-social { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; }
+    .nav-social a { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; padding: 0; border-radius: 50%; color: #fff; transition: transform 0.16s ease, filter 0.16s ease; }
+    .nav-social a:hover { transform: translateY(-1px); filter: brightness(1.12); background: none; }
+    .soc-fb { background: #1877F2; }
+    .soc-ig { background: linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888); }
+    .soc-yt { background: #FF0000; }
+    .nav-social a[aria-current="page"] { box-shadow: 0 0 0 2px #d99a3a; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 6px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: rgba(255,255,255,0.85); }
+    /* Drawer */
+    .drawer-bg { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.45); }
+    .drawer-bg.open { display: block; }
+    .drawer { position: fixed; top: 0; right: -300px; width: 280px; height: 100vh; z-index: 1001; background: #1d3f29; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; transition: right 0.28s ease; overflow-y: auto; }
+    .drawer.open { right: 0; }
+    .drawer-close { background: none; border: none; color: rgba(255,255,255,0.6); font-size: 1.2rem; cursor: pointer; align-self: flex-end; padding: 4px; margin-bottom: 1rem; }
+    .drawer a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 0.7rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .drawer a:hover { color: #fff; }
+    .drawer-social { display: flex; gap: 14px; margin-top: 1.2rem; }
+    .drawer-social a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; color: #fff; padding: 0; border-bottom: none; }
+    /* Hero */
+    .post-hero { background: #1d3f29; padding: clamp(3rem,6vw,5rem) 2rem clamp(2.5rem,4vw,3.5rem); text-align: center; position: relative; overflow: hidden; }
+    .post-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 120%, rgba(217,154,58,0.22) 0%, transparent 65%); pointer-events: none; }
+    .post-hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-bottom: 1.3rem; font-size: 0.82rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+    .breadcrumb a:hover { color: #d99a3a; }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .post-category { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #f0d9ad; background: rgba(217,154,58,0.15); border: 1px solid rgba(217,154,58,0.4); padding: 6px 15px; border-radius: 100px; margin-bottom: 1.1rem; }
+    .post-title { font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(2rem,5vw,3.1rem); line-height: 1.1; color: #fff; letter-spacing: -0.01em; }
+    .post-sub { margin-top: 1rem; font-size: clamp(1rem,1.6vw,1.12rem); color: rgba(255,255,255,0.72); max-width: 620px; margin-left: auto; margin-right: auto; }
+    /* Layout */
+    main { max-width: 1080px; margin: 0 auto; padding: clamp(2.2rem,5vw,3.6rem) clamp(1.1rem,4vw,2.5rem) 1rem; }
+    .feed-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,340px); gap: clamp(1.6rem,3.5vw,2.6rem); align-items: start; }
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #b87a22; }
+    .section-h { font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(1.5rem,3vw,2rem); line-height: 1.18; color: #1d3f29; margin: 0.5rem 0 0.6rem; }
+    .rule { width: 54px; height: 3px; background: #d99a3a; border-radius: 2px; margin-bottom: 1.4rem; }
+    .body-text { font-size: 1.02rem; line-height: 1.75; color: var(--text-muted); margin-bottom: 1rem; }
+    /* Feed panel */
+    .feed-panel { background: #fffdf8; border: 1px solid var(--border); border-radius: 16px; padding: clamp(1rem,2.5vw,1.4rem); box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
+    .feed-frame-wrap { position: relative; min-height: 560px; border-radius: 10px; overflow: hidden; background: #f0f2f5; }
+    .feed-frame-wrap iframe { display: block; border: none; overflow: hidden; margin: 0 auto; background: #fff; }
+    .feed-status { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.6rem; padding: 2rem 1.4rem; background: #f0f2f5; color: var(--text-muted); font-size: 0.95rem; }
+    .feed-status[hidden] { display: none; }
+    /* when the embed is blocked the frame is removed from flow, so let the
+       fallback size the panel instead of holding the full 720px frame height */
+    .feed-frame-wrap.is-fallback { min-height: 0 !important; }
+    .feed-frame-wrap.is-fallback .feed-status { position: static; min-height: 320px; }
+    .spinner { width: 26px; height: 26px; border: 3px solid #d8dde5; border-top-color: var(--fb-blue); border-radius: 50%; animation: spin 0.9s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .fallback-title { font-family: 'Spectral', serif; font-size: 1.15rem; font-weight: 600; color: #1d3f29; }
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; font-weight: 700; font-size: 0.97rem; text-decoration: none; padding: 0.85rem 1.4rem; border-radius: 10px; border: 1.5px solid transparent; transition: 0.16s; }
+    .btn-fb { background: var(--fb-blue); color: #fff; }
+    .btn-fb:hover { background: #1461c9; }
+    .btn-primary { background: #2b5a3a; color: #fff; }
+    .btn-primary:hover { background: #22492f; }
+    .btn-ghost { background: #fff; color: #2b5a3a; border-color: #e0d4ba; }
+    .btn-ghost:hover { background: #2b5a3a; color: #fff; border-color: #2b5a3a; }
+    .btn-row { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.1rem; }
+    /* Sidebar */
+    .side-card { background: #fffdf8; border: 1px solid var(--border); border-radius: 16px; padding: 1.4rem 1.5rem; box-shadow: 0 4px 18px rgba(0,0,0,0.05); margin-bottom: 1.2rem; }
+    .side-card h3 { font-family: 'Spectral', serif; font-weight: 600; font-size: 1.12rem; color: #1d3f29; margin-bottom: 0.7rem; }
+    .side-card p { font-size: 0.93rem; line-height: 1.65; color: var(--text-muted); }
+    .side-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; margin-top: 0.4rem; }
+    .side-list a { font-size: 0.94rem; color: #2b5a3a; font-weight: 600; text-decoration: none; }
+    .side-list a:hover { text-decoration: underline; }
+    .side-list span { color: var(--text-muted); font-size: 0.93rem; display: flex; gap: 0.5rem; align-items: flex-start; }
+    .tick { color: #4d7c4e; font-weight: 700; flex-shrink: 0; }
+    .side-card-alert { background: #fdf3ef; border-color: #f0cdbf; }
+    .side-card-alert h3 { color: #b03a1f; }
+    /* Emergency strip */
+    .cta-strip { max-width: 1080px; margin: clamp(1.6rem,4vw,2.6rem) auto 0; padding: 0 clamp(1.1rem,4vw,2.5rem); }
+    .cta-inner { background: var(--green-pale); border: 1px solid #cfe0c4; border-radius: 16px; padding: clamp(1.5rem,3vw,2.2rem); text-align: center; }
+    .cta-inner h3 { font-family: 'Spectral', serif; font-weight: 600; font-size: clamp(1.3rem,2.6vw,1.7rem); color: #1d3f29; margin-bottom: 0.5rem; }
+    .cta-inner p { color: var(--text-muted); font-size: 1rem; max-width: 560px; margin: 0 auto; }
+    .cta-inner .btn-row { justify-content: center; }
+    @media (max-width: 900px) {
+      .feed-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+    a:focus-visible, button:focus-visible { outline: 3px solid #d99a3a; outline-offset: 2px; }
+    @media (prefers-reduced-motion: reduce) { *{ transition: none !important; animation: none !important; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5efe3" stroke-width="2.2" stroke-linecap="round"><path d="M3 20 C5 11 9 7 13 12 C17 17 21 13 22 5"/><circle cx="22" cy="4.4" r="1.2" fill="#d99a3a" stroke="none"/></svg>
+    </div>
+    <span class="nav-brand-text">SaveSnakes.org</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#snakes">Meet the Snakes</a>
+    <a href="index.html#guides">Helpful Tips</a>
+    <a href="snakebite-help.html">Snake Bite Help</a>
+    <a href="index.html#updates">Latest Updates</a>
+    <a href="index.html#mission">Mission</a>
+    <span class="nav-social">
+      <a href="facebook.html" class="soc-fb" aria-label="Facebook posts" aria-current="page" data-cta="social-facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" class="soc-ig" aria-label="Instagram" data-cta="social-instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a>
+      <a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" class="soc-yt" aria-label="YouTube" data-cta="social-youtube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a>
+    </span>
+  </div>
+  <button class="hamburger" onclick="openDrawer()" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="drawer-bg" id="drawerBg" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">&#10005;</button>
+  <a href="index.html#home" onclick="closeDrawer()">Home</a>
+  <a href="index.html#services" onclick="closeDrawer()">Services</a>
+  <a href="index.html#snakes" onclick="closeDrawer()">Meet the Snakes</a>
+  <a href="index.html#guides" onclick="closeDrawer()">Helpful Tips</a>
+  <a href="snakebite-help.html" onclick="closeDrawer()">Snake Bite Help</a>
+  <a href="index.html#updates" onclick="closeDrawer()">Latest Updates</a>
+  <a href="index.html#mission" onclick="closeDrawer()">Mission</a>
+  <a href="facebook.html" onclick="closeDrawer()">Facebook Posts</a>
+  <span class="drawer-social">
+    <a href="facebook.html" class="soc-fb" aria-label="Facebook posts"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    <a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" class="soc-ig" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a>
+    <a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" class="soc-yt" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a>
+  </span>
+</div>
+
+<header class="post-hero">
+  <div class="post-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="position:static;background:none;backdrop-filter:none;border:none;padding:0;">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">&#8250;</span>
+      <span style="color:rgba(255,255,255,0.75)">Facebook Posts</span>
+    </nav>
+    <span class="post-category">Straight from our page</span>
+    <h1 class="post-title">Facebook Posts &amp; Updates</h1>
+    <p class="post-sub">Rescue photos, snake ID help, and community updates - published to our Facebook page and mirrored here so you can read them without an account.</p>
+  </div>
+</header>
+
+<main>
+  <div class="feed-grid">
+
+    <div>
+      <span class="section-label">Live Feed</span>
+      <h2 class="section-h">Recent posts from SaveSnakes.org</h2>
+      <div class="rule"></div>
+      <p class="body-text">
+        Most of our day-to-day work shows up on Facebook first: the snake we relocated last night,
+        an ID request from a neighbor, a reminder about copperhead season. The feed below pulls
+        those posts directly from our page. If it does not load - some browsers and ad blockers
+        block social embeds - use the button underneath to open the page on Facebook instead.
+      </p>
+
+      <div class="feed-panel">
+        <div class="feed-frame-wrap" id="feedWrap">
+          <div class="feed-status" id="feedLoading">
+            <div class="spinner" aria-hidden="true"></div>
+            <p>Loading posts from Facebook&hellip;</p>
+          </div>
+          <div class="feed-status" id="feedFallback" hidden>
+            <p class="fallback-title">The Facebook feed could not load</p>
+            <p style="max-width:340px;">This usually means a browser privacy setting or ad blocker is blocking the embed. Our posts are still there - open the page directly.</p>
+            <a class="btn btn-fb" href="https://www.facebook.com/SaveSnakesOrg/" target="_blank" rel="noopener" data-cta="fb-page-fallback">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Open our Facebook page
+            </a>
+          </div>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-fb" href="https://www.facebook.com/SaveSnakesOrg/" target="_blank" rel="noopener" data-cta="fb-page">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Follow us on Facebook
+          </a>
+          <a class="btn btn-ghost" href="index.html#updates">Read our long-form guides &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-card side-card-alert">
+        <h3>&#128680; Active snake bite?</h3>
+        <p style="margin-bottom:0.7rem;">Do not wait on a social post. Get medical help immediately, then read our first-aid steps.</p>
+        <a class="btn btn-primary" href="snakebite-help.html" style="width:100%;">Snake Bite Help &rarr;</a>
+      </div>
+
+      <div class="side-card">
+        <h3>What we post</h3>
+        <ul class="side-list">
+          <li><span><span class="tick">&#10003;</span> Rescue and relocation photos from around Greater Richmond</span></li>
+          <li><span><span class="tick">&#10003;</span> Snake identification help - venomous vs. non-venomous</span></li>
+          <li><span><span class="tick">&#10003;</span> Seasonal safety reminders for yards, trails and pets</span></li>
+          <li><span><span class="tick">&#10003;</span> Myth-busting and conservation education</span></li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <h3>Need a snake removed?</h3>
+        <p style="margin-bottom:0.8rem;">Free, humane relocation across Greater Richmond, VA. Call or message us - a Facebook comment may not be seen right away.</p>
+        <a class="btn btn-primary" href="tel:+18044045594" data-cta="call" style="width:100%;margin-bottom:0.5rem;">Call (804) 404-5594</a>
+        <a class="btn btn-ghost" href="https://wa.me/18044045594?text=Hi%20SaveSnakes%2C%20I%20need%20help%20with%20a%20snake." target="_blank" rel="noopener" data-cta="whatsapp" style="width:100%;">WhatsApp us</a>
+      </div>
+
+      <div class="side-card">
+        <h3>Elsewhere</h3>
+        <ul class="side-list">
+          <li><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener">Instagram &rarr;</a></li>
+          <li><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener">YouTube &rarr;</a></li>
+          <li><a href="snake-identification.html">Snake identification guide &rarr;</a></li>
+          <li><a href="avoid-snakes.html">Keep snakes out of your yard &rarr;</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<section class="cta-strip">
+  <div class="cta-inner">
+    <h3>Snakes are neighbors, not nightmares.</h3>
+    <p>We rescue and relocate snakes across Greater Richmond for free - no killing, no charge. Following along on Facebook is the easiest way to support the work.</p>
+    <div class="btn-row">
+      <a class="btn btn-fb" href="https://www.facebook.com/SaveSnakesOrg/" target="_blank" rel="noopener" data-cta="fb-page-cta">Follow on Facebook</a>
+      <a class="btn btn-primary" href="index.html#contact">Contact Us &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SITE FOOTER ═══ -->
+<footer style="background:var(--green-deep); padding:2rem 2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:3rem;">
+  <p style="font-family:'Spectral',serif; color:#fff; font-size:0.95rem; font-weight:700;">SaveSnakes.org</p>
+  <p style="font-size:0.75rem; color:rgba(255,255,255,0.4);">&copy; 2025 SaveSnakes.org &middot; Richmond, VA &middot; <a href="mailto:savesnakesorg@gmail.com" style="color:inherit;">savesnakesorg@gmail.com</a> &middot; <a href="tel:+18044045594" style="color:inherit;">(804) 404-5594</a></p>
+</footer>
+
+<script>
+  function openDrawer() {
+    document.getElementById('drawer').classList.add('open');
+    document.getElementById('drawerBg').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('drawerBg').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDrawer(); });
+</script>
+
+<script>
+(function () {
+  "use strict";
+  var PAGE = "https://www.facebook.com/SaveSnakesOrg/";
+  var MIN_W = 180, MAX_W = 500, HEIGHT = 720, GRACE = 6000;
+
+  var wrap = document.getElementById('feedWrap');
+  var loading = document.getElementById('feedLoading');
+  var fallback = document.getElementById('feedFallback');
+  if (!wrap) return;
+
+  var frame = null, lastWidth = 0, timer = null;
+  var reachable = null;   // null = unknown, true = plugin host reachable, false = blocked
+  var framed = false;     // iframe fired load at least once
+  var settled = false;    // final state decided
+
+  function targetWidth() {
+    var w = Math.floor(wrap.getBoundingClientRect().width) || MAX_W;
+    return Math.max(MIN_W, Math.min(MAX_W, w));
+  }
+
+  function buildSrc(w) {
+    return "https://www.facebook.com/plugins/page.php"
+      + "?href=" + encodeURIComponent(PAGE)
+      + "&tabs=timeline"
+      + "&width=" + w
+      + "&height=" + HEIGHT
+      + "&small_header=false"
+      + "&adapt_container_width=true"
+      + "&hide_cover=false"
+      + "&show_facepile=true"
+      + "&lazy=true";
+  }
+
+  function showFallback() {
+    if (settled) return;
+    settled = true;
+    if (timer) { clearTimeout(timer); timer = null; }
+    if (loading) loading.hidden = true;
+    if (fallback) fallback.hidden = false;
+    if (frame) { frame.style.display = 'none'; frame.setAttribute('aria-hidden', 'true'); }
+    wrap.classList.add('is-fallback');
+  }
+
+  function showFeed() {
+    if (settled) return;
+    settled = true;
+    if (timer) { clearTimeout(timer); timer = null; }
+    if (loading) loading.hidden = true;
+    if (fallback) fallback.hidden = true;
+    if (frame) frame.style.visibility = 'visible';
+  }
+
+  function decide() {
+    if (reachable === false) { showFallback(); return; }
+    if (reachable === true && framed) { showFeed(); }
+  }
+
+  /* Probe the plugin host directly. An ad blocker or tracker-blocking
+     extension rejects this request outright, which a cross-origin iframe
+     `load` event cannot tell us (a blocked frame still fires `load`). */
+  function probe() {
+    if (typeof window.fetch !== 'function') { reachable = true; return; }
+    window.fetch(buildSrc(MAX_W), { mode: 'no-cors', cache: 'no-store', credentials: 'omit' })
+      .then(function () { reachable = true; decide(); })
+      .catch(function () { reachable = false; decide(); });
+  }
+
+  function render() {
+    var w = targetWidth();
+    if (Math.abs(w - lastWidth) < 8 && frame) return;
+    lastWidth = w;
+
+    if (!frame) {
+      frame = document.createElement('iframe');
+      frame.title = "SaveSnakes.org posts on Facebook";
+      frame.setAttribute('scrolling', 'no');
+      frame.setAttribute('frameborder', '0');
+      frame.setAttribute('allowfullscreen', 'true');
+      frame.setAttribute('allow', 'clipboard-write; encrypted-media; picture-in-picture; web-share');
+      frame.style.visibility = 'hidden';
+      frame.addEventListener('load', function () { framed = true; decide(); });
+      wrap.appendChild(frame);
+      timer = setTimeout(showFallback, GRACE);
+      probe();
+    }
+    frame.style.width = w + 'px';
+    frame.style.height = HEIGHT + 'px';
+    frame.src = buildSrc(w);
+    wrap.style.minHeight = HEIGHT + 'px';
+  }
+
+  render();
+
+  var rt = null;
+  window.addEventListener('resize', function () {
+    clearTimeout(rt);
+    rt = setTimeout(render, 250);
+  });
+})();
+</script>
+
+</body>
+</html>

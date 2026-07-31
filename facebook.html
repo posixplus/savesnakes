@@ -99,6 +99,10 @@
     .btn-ghost:hover { background: #2b5a3a; color: #fff; border-color: #2b5a3a; }
     .btn-row { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.1rem; }
     /* Sidebar */
+    /* the feed column is much taller than the sidebar now, so let the
+       sidebar ride along instead of stranding it at the top */
+    .feed-grid > aside { position: sticky; top: 78px; }
+    @media (max-width: 900px) { .feed-grid > aside { position: static; } }
     .side-card { background: #fffdf8; border: 1px solid var(--border); border-radius: 16px; padding: 1.4rem 1.5rem; box-shadow: 0 4px 18px rgba(0,0,0,0.05); margin-bottom: 1.2rem; }
     .side-card h3 { font-family: 'Spectral', serif; font-weight: 600; font-size: 1.12rem; color: #1d3f29; margin-bottom: 0.7rem; }
     .side-card p { font-size: 0.93rem; line-height: 1.65; color: var(--text-muted); }
@@ -294,7 +298,12 @@
 (function () {
   "use strict";
   var PAGE = "https://www.facebook.com/SaveSnakesOrg/";
-  var MIN_W = 180, MAX_W = 500, HEIGHT = 720, GRACE = 6000;
+  /* The Page Plugin has no post-count parameter, so the only lever on how
+     many posts render is vertical room. Stripping the cover photo and
+     facepile and using the compact header reclaims ~300px of chrome, and
+     a tall frame does the rest. Expect roughly 4-8 posts depending on how
+     media-heavy they are; the frame scrolls internally past that. */
+  var MIN_W = 180, MAX_W = 500, HEIGHT = 1500, GRACE = 6000;
 
   var wrap = document.getElementById('feedWrap');
   var loading = document.getElementById('feedLoading');
@@ -317,10 +326,10 @@
       + "&tabs=timeline"
       + "&width=" + w
       + "&height=" + HEIGHT
-      + "&small_header=false"
+      + "&small_header=true"
       + "&adapt_container_width=true"
-      + "&hide_cover=false"
-      + "&show_facepile=true"
+      + "&hide_cover=true"
+      + "&show_facepile=false"
       + "&lazy=true";
   }
 
@@ -366,7 +375,9 @@
     if (!frame) {
       frame = document.createElement('iframe');
       frame.title = "SaveSnakes.org posts on Facebook";
-      frame.setAttribute('scrolling', 'no');
+      /* 'yes' so anything past the frame height is still reachable rather
+         than silently clipped - the old 'no' is why only one post showed */
+      frame.setAttribute('scrolling', 'yes');
       frame.setAttribute('frameborder', '0');
       frame.setAttribute('allowfullscreen', 'true');
       frame.setAttribute('allow', 'clipboard-write; encrypted-media; picture-in-picture; web-share');

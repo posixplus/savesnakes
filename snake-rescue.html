@@ -171,6 +171,29 @@ a[href^="tel:"]::after,a[href^="mailto:"]::after{content:"";position:absolute;le
 a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2px;}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 
+    /* --- resource cards: same pattern as snakebite-help / snake-identification.
+       Duplicated rather than shared because sub-pages carry their own inline
+       styles and the repo's styles.css is dead code from an older design. --- */
+    .res-card { background: #fffdf8; border: 1px solid #e4dac4; border-left: 4px solid #4d7c4e; border-radius: 14px; padding: 1.4rem 1.6rem; margin: 1.6rem 0; box-shadow: 0 3px 14px rgba(21,36,26,0.05); }
+    .res-card-gold { border-left-color: #d99a3a; }
+    .res-card-head { display: flex; align-items: center; gap: 0.55rem; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2b5a3a; margin-bottom: 0.7rem; }
+    .res-card-gold .res-card-head { color: #9a6c00; }
+    .res-card-lead { font-size: 0.96rem; line-height: 1.7; color: #5f6c5e; margin-bottom: 0.9rem; }
+    /* --- relocator directory map --- */
+    .map-block { margin: 1.6rem 0 2rem; }
+    .map-tools { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
+    .map-tools label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .map-tools input { flex: 1 1 260px; min-width: 0; padding: 0.72rem 0.95rem; font-family: inherit; font-size: 0.95rem; color: #25312a; background: #fff; border: 1px solid #e0d4ba; border-radius: 10px; }
+    .map-tools input::placeholder { color: #9aa393; }
+    .map-tools input:focus { outline: none; border-color: #2b5a3a; box-shadow: 0 0 0 3px rgba(43,90,58,0.15); }
+    .map-tools .btn { padding: 0.72rem 1.3rem; }
+    .map-frame { border: 1px solid #e4dac4; border-radius: 14px; overflow: hidden; box-shadow: 0 3px 14px rgba(21,36,26,0.05); background: #e8e5dd; }
+    .map-frame iframe { display: block; width: 100%; height: clamp(360px, 55vh, 560px); border: 0; }
+    .map-status { font-size: 0.88rem; line-height: 1.6; color: #5f6c5e; margin-top: 0.6rem; min-height: 1.3em; }
+    .map-status.is-error { color: #b03a1f; }
+    .map-credit { font-size: 0.78rem; color: #8a957f; margin-top: 0.35rem; }
+    .map-credit a { color: inherit; text-decoration: underline; }
+    @media (max-width: 640px) { .res-card { padding: 1.15rem 1.15rem; } .map-tools .btn { flex: 1 1 100%; justify-content: center; } }
     /* --- nav parity with index.html -------------------------------
        index.html centres its nav inside a 1240px container; these pages
        were full-bleed, so the header visibly jumped when you navigated.
@@ -246,9 +269,26 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
 <main>
   <article class="article-wrap">
     
-      <p class="body-text">
-        Find the approved relocators here: <a href="https://freesnakerelocation.com/" target="_blank" rel="noopener" style="color:var(--green-mid); font-weight:600;">freesnakerelocation.com</a>
-      </p>
+      <div class="res-card res-card-gold">
+        <p class="res-card-head">&#128205; Approved Relocators Directory</p>
+        <p class="res-card-lead">Outside Greater Richmond, or need someone sooner? <strong>Free Snake Relocation</strong> keeps a vetted, nationwide directory of volunteers who relocate snakes at no charge.</p>
+        <a class="btn btn-primary" href="https://freesnakerelocation.com/" target="_blank" rel="noopener" data-cta="freesnakerelocation">Find an approved relocator &rarr;</a>
+      </div>
+
+      <div class="map-block">
+        <form class="map-tools" id="mapSearch" novalidate>
+          <label for="mapQuery">Search a location on the relocator map</label>
+          <input id="mapQuery" type="search" name="q" placeholder="City, state or ZIP - e.g. Roanoke, VA" autocomplete="off">
+          <button class="btn btn-primary" type="submit">Show this area</button>
+        </form>
+        <div class="map-frame">
+          <iframe id="reloMap" title="Free Snake Relocation directory map"
+            src="https://www.google.com/maps/d/embed?mid=1__R7DSwXpME1vtvTbOTOBlZXV6CsO3w&amp;ll=37.52472241048168%2C-77.49334295&amp;z=12"
+            loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="map-status" id="mapStatus" role="status" aria-live="polite">Showing Richmond, Virginia. Search above, or drag and zoom the map directly.</p>
+        <p class="map-credit">Directory map by Free Snake Relocation. Location search by <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.</p>
+      </div>
       <p class="body-text">
         Some of these Richmond Virginia Government Agencies may help with wildlife issues. Facing a
         wildlife problem in Richmond? These agencies might help at no cost. Here's what each one
@@ -308,5 +348,53 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
   }
 </script>
 
+
+<script>
+(function () {
+  "use strict";
+  var MID = "1__R7DSwXpME1vtvTbOTOBlZXV6CsO3w";
+  var HOME = { lat: "37.52472241048168", lon: "-77.49334295", z: 12 };
+  var frame  = document.getElementById("reloMap");
+  var form   = document.getElementById("mapSearch");
+  var input  = document.getElementById("mapQuery");
+  var status = document.getElementById("mapStatus");
+  if (!frame || !form || !input || !status) return;
+
+  function say(msg, isError) {
+    status.className = "map-status" + (isError ? " is-error" : "");
+    status.textContent = msg;
+  }
+  function recentre(lat, lon, z) {
+    frame.src = "https://www.google.com/maps/d/embed?mid=" + MID +
+                "&ll=" + encodeURIComponent(lat + "," + lon) + "&z=" + (z || 11);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (!q) { recentre(HOME.lat, HOME.lon, HOME.z); say("Back to Richmond, Virginia."); return; }
+    if (typeof window.fetch !== "function") {
+      say("Your browser cannot run the location search - drag or zoom the map instead.", true); return;
+    }
+    say("Looking up " + q + "\u2026");
+    /* Nominatim (OpenStreetMap) - free, no API key. US-biased because the
+       relocator directory is US-based; drop countrycodes to go worldwide. */
+    fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q=" +
+          encodeURIComponent(q), { headers: { "Accept": "application/json" } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || !d.length) {
+          say("No match for \u201c" + q + "\u201d. Try a city and state, or drag the map instead.", true);
+          return;
+        }
+        recentre(d[0].lat, d[0].lon, 11);
+        say("Showing " + (d[0].display_name || q) + ".");
+      })
+      .catch(function () {
+        say("Location search is unavailable right now - drag or zoom the map instead.", true);
+      });
+  });
+})();
+</script>
 </body>
 </html>

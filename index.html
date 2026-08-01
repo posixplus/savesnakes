@@ -27,9 +27,22 @@
 
 <style>
 /* was style-focus="" (Claude Design runtime attr) */
-.hp-form input:focus,.hp-form textarea:focus,.hp-form select:focus{border-color:#2b5a3a !important;}
-/* native select arrow + consistent box */
-.hp-form select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a8676' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") !important;background-repeat:no-repeat !important;background-position:right 12px center !important;background-size:18px !important;background-color:#fff !important;padding-right:40px !important;min-height:46px;}
+/* --- relocator map (replaced the contact form) --- */
+.hp-map-tools{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:13px;}
+.hp-map-tools label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.hp-map-tools input{flex:1 1 190px;min-width:0;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;
+  font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;}
+.hp-map-tools input::placeholder{color:#9aa393;}
+.hp-map-tools input:focus{border-color:#2b5a3a;box-shadow:0 0 0 3px rgba(43,90,58,.14);}
+.hp-map-tools button{padding:12px 20px;background:#2b5a3a;color:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:700;
+  font-size:15px;border:none;border-radius:9px;cursor:pointer;white-space:nowrap;transition:background .16s ease;}
+.hp-map-tools button:hover{background:#22492f;}
+.hp-map-frame{border:1px solid #e4dac4;border-radius:12px;overflow:hidden;background:#e8e5dd;}
+.hp-map-frame iframe{display:block;width:100%;height:clamp(320px,42vh,420px);border:0;}
+.hp-map-status{font-size:13.5px;line-height:1.6;color:#5f6c5e;margin:11px 0 0;min-height:1.3em;}
+.hp-map-status.is-error{color:#b03a1f;}
+.hp-map-credit{font-size:12.5px;color:#8a957f;margin:5px 0 0;}
+.hp-map-credit a{color:inherit;text-decoration:underline;}
 [data-hv="hvwa"]:hover{background:#1ebe5a;}
 [data-hv="hvsafe"]:hover{border-bottom-color:#2b5a3a;}
 [data-hv="hvcall2"]:hover{background:#22492f;}
@@ -974,7 +987,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <div>
         <span style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b87a22;">Reach Out</span>
         <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#1d3f29;margin:12px 0 16px;">Contact Us</h2>
-        <p style="font-size:16.5px;line-height:1.7;color:#5f6c5e;margin:0 0 26px;max-width:380px;">Need a snake removed? Have a question? We're here to help. Reach us by phone or fill out the form.</p>
+        <p style="font-size:16.5px;line-height:1.7;color:#5f6c5e;margin:0 0 26px;max-width:380px;">Need a snake removed? Have a question? We're here to help &mdash; call or message us and we'll take it from there.</p>
         <a href="tel:+18044045594" style="font-family:'Spectral',serif;font-weight:600;font-size:30px;color:#1d3f29;text-decoration:none;display:inline-block;margin-bottom:16px;" data-hv="hv8">(804) 404-5594</a>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin:4px 0 22px;">
           <a href="tel:+18044045594" data-cta="call" style="display:inline-flex;align-items:center;gap:9px;padding:14px 24px;background:#2b5a3a;color:#fff;font-weight:700;font-size:15px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;white-space:nowrap;" data-hv="hvcall2"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg><span>Call Now</span></a>
@@ -990,42 +1003,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         </div>
       </div>
 
-      <div style="background:#fffdf8;border:1px solid #e4dac4;border-radius:18px;padding:30px 30px;box-shadow:0 8px 28px rgba(0,0,0,0.05);">
-        <p style="font-size:14.5px;color:#5f6c5e;margin:0 0 20px;">Fill out the form below and we'll get back to you as soon as possible.</p>
-        <form class="hp-form" data-action="onSubmit" action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:16px;"><input type="hidden" name="access_key" value="ccefb62f-0ae7-4087-ab79-6f380bb8720c"><input type="hidden" name="subject" value="New Get Help request from savesnakes.org"><input type="hidden" name="from_name" value="SaveSnakes.org website"><input type="checkbox" name="botcheck" class="hidden" style="display:none !important" tabindex="-1" autocomplete="off"><input type="hidden" name="redirect" value="https://savesnakes.org/thanks.html">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 140px), 1fr));gap:14px;">
-            <div>
-              <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Name *</label>
-              <input type="text" name="name" placeholder="Your full name" required="true" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;">
-            </div>
-            <div>
-              <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Phone</label>
-              <input type="tel" name="phone" placeholder="(804) 000-0000" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;">
-            </div>
-          </div>
-          <div>
-            <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Email *</label>
-            <input type="email" name="email" placeholder="your@email.com" required="true" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;">
-          </div>
-          <div>
-            <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Reason for Contact</label>
-            <select name="reason" id="reason" style="width:100%;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;">
-              <option value="">Select a reason…</option>
-              <option value="Snake Relocation Request">Snake Relocation Request</option>
-              <option value="Snake Identification">Snake Identification Help</option>
-              <option value="General Question">General Question</option>
-              <option value="Donate / Support">Donate / Support</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div>
-            <label style="display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7a8676;margin-bottom:6px;">Message *</label>
-            <textarea name="message" placeholder="Describe the situation or your question…" required="true" style="width:100%;min-height:112px;padding:12px 14px;background:#fff;border:1.5px solid #e4dac4;border-radius:9px;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#25312a;outline:none;resize:vertical;"></textarea>
-          </div>
-          <button type="submit" style="width:100%;justify-content:center;display:inline-flex;align-items:center;gap:8px;padding:15px;background:#d99a3a;color:#1b1205;font-weight:700;font-size:15.5px;border:none;border-radius:10px;cursor:pointer;" data-hv="hv2">Send Message</button>
-          <p style="font-size:13px;color:#8a957f;margin:0;text-align:center;">We're volunteer-run, so response times vary &mdash; for anything urgent, please call.</p>
-          <div id="form-success" style="display:none;align-items:center;gap:9px;background:#eef4e6;color:#2b5a3a;border:1px solid rgba(43,90,58,0.3);border-radius:9px;padding:13px 16px;font-size:14.5px;font-weight:600;">✅ Message sent! We'll get back to you soon.</div>
+      <div style="background:#fffdf8;border:1px solid #e4dac4;border-radius:18px;padding:26px clamp(20px,3vw,30px);box-shadow:0 8px 28px rgba(0,0,0,0.05);">
+        <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:21px;line-height:1.3;color:#1d3f29;margin:0 0 8px;">Other Free Snake Relocators near by:</h3>
+        <p style="font-size:14.5px;line-height:1.65;color:#5f6c5e;margin:0 0 18px;">Outside Greater Richmond, or need someone sooner? Search the Free Snake Relocation directory for a volunteer near you.</p>
+        <form class="hp-map-tools" id="hpMapSearch" novalidate>
+          <label for="hpMapQuery">Search a location on the relocator map</label>
+          <input id="hpMapQuery" type="search" name="q" placeholder="City, state or ZIP" autocomplete="off">
+          <button type="submit">Search</button>
         </form>
+        <div class="hp-map-frame">
+          <iframe id="hpReloMap" title="Free Snake Relocation directory map"
+            src="https://www.google.com/maps/d/embed?mid=1__R7DSwXpME1vtvTbOTOBlZXV6CsO3w&amp;ll=37.52472241048168%2C-77.49334295&amp;z=11"
+            loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="hp-map-status" id="hpMapStatus" role="status" aria-live="polite">Showing Richmond, Virginia. Search above, or drag and zoom the map directly.</p>
+        <p class="hp-map-credit">Directory map by <a href="https://freesnakerelocation.com/" target="_blank" rel="noopener">Free Snake Relocation</a>. Location search by <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.</p>
       </div>
     </div>
   </section>
@@ -1146,29 +1138,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     });
   });
 
-  /* ---- contact form (Web3Forms; progressive enhancement) ---- */
-  var form=$('form[data-action="onSubmit"]');
-  if(form){
-    form.addEventListener('submit',function(e){
-      if(!form.action || form.action.indexOf('web3forms')===-1) return; /* no key yet: let it be */
+  /* ---- relocator map: recentre via OpenStreetMap geocoding ---- */
+  var MID="1__R7DSwXpME1vtvTbOTOBlZXV6CsO3w", HOME={lat:"37.52472241048168",lon:"-77.49334295",z:11};
+  var mFrame=$('#hpReloMap'), mForm=$('#hpMapSearch'), mInput=$('#hpMapQuery'), mStatus=$('#hpMapStatus');
+  if(mFrame && mForm && mInput && mStatus){
+    var say=function(msg,bad){ mStatus.className='hp-map-status'+(bad?' is-error':''); mStatus.textContent=msg; };
+    var go=function(lat,lon,z){ mFrame.src='https://www.google.com/maps/d/embed?mid='+MID+
+      '&ll='+encodeURIComponent(lat+','+lon)+'&z='+(z||11); };
+    mForm.addEventListener('submit',function(e){
       e.preventDefault();
-      var btn=form.querySelector('button[type="submit"]');
-      var old=btn?btn.textContent:'';
-      if(btn){btn.disabled=true;btn.textContent='Sending...';}
-      fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
-        .then(function(r){return r.json();})
-        .then(function(j){
-          if(j.success){
-            var ok=$('#form-success');
-            if(ok){ok.style.display='flex';}
-            form.reset();
-            if(window.gtag) gtag('event','generate_lead',{form:'get_help'});
-          } else { throw new Error(j.message||'send failed'); }
+      var q=mInput.value.trim();
+      if(!q){ go(HOME.lat,HOME.lon,HOME.z); say('Back to Richmond, Virginia.'); return; }
+      if(typeof window.fetch!=='function'){ say('Your browser cannot run the location search - drag or zoom the map instead.',true); return; }
+      say('Looking up '+q+'\u2026');
+      fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q='+encodeURIComponent(q),
+            {headers:{'Accept':'application/json'}})
+        .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function(d){
+          if(!d || !d.length){ say('No match for \u201c'+q+'\u201d. Try a city and state, or drag the map instead.',true); return; }
+          go(d[0].lat,d[0].lon,11);
+          say('Showing '+(d[0].display_name||q)+'.');
         })
-        .catch(function(){
-          alert('Sorry, that did not send. Please call (804) 404-5594 or email savesnakesorg@gmail.com.');
-        })
-        .finally(function(){ if(btn){btn.disabled=false;btn.textContent=old;} });
+        .catch(function(){ say('Location search is unavailable right now - drag or zoom the map instead.',true); });
     });
   }
 })();

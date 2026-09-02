@@ -258,6 +258,9 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
 .vs-lab{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;}
 .vs-val{font-size:13.5px;line-height:1.5;color:#5f6c5e;}
 .vs-note{font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;}
+.vs-credit-line{margin-top:10px;font-size:11.5px;line-height:1.45;color:#8d8672;}
+.vs-credit-line a{color:#7a7460;text-decoration:none;border-bottom:1px solid #ded2b8;}
+.vs-credit-line a:hover{color:#2b5a3a;border-bottom-color:#2b5a3a;}
 .vs-link{display:block;margin-top:11px;font-size:12px;color:#2b5a3a;text-decoration:none;font-weight:600;}
 .vs-link:hover{text-decoration:underline;}
 .vs-link::after{content:' \2197';}
@@ -790,6 +793,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
       authoritative record of what lives where in this state. The descriptions here are written in
       our own words. For photographs, range maps and the full scientific account of any species,
       follow its VHS link above. If you want to go deeper than this page, start there.
+      Photographs are credited individually beneath each one, with a link to the photographer, the licence and the original file.
     </div>
   </div>
 </main>
@@ -863,34 +867,92 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
 <script>
 /* ---------------------------------------------------------------
    PHOTO MANIFEST
+
    To add a photo for a species:
-     1. save the image as  assets/snakes/<slug>.jpg   (the slug is the
-        data-slug on its card, e.g. eastern-hog-nosed-snake)
-     2. add that slug to the list below
-   Anything not listed keeps its empty photo slot. No other edit needed.
+     1. save the image as  assets/snakes/<slug>.jpg
+        (the slug is the data-slug on its card, e.g. eastern-hog-nosed-snake)
+     2. add an entry below
+
+   Fields:
+     credit      author exactly as the source names them        REQUIRED
+     license     e.g. "CC BY 2.0", "CC BY-SA 4.0", "CC0", "Public domain"
+     licenseUrl  link to the licence deed (omit for public domain)
+     source      link to the file page the image came from
+     title       the work's title, if the source gives one
+
+   CC BY and CC BY-SA both require the author, the licence and the source
+   to be stated. Fill all four for anything that is not public domain.
+
+   Anything not listed here keeps its empty photo slot.
 --------------------------------------------------------------- */
-var SNAKE_PHOTOS = [
-  // "eastern-hog-nosed-snake",
-];
+var SNAKE_PHOTOS = {
+  // "eastern-wormsnake": {
+  //   credit: "Greg Schechter",
+  //   title: "Eastern Worm Snake (Carphophis amoenus amoenus)",
+  //   license: "CC BY 2.0",
+  //   licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+  //   source: "https://commons.wikimedia.org/wiki/File:Eastern_Worm_Snake.jpg"
+  // },
+};
+
 (function () {
   var PH = '<svg class="vs-ph" viewBox="0 0 24 24" fill="none" stroke="#6b7a63" stroke-width="1.5"'
          + ' stroke-linecap="round" aria-hidden="true">'
          + '<path d="M3 20 C5 11 9 7 13 12 C17 17 21 13 22 5"></path>'
          + '<circle cx="22" cy="4.4" r="1.3" fill="#6b7a63" stroke="none"></circle></svg>';
+
+  function esc(t) {
+    return String(t == null ? '' : t)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function link(url, text) {
+    return url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener nofollow">'
+               + esc(text) + '</a>' : esc(text);
+  }
+
+  /* Renders e.g.  Photo: Eastern Worm Snake by Greg Schechter, CC BY 2.0
+     with the title linking to the source and the licence to its deed. */
+  function creditHTML(m) {
+    var bits = [];
+    if (m.title)   bits.push(link(m.source, m.title));
+    if (m.credit)  bits.push((m.title ? 'by ' : '') + (m.title ? esc(m.credit)
+                              : link(m.source, m.credit)));
+    var head = bits.join(' ');
+    if (!head) head = link(m.source, 'Source');
+    var lic = m.license ? ', ' + link(m.licenseUrl, m.license) : '';
+    return 'Photo: ' + head + lic;
+  }
+
   document.querySelectorAll('.vs-img').forEach(function (el) {
     var slug = el.getAttribute('data-slug');
-    var name = el.parentNode.querySelector('h3').textContent;
-    if (SNAKE_PHOTOS.indexOf(slug) !== -1) {
-      var img = document.createElement('img');
-      img.src = 'assets/snakes/' + slug + '.jpg';
-      img.alt = name;
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      el.classList.add('has-photo');
-      el.appendChild(img);
-    } else {
+    var body = el.parentNode;
+    var name = body.querySelector('h3').textContent;
+    var meta = SNAKE_PHOTOS[slug];
+
+    if (!meta) { el.insertAdjacentHTML('beforeend', PH); return; }
+
+    var img = document.createElement('img');
+    img.src = 'assets/snakes/' + slug + '.jpg';
+    img.alt = name;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    /* If the file is missing, fall back to the empty slot rather than a
+       broken image, and drop the credit with it. */
+    img.onerror = function () {
+      el.classList.remove('has-photo');
+      img.remove();
       el.insertAdjacentHTML('beforeend', PH);
-    }
+      var c = body.querySelector('.vs-credit-line');
+      if (c) c.remove();
+    };
+    el.classList.add('has-photo');
+    el.appendChild(img);
+
+    var p = document.createElement('p');
+    p.className = 'vs-credit-line';
+    p.innerHTML = creditHTML(meta);
+    body.appendChild(p);
   });
 })();
 </script>

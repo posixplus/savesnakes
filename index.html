@@ -205,6 +205,7 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
         <a href="snakebite-help.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Snake Bite Help</a>
         <a href="#updates" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Latest Updates</a>
         <a href="#mission" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Mission</a>
+        <a href="virginia-snakes.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">All Snakes</a>
         <a href="facebook.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Facebook</a>
         
           <span style="display:inline-flex;align-items:center;gap:4px;"><a href="facebook.html" aria-label="Facebook posts" class="hp-social hp-social-fb" data-cta="social-facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" aria-label="Instagram" class="hp-social hp-social-ig" data-cta="social-instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" aria-label="YouTube" class="hp-social hp-social-yt" data-cta="social-youtube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a></span>
@@ -346,153 +347,13 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
 
       <!-- Filter tabs -->
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;">
-        <button data-action="setAll" class="filter-tab is-active" data-filter="all">All Species</button>
-        <button data-action="setHarmless" class="filter-tab" data-filter="harmless"><span style="width:8px;height:8px;border-radius:50%;background:#5a9243;display:inline-block;"></span> Harmless</button>
-        <button data-action="setVenom" class="filter-tab" data-filter="venom"><span style="width:8px;height:8px;border-radius:50%;background:#cf8a2a;display:inline-block;"></span> Venomous</button>
+        <button data-action="setVenom" class="filter-tab is-active" data-filter="venom" aria-pressed="true"><span style="width:8px;height:8px;border-radius:50%;background:#cf8a2a;display:inline-block;"></span> Venomous</button>
+        <button data-action="setHarmless" class="filter-tab" data-filter="harmless" aria-pressed="false"><span style="width:8px;height:8px;border-radius:50%;background:#5a9243;display:inline-block;"></span> Harmless</button>
+        <button data-action="setAll" class="filter-tab" data-filter="all" aria-pressed="false">All Species</button>
       </div>
 
       <!-- Gallery grid -->
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%, 310px), 1fr));gap:24px;">
-        
-          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
-            <div style="position:relative;height:222px;overflow:hidden;">
-              <img src="assets/snakes/garter-e3c0d0.avif" loading="lazy" decoding="async" width="800" height="533" alt="Eastern Garter Snake" style="width:100%;height:100%;object-fit:cover;display:block;">
-              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
-                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
-              </span>
-            </div>
-            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
-              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">Eastern Garter Snake</h3>
-              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Thamnophis sirtalis</em>
-              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Slender, 1.5 to 3 ft; olive, brown or black with three pale yellow stripes.</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Yards, gardens &amp; parks</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Ribbon snake, which is more slender with white markings near the eyes.</div>
-                </div>
-              </div>
-              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Virginia's most common backyard snake. Completely harmless - it eats slugs, worms and frogs, and gives birth to live young.</div>
-            </div>
-          </article>
-        
-          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
-            <div style="position:relative;height:222px;overflow:hidden;">
-              <img src="assets/snakes/rat-8957cc.avif" loading="lazy" decoding="async" width="800" height="533" alt="Eastern Rat Snake" style="width:100%;height:100%;object-fit:cover;display:block;">
-              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
-                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
-              </span>
-            </div>
-            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
-              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">Eastern Rat Snake</h3>
-              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Pantherophis alleghaniensis</em>
-              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Up to 6 ft; glossy black adults with a white chin; juveniles are gray with dark blotches.</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Trees, barns &amp; wood piles</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Juveniles are mistaken for copperheads, but lack hourglass bands and a yellow tail tip.</div>
-                </div>
-              </div>
-              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Virginia's longest snake - up to six feet of glossy black with a white chin. A superb climber and the area's best rodent control.</div>
-            </div>
-          </article>
-        
-          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
-            <div style="position:relative;height:222px;overflow:hidden;">
-              <img src="assets/snakes/king-8c8c56.avif" loading="lazy" decoding="async" width="800" height="533" alt="Eastern Kingsnake" style="width:100%;height:100%;object-fit:cover;display:block;">
-              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
-                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
-              </span>
-            </div>
-            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
-              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">Eastern Kingsnake</h3>
-              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Lampropeltis getula</em>
-              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Glossy black, 3 to 5 ft, with a pale chain-link pattern of bands.</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Woods, fields &amp; backyards</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Black racer or rat snake, but only the kingsnake has the chain banding.</div>
-                </div>
-              </div>
-              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Glossy black with a pale chain-link pattern. Famously immune to copperhead venom - and it actually eats them.</div>
-            </div>
-          </article>
-        
-          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
-            <div style="position:relative;height:222px;overflow:hidden;">
-              <img src="assets/snakes/water-8dd2df.avif" loading="lazy" decoding="async" width="800" height="533" alt="Northern Water Snake" style="width:100%;height:100%;object-fit:cover;display:block;">
-              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
-                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
-              </span>
-            </div>
-            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
-              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">Northern Water Snake</h3>
-              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Nerodia sipedon</em>
-              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Thick-bodied, brown or reddish with darker bands; looks almost black when wet.</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Rivers, ponds &amp; creeks</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Cottonmouth, but water snakes have a narrow head and dark bars on each lip scale.</div>
-                </div>
-              </div>
-              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Constantly mistaken for a cottonmouth, but harmless. A strong swimmer that keeps fish and frog populations in balance.</div>
-            </div>
-          </article>
-        
-          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
-            <div style="position:relative;height:222px;overflow:hidden;">
-              <img src="assets/snakes/brown-bda643.avif" loading="lazy" decoding="async" width="800" height="533" alt="DeKay's Brownsnake" style="width:100%;height:100%;object-fit:cover;display:block;">
-              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
-                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
-              </span>
-            </div>
-            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
-              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">DeKay's Brownsnake</h3>
-              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Storeria dekayi</em>
-              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Tiny, 8 to 15 in; brown or gray with two rows of small dark spots.</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Gardens &amp; leaf litter</div>
-                </div>
-                <div>
-                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
-                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Often mistaken for an earthworm or a juvenile of another species.</div>
-                </div>
-              </div>
-              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">A tiny, gentle snake rarely longer than a pencil - a gardener's best friend that feeds on slugs and snails.</div>
-            </div>
-          </article>
         
           <article data-cat="venom" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
             <div style="position:relative;height:222px;overflow:hidden;">
@@ -521,7 +382,6 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
               <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Venomous. Virginia's most common venomous snake, with hourglass bands and a copper head. Bites are rarely fatal - give it room.</div>
             </div>
           </article>
-        
           <article data-cat="venom" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
             <div style="position:relative;height:222px;overflow:hidden;">
               <img src="assets/snakes/cotton-d92809.jpg" loading="lazy" decoding="async" width="800" height="533" alt="Northern Cottonmouth" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -549,7 +409,6 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
               <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Venomous. A semi-aquatic pit viper that gapes to flash its white 'cotton' mouth when threatened. Rare across most of Virginia.</div>
             </div>
           </article>
-        
           <article data-cat="venom" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
             <div style="position:relative;height:222px;overflow:hidden;">
               <img src="assets/snakes/timber-d19a99.avif" loading="lazy" decoding="async" width="800" height="533" alt="Timber Rattlesnake" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -577,7 +436,145 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
               <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Venomous. A shy, well-camouflaged forest dweller that rattles a clear warning long before it ever strikes.</div>
             </div>
           </article>
+          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
+            <div style="position:relative;height:222px;overflow:hidden;">
+              <img src="assets/snakes/water-8dd2df.avif" loading="lazy" decoding="async" width="800" height="533" alt="Northern Water Snake" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
+                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
+              </span>
+            </div>
+            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
+              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">Northern Water Snake</h3>
+              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Nerodia sipedon</em>
+              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Thick-bodied, brown or reddish with darker bands; looks almost black when wet.</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Rivers, ponds &amp; creeks</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Cottonmouth, but water snakes have a narrow head and dark bars on each lip scale.</div>
+                </div>
+              </div>
+              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Constantly mistaken for a cottonmouth, but harmless. A strong swimmer that keeps fish and frog populations in balance.</div>
+            </div>
+          </article>
+          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
+            <div style="position:relative;height:222px;overflow:hidden;">
+              <img src="assets/snakes/rat-8957cc.avif" loading="lazy" decoding="async" width="800" height="533" alt="Eastern Rat Snake" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
+                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
+              </span>
+            </div>
+            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
+              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">Eastern Rat Snake</h3>
+              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Pantherophis alleghaniensis</em>
+              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Up to 6 ft; glossy black adults with a white chin; juveniles are gray with dark blotches.</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Trees, barns &amp; wood piles</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Juveniles are mistaken for copperheads, but lack hourglass bands and a yellow tail tip.</div>
+                </div>
+              </div>
+              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Virginia's longest snake - up to six feet of glossy black with a white chin. A superb climber and the area's best rodent control.</div>
+            </div>
+          </article>
+          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
+            <div style="position:relative;height:222px;overflow:hidden;">
+              <img src="assets/snakes/garter-e3c0d0.avif" loading="lazy" decoding="async" width="800" height="533" alt="Eastern Garter Snake" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
+                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
+              </span>
+            </div>
+            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
+              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">Eastern Garter Snake</h3>
+              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Thamnophis sirtalis</em>
+              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Slender, 1.5 to 3 ft; olive, brown or black with three pale yellow stripes.</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Yards, gardens &amp; parks</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Ribbon snake, which is more slender with white markings near the eyes.</div>
+                </div>
+              </div>
+              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Virginia's most common backyard snake. Completely harmless - it eats slugs, worms and frogs, and gives birth to live young.</div>
+            </div>
+          </article>
+          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
+            <div style="position:relative;height:222px;overflow:hidden;">
+              <img src="assets/snakes/brown-bda643.avif" loading="lazy" decoding="async" width="800" height="533" alt="DeKay's Brownsnake" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
+                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
+              </span>
+            </div>
+            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
+              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">DeKay's Brownsnake</h3>
+              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Storeria dekayi</em>
+              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Tiny, 8 to 15 in; brown or gray with two rows of small dark spots.</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Gardens &amp; leaf litter</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Often mistaken for an earthworm or a juvenile of another species.</div>
+                </div>
+              </div>
+              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">A tiny, gentle snake rarely longer than a pencil - a gardener's best friend that feeds on slugs and snails.</div>
+            </div>
+          </article>
+          <article data-cat="harmless" style="background:#fffdf8;border:1px solid #e4dac4;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.05);display:flex;flex-direction:column;" data-hv="hv7">
+            <div style="position:relative;height:222px;overflow:hidden;">
+              <img src="assets/snakes/king-8c8c56.avif" loading="lazy" decoding="async" width="800" height="533" alt="Eastern Kingsnake" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <span style="position:absolute;top:13px;left:13px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;backdrop-filter:blur(4px);">
+                <span style="width:7px;height:7px;border-radius:50%;"></span>Harmless
+              </span>
+            </div>
+            <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
+              <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#1d3f29;margin:0 0 2px;">Eastern Kingsnake</h3>
+              <em style="font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:12px;">Lampropeltis getula</em>
+              <div style="display:flex;flex-direction:column;gap:11px;margin:2px 0 14px;flex:1;">
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Appearance</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Glossy black, 3 to 5 ft, with a pale chain-link pattern of bands.</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Where you'll see them</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Woods, fields &amp; backyards</div>
+                </div>
+                <div>
+                  <div style="font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;">Lookalike</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#5f6c5e;">Black racer or rat snake, but only the kingsnake has the chain banding.</div>
+                </div>
+              </div>
+              <div style="font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;">Glossy black with a pale chain-link pattern. Famously immune to copperhead venom - and it actually eats them.</div>
+            </div>
+          </article>
         
+      </div>
+      <div style="margin-top:34px;">
+        <a href="virginia-snakes.html" style="display:inline-flex;align-items:center;gap:9px;padding:15px 26px;background:#fffdf8;border:1.5px solid #d9cba8;border-radius:10px;color:#1d3f29;font-weight:700;font-size:15.5px;text-decoration:none;">Virginia has 26 more harmless snakes &rarr;</a>
       </div>
 
       <div style="margin:34px auto 0;max-width:820px;background:#fffdf8;border:1px solid #e4dac4;border-left:4px solid #d99a3a;border-radius:16px;padding:26px clamp(20px,3vw,30px);box-shadow:0 4px 18px rgba(0,0,0,0.05);">
@@ -959,6 +956,15 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
 
   /* ---- snake gallery filter ---- */
   var tabs=$$('.filter-tab');
+  /* Venomous is the tab that starts active, so hide the rest before first paint. */
+  (function(){
+    var a=document.querySelector('.filter-tab.is-active');
+    if(!a) return;
+    var f=a.getAttribute('data-filter');
+    $$('article[data-cat]').forEach(function(card){
+      card.hidden = !(f==='all' || card.getAttribute('data-cat')===f);
+    });
+  })();
   tabs.forEach(function(tab){
     tab.addEventListener('click',function(){
       var f=tab.getAttribute('data-filter');

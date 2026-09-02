@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All 31 Harmless Snakes of Virginia | Field ID Guide | SaveSnakes.org</title>
+<link rel="canonical" href="https://savesnakes.org/virginia-snakes.html">
+  <meta name="description" content="Field identification for every harmless snake in Virginia, ordered by how widely each is recorded. Free snake ID statewide, free relocation in Greater Richmond. WCO licensed (CNAP).">
+  <link rel="preload" href="assets/fonts/f271d5973.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/f38929e98.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 118px; }
+    .guide-menu { position: sticky; top: 63px; z-index: 40; background: rgba(245,239,227,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid #e4dac4; }
+    .guide-menu-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; gap: 8px; padding: 11px clamp(16px,4vw,40px); overflow-x: auto; }
+    .guide-menu-inner::-webkit-scrollbar { height: 0; }
+    .guide-label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #b87a22; white-space: nowrap; margin-right: 6px; flex-shrink: 0; }
+    .guide-menu a { white-space: nowrap; font-size: 14px; font-weight: 600; color: #2b5a3a; text-decoration: none; padding: 7px 14px; border-radius: 100px; border: 1px solid #e0d4ba; background: #fff; flex-shrink: 0; transition: 0.15s; }
+    .guide-menu a:hover { background: #2b5a3a; color: #fff; border-color: #2b5a3a; }
+    body { font-family: 'Hanken Grotesk', system-ui, sans-serif; background: #f5efe3; color: #25312a; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #d99a3a; color: #1b1205; }
+    :root {
+      --green-deep: #1d3f29; --green-mid: #2b5a3a; --green-soft: #4d7c4e;
+      --green-pale: #eef4e6; --cream: #f5efe3; --cream-warm: #ece2cf;
+      --text: #25312a; --text-muted: #5f6c5e; --border: #e4dac4; --honey: #d99a3a;
+    }
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 999; background: rgba(29,63,41,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px clamp(18px,4vw,40px); }
+    .nav-brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .nav-brand-icon { width: 38px; height: 38px; background: #2b5a3a; border: 2px solid #d99a3a; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .nav-brand-text { font-family: 'Spectral', serif; font-size: 19px; font-weight: 700; color: #fff; letter-spacing: 0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { font-size: 14px; font-weight: 500; white-space: nowrap; color: rgba(255,255,255,0.82); text-decoration: none; padding: 8px 12px; border-radius: 7px; transition: color 0.15s, background 0.15s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.09); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 6px; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: rgba(255,255,255,0.85); }
+    /* Drawer */
+    .drawer-bg { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.45); }
+    .drawer-bg.open { display: block; }
+    .drawer { position: fixed; top: 0; right: -300px; width: 280px; height: 100vh; z-index: 1001; background: #1d3f29; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.3rem; transition: right 0.28s ease; }
+    .drawer.open { right: 0; }
+    .drawer-close { background: none; border: none; color: rgba(255,255,255,0.6); font-size: 1.2rem; cursor: pointer; align-self: flex-end; padding: 4px; margin-bottom: 1rem; }
+    .drawer a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 0.7rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .drawer a:hover { color: #fff; }
+    /* Hero */
+    .post-hero { background: #1d3f29; padding: clamp(3rem,6vw,5rem) 2rem clamp(2.5rem,4vw,3.5rem); text-align: center; position: relative; overflow: hidden; }
+    .post-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 120%, rgba(217,154,58,0.22) 0%, transparent 65%); pointer-events: none; }
+    .post-hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
+    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-bottom: 1.3rem; font-size: 0.82rem; }
+    .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+    .breadcrumb a:hover { color: rgba(255,255,255,0.9); }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); }
+    .post-category { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #f0d9ad; background: rgba(217,154,58,0.16); border: 1px solid rgba(217,154,58,0.4); padding: 0.32rem 0.95rem; border-radius: 100px; margin-bottom: 1.3rem; }
+    .post-title { font-family: 'Spectral', serif; font-size: clamp(2rem, 4.2vw, 3rem); font-weight: 600; color: #fff; line-height: 1.16; margin-bottom: 1.3rem; letter-spacing: -0.01em; }
+    .post-meta { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: 0.82rem; color: rgba(255,255,255,0.55); }
+    .post-meta-dot { width: 3px; height: 3px; background: rgba(255,255,255,0.35); border-radius: 50%; }
+    /* Article */
+    .article-wrap { max-width: 820px; margin: 0 auto; padding: clamp(2.5rem,5vw,3.8rem) 2rem 5rem; }
+    .toc { background: #eef4e6; border-left: 4px solid #d99a3a; border-radius: 0 10px 10px 0; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem; }
+    .toc-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #2b5a3a; margin-bottom: 0.8rem; }
+    .toc ol { padding-left: 1.1rem; }
+    .toc li { margin-bottom: 0.35rem; }
+    .toc a { font-size: 0.88rem; color: #2b5a3a; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .intro { font-size: 1.16rem; color: #4a5648; line-height: 1.85; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+    .intro strong { color: #25312a; }
+    .article-section { margin-bottom: 3.2rem; }
+    .article-section:last-child { margin-bottom: 0; }
+    h2.section-h { font-family: 'Spectral', serif; font-size: clamp(1.6rem,3vw,2rem); font-weight: 600; color: #1d3f29; margin-bottom: 0.5rem; padding-top: 0.5rem; }
+    .section-divider { width: 48px; height: 3px; background: #d99a3a; border-radius: 2px; margin-bottom: 1.3rem; }
+    h3.snake-h { font-family: 'Spectral', serif; font-size: 1.3rem; font-weight: 600; color: #2b5a3a; margin: 2.2rem 0 0.8rem; display: flex; align-items: center; gap: 0.6rem; }
+    h3.snake-h::before { content: ''; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #d99a3a; flex-shrink: 0; }
+    p.body-text { font-size: 1.02rem; color: #4a5648; line-height: 1.85; margin-bottom: 1rem; }
+    p.body-text strong { color: #25312a; }
+    /* Images */
+    .article-img-wrap { margin: 1.4rem 0; }
+    .article-img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 1.4rem 0; }
+    figure { margin: 0; }
+    figure img { width: 100%; border-radius: 12px; display: block; border: 1px solid var(--border); }
+    figcaption { font-size: 0.78rem; color: #8a957f; margin-top: 0.45rem; line-height: 1.4; font-style: italic; text-align: center; }
+    .img-full figure img { width: 100%; height: auto; max-height: none; object-fit: contain; }
+    /* Snake cards */
+    .snake-card { background: #fffdf8; border: 1px solid var(--border); border-radius: 16px; padding: 1.6rem; margin-bottom: 1.6rem; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
+    .snake-card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+    .snake-name { font-family: 'Spectral', serif; font-size: 1.2rem; font-weight: 600; color: #1d3f29; }
+    .badge { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 100px; }
+    .badge-venomous { background: #f7e6cd; color: #a8651a; border: 1px solid rgba(184,122,34,0.4); }
+    .badge-safe { background: #e6f0da; color: #3a6b2e; border: 1px solid rgba(90,124,66,0.35); }
+    .snake-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 1rem; }
+    .fact-item { display: flex; gap: 0.4rem; align-items: flex-start; font-size: 0.9rem; color: #5f6c5e; line-height: 1.55; }
+    .fact-label { font-weight: 700; color: #25312a; font-size: 0.82rem; white-space: nowrap; }
+    .snake-funfact { background: #eef4e6; border-radius: 9px; padding: 0.8rem 1.1rem; margin-top: 0.8rem; font-size: 0.88rem; color: #2b5a3a; line-height: 1.6; }
+    .snake-funfact strong { font-weight: 700; }
+    .snake-lookalike { background: #fdf0d8; border-radius: 9px; padding: 0.8rem 1.1rem; margin-top: 0.6rem; font-size: 0.88rem; color: #8a5a12; line-height: 1.6; border-left: 3px solid #d99a3a; }
+    /* Callouts */
+    .callout { border-radius: 14px; padding: 1.6rem; margin: 1.6rem 0; }
+    .callout-warning { background: #fdf0d8; border: 1px solid #ecca7d; border-left: 4px solid #d99a3a; }
+    .callout-info { background: #eef4e6; border: 1px solid rgba(90,124,66,0.25); border-left: 4px solid #4d7c4e; }
+    .callout-danger { background: #fbeae6; border: 1px solid #f0c0b4; border-left: 4px solid #c0492b; }
+    .callout-title { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .callout-warning .callout-title { color: #9a6c00; }
+    .callout-info .callout-title { color: #2b5a3a; }
+    .callout-danger .callout-title { color: #b03a1f; }
+    .callout ul, .callout ol { padding-left: 1.2rem; }
+    .callout li { font-size: 0.95rem; color: #4a5648; margin-bottom: 0.45rem; line-height: 1.65; }
+    .callout a { color: inherit; font-weight: 600; }
+    /* ID table */
+    .id-table { width: 100%; border-collapse: collapse; margin: 1.4rem 0; font-size: 0.9rem; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 14px rgba(0,0,0,0.05); }
+    .id-table th { background: #1d3f29; color: #fff; padding: 0.75rem 1rem; text-align: left; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.03em; }
+    .id-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); color: #5f6c5e; vertical-align: top; background: #fffdf8; }
+    .id-table tr:last-child td { border-bottom: none; }
+    .id-table tr:nth-child(even) td { background: #f7f2e6; }
+    .id-table .danger { color: #b03a1f; font-weight: 700; }
+    .id-table .safe { color: #3a6b2e; font-weight: 700; }
+    /* Agency + links */
+    .agency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin: 1.1rem 0; }
+    .agency-card { background: #fffdf8; border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+    .agency-name { font-size: 0.92rem; font-weight: 700; color: #25312a; margin-bottom: 0.35rem; }
+    .agency-phone { font-size: 0.9rem; color: #b87a22; font-weight: 700; text-decoration: none; }
+    .agency-phone:hover { text-decoration: underline; }
+    .agency-desc { font-size: 0.83rem; color: #5f6c5e; margin-top: 0.35rem; line-height: 1.55; }
+    .link-list { list-style: none; padding: 0; margin: 0.6rem 0; }
+    .link-list li { margin-bottom: 0.9rem; }
+    .link-list a { font-size: 0.95rem; color: #2b5a3a; font-weight: 600; text-decoration: none; }
+    .link-list a:hover { text-decoration: underline; }
+    .link-list .link-desc { font-size: 0.86rem; color: #5f6c5e; margin-top: 0.2rem; font-weight: 400; line-height: 1.5; }
+    /* CTA + footer */
+    .post-cta { background: #1d3f29; border-radius: 18px; padding: 2.8rem; margin-top: 3.2rem; text-align: center; }
+    .post-cta h3 { font-family: 'Spectral', serif; font-size: 1.6rem; font-weight: 600; color: #fff; margin-bottom: 0.7rem; }
+    .post-cta p { font-size: 1rem; color: rgba(255,255,255,0.72); margin-bottom: 1.6rem; max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .btn { display: inline-flex; align-items: center; gap: 7px; padding: 0.9rem 1.8rem; font-family: 'Hanken Grotesk', sans-serif; font-size: 0.95rem; font-weight: 700; border: none; cursor: pointer; text-decoration: none; border-radius: 10px; transition: 0.18s; }
+    .btn-primary { background: #d99a3a; color: #1b1205; }
+    .btn-primary:hover { background: #e8aa4d; }
+    .post-footer-strip { border-top: 1px solid var(--border); padding: 1.6rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; max-width: 820px; margin: 0 auto; }
+    .post-stats { font-size: 0.85rem; color: #8a957f; display: flex; gap: 1.3rem; }
+    .back-link { font-size: 0.9rem; font-weight: 700; color: #2b5a3a; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .snake-facts { grid-template-columns: 1fr; }
+      .agency-grid { grid-template-columns: 1fr; }
+      .article-img-pair { grid-template-columns: 1fr; }
+      .article-wrap { padding: 2.2rem 1.2rem 4rem; }
+    }
+
+    /* Site footer override */
+    body > footer { background: #15241a !important; }
+
+  
+    /* --- social badges (synced with index.html nav) --- */
+    .nav-social { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; }
+    .nav-social a { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; padding: 0; border-radius: 50%; color: #fff; transition: transform 0.16s ease, filter 0.16s ease; }
+    .nav-social a:hover { transform: translateY(-1px); filter: brightness(1.12); background: none; }
+    /* The SVG is a flex item. Without flex-shrink:0 it gets squeezed to 8x17
+       instead of 15x15, which distorts every logo. Matches .hp-social on index.html. */
+    .nav-social a svg { width: 15px; height: 15px; flex: 0 0 auto; display: block; }
+    .soc-fb { background: #1877F2; }
+    .soc-ig { background: linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888); }
+    .soc-yt { background: #FF0000; }
+    .drawer-social { display: flex; gap: 14px; margin-top: 1.2rem; }
+    .drawer-social a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; color: #fff; padding: 0; border-bottom: none; }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXMX2NK1KR"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXMX2NK1KR');</script>
+<style>
+/* tap targets >=44px without changing layout */
+a[href^="tel:"],a[href^="mailto:"]{position:relative;}
+a[href^="tel:"]::after,a[href^="mailto:"]::after{content:"";position:absolute;left:-6px;right:-6px;top:50%;transform:translateY(-50%);height:44px;}
+.hamburger{min-width:44px;min-height:44px;align-items:center;justify-content:center;}
+a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2px;}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+
+    /* --- resource cards: same pattern as snakebite-help / snake-identification.
+       Duplicated rather than shared because sub-pages carry their own inline
+       styles and the repo's styles.css is dead code from an older design. --- */
+    .res-card { background: #fffdf8; border: 1px solid #e4dac4; border-left: 4px solid #4d7c4e; border-radius: 14px; padding: 1.4rem 1.6rem; margin: 1.6rem 0; box-shadow: 0 3px 14px rgba(21,36,26,0.05); }
+    .res-card-gold { border-left-color: #d99a3a; }
+    .res-card-head { display: flex; align-items: center; gap: 0.55rem; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2b5a3a; margin-bottom: 0.7rem; }
+    .res-card-gold .res-card-head { color: #9a6c00; }
+    .res-card-lead { font-size: 0.96rem; line-height: 1.7; color: #5f6c5e; margin-bottom: 0.9rem; }
+    /* --- relocator directory map --- */
+    .map-block { margin: 1.6rem 0 2rem; }
+    .map-tools { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
+    .map-tools label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .map-tools input { flex: 1 1 260px; min-width: 0; padding: 0.72rem 0.95rem; font-family: inherit; font-size: 0.95rem; color: #25312a; background: #fff; border: 1px solid #e0d4ba; border-radius: 10px; }
+    .map-tools input::placeholder { color: #9aa393; }
+    .map-tools input:focus { outline: none; border-color: #2b5a3a; box-shadow: 0 0 0 3px rgba(43,90,58,0.15); }
+    .map-tools .btn { padding: 0.72rem 1.3rem; }
+    .map-frame { border: 1px solid #e4dac4; border-radius: 14px; overflow: hidden; box-shadow: 0 3px 14px rgba(21,36,26,0.05); background: #e8e5dd; }
+    .map-frame iframe { display: block; width: 100%; height: clamp(360px, 55vh, 560px); border: 0; }
+    .map-status { font-size: 0.88rem; line-height: 1.6; color: #5f6c5e; margin-top: 0.6rem; min-height: 1.3em; }
+    .map-status.is-error { color: #b03a1f; }
+    .map-credit { font-size: 0.78rem; color: #8a957f; margin-top: 0.35rem; }
+    .map-credit a { color: inherit; text-decoration: underline; }
+    @media (max-width: 640px) { .res-card { padding: 1.15rem 1.15rem; } .map-tools .btn { flex: 1 1 100%; justify-content: center; } }
+    /* --- nav parity with index.html -------------------------------
+       index.html centres its nav inside a 1240px container; these pages
+       were full-bleed, so the header visibly jumped when you navigated.
+       padding-inline reproduces that centred container without adding a
+       wrapper element to every file. Metrics below (vertical padding,
+       brand size, link padding, burger breakpoint) are index.html's. */
+    nav { padding-top: 14px; padding-bottom: 14px;
+          padding-inline: max(clamp(18px,4vw,40px), calc((100% - 1240px) / 2 + 40px)); }
+    .nav-brand-icon svg { width: 20px; height: 20px; }
+    .nav-brand-text { font-size: 20px; }
+    /* body sets line-height:1.65 on these pages but index.html leaves it at
+       normal, which made the links 5px taller and the whole bar 1px taller */
+    .nav-links a { padding: 8px 11px; line-height: 18px; }
+    .nav-social { gap: 4px; margin-left: 0; }   /* the .nav-links 2px gap already spaces it, same as index */
+    @media (max-width: 1240px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (min-width: 1241px) {
+      .nav-links { display: flex; }
+      .hamburger { display: none; }
+    }
+</style>
+<style>
+/* ===== Virginia snakes index ===== */
+.vs-wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px) 10px;}
+.vs-head{max-width:760px;margin:0 0 26px;}
+.vs-eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b87a22;}
+.vs-head .vs-h2{font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.6vw,46px);
+  line-height:1.12;color:#1d3f29;margin:12px 0 16px;}
+.vs-head p{font-size:17px;line-height:1.7;color:#5f6c5e;margin:0 0 10px;}
+.vs-meta{font-size:14px;color:#7d8878;margin-top:14px;}
+.vs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:24px;}
+.vs-card{position:relative;background:#fffdf8;border:1px solid #e4dac4;border-radius:18px;overflow:hidden;
+  box-shadow:0 4px 18px rgba(0,0,0,.05);display:flex;flex-direction:column;
+  transition:transform .22s cubic-bezier(.2,.7,.3,1),box-shadow .22s ease,border-color .22s ease;}
+.vs-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;z-index:3;
+  background:linear-gradient(90deg,#5a9243,#79b45c);}
+.vs-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(21,36,26,.16);border-color:#d9cba8;}
+/* Photo slot. Keeps its height whether or not a picture exists, so nothing shifts later. */
+.vs-img{position:relative;height:236px;overflow:hidden;background:#efe7d6;
+  display:flex;align-items:center;justify-content:center;}
+.vs-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.vs-img:not(.has-photo)::after{content:"Photo coming soon";position:absolute;bottom:14px;left:0;right:0;
+  text-align:center;font-size:12px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:#a2977f;}
+.vs-img:not(.has-photo) .vs-ph{width:70px;height:70px;opacity:.34;}
+.vs-badge{position:absolute;top:13px;left:13px;z-index:2;display:inline-flex;align-items:center;gap:7px;
+  font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;
+  border-radius:100px;background:rgba(255,253,248,.94);color:#25312a;box-shadow:0 2px 10px rgba(0,0,0,.18);}
+.vs-body{padding:20px 22px 22px;flex:1;display:flex;flex-direction:column;}
+.vs-body h3{font-family:'Spectral',serif;font-weight:600;font-size:21px;color:#1d3f29;margin:0 0 2px;
+  letter-spacing:-.005em;}
+.vs-sci{font-size:13.5px;color:#9a8c6f;font-style:italic;display:block;margin-bottom:10px;}
+.vs-flag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:#8a5a12;background:#f6ead2;border:1px solid #e6d3ab;border-radius:6px;padding:3px 8px;margin-bottom:10px;}
+.vs-rows{display:flex;flex-direction:column;margin:2px 0 14px;flex:1;}
+.vs-rows>div{padding:9px 0;border-top:1px solid #f0e7d6;}
+.vs-rows>div:first-child{border-top:none;padding-top:2px;}
+.vs-lab{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b87a22;margin-bottom:3px;}
+.vs-val{font-size:13.5px;line-height:1.5;color:#5f6c5e;}
+.vs-note{font-size:13.5px;line-height:1.6;color:#41513f;background:#eef4e6;border-radius:9px;padding:11px 13px;}
+.vs-link{display:block;margin-top:11px;font-size:12px;color:#2b5a3a;text-decoration:none;font-weight:600;}
+.vs-link:hover{text-decoration:underline;}
+.vs-link::after{content:' \2197';}
+.vs-foot{max-width:1240px;margin:34px auto 0;padding:0 clamp(18px,4vw,40px);}
+.vs-credit{background:#fffdf8;border:1px solid #e4dac4;border-left:4px solid #4d7c4e;border-radius:14px;
+  padding:1.3rem 1.5rem;font-size:14.5px;line-height:1.65;color:#41513f;}
+.vs-credit a{color:#2b5a3a;font-weight:600;}
+@media (prefers-reduced-motion: reduce){
+  .vs-card{transition:none;} .vs-card:hover{transform:none;}
+}
+</style>
+</head>
+<body>
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f5efe3" stroke-width="2.2" stroke-linecap="round"><path d="M3 20 C5 11 9 7 13 12 C17 17 21 13 22 5"/><circle cx="22" cy="4.4" r="1.3" fill="#d99a3a" stroke="none"/></svg>
+    </div>
+    <span class="nav-brand-text">SaveSnakes<span style="color:#d99a3a;">.org</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#snakes">Meet the Snakes</a>
+    <a href="index.html#guides">Helpful Tips</a>
+    <a href="snakebite-help.html">Snake Bite Help</a>
+    <a href="index.html#updates">Latest Updates</a>
+    <a href="index.html#mission">Mission</a>
+    <a href="virginia-snakes.html">All Snakes</a>
+    <a href="facebook.html">Facebook</a>
+    <span class="nav-social"><a href="facebook.html" class="soc-fb" aria-label="Facebook posts" data-cta="social-facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" class="soc-ig" aria-label="Instagram" data-cta="social-instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" class="soc-yt" aria-label="YouTube" data-cta="social-youtube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a></span>
+  </div>
+  <button class="hamburger" onclick="openDrawer()" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="drawer-bg" id="drawerBg" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">✕</button>
+  <a href="index.html#home" onclick="closeDrawer()">Home</a>
+  <a href="index.html#services" onclick="closeDrawer()">Services</a>
+  <a href="index.html#snakes" onclick="closeDrawer()">Meet the Snakes</a>
+  <a href="index.html#guides" onclick="closeDrawer()">Helpful Tips</a>
+  <a href="snakebite-help.html" onclick="closeDrawer()">Snake Bite Help</a>
+  <a href="index.html#updates" onclick="closeDrawer()">Latest Updates</a>
+  <a href="index.html#mission" onclick="closeDrawer()">Mission</a>
+  <a href="virginia-snakes.html" onclick="closeDrawer()">All Snakes</a>
+  <a href="facebook.html" onclick="closeDrawer()">Facebook</a>
+  <span class="drawer-social"><a href="facebook.html" class="soc-fb" aria-label="Facebook posts" data-cta="social-facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" class="soc-ig" aria-label="Instagram" data-cta="social-instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" class="soc-yt" aria-label="YouTube" data-cta="social-youtube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a></span>
+</div>
+<header class="post-hero">
+  <div class="post-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">&rsaquo;</span>
+      <a href="index.html#snakes">Meet the Snakes</a>
+      <span class="breadcrumb-sep">&rsaquo;</span>
+      <span style="color:rgba(255,255,255,0.75)">All Other Virginia Snakes</span>
+    </nav>
+    <span class="post-category">Field Guide</span>
+    <h1 class="post-title">All Other Virginia Snakes</h1>
+  </div>
+</header>
+<main>
+  <div class="vs-wrap">
+    <div class="vs-head">
+      <span class="vs-eyebrow">Field Guide</span>
+      <h2 class="vs-h2">Every other harmless snake in Virginia</h2>
+      <p>Virginia has 31 harmless snake species and three venomous ones. Five of the harmless
+      species are the ones we get called about most, and they have their own cards on the
+      <a href="index.html#snakes" style="color:#2b5a3a;font-weight:600;">home page</a>. These are the
+      other 26.</p>
+      <p>They are ordered by how widely each species is recorded across Virginia, from the ones
+      found in nearly every county down to the ones known from a single one. Nothing on this page
+      is venomous.</p>
+      <p class="vs-meta">Not sure what you are looking at? Send a photo for a free identification,
+      anywhere in Virginia.</p>
+    </div>
+
+    <div class="vs-grid">
+      <article class="vs-card" data-cat="harmless" data-slug="eastern-wormsnake" data-rank="114">
+        <div class="vs-img" data-slug="eastern-wormsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Eastern Wormsnake</h3>
+          <em class="vs-sci">Carphophis amoenus amoenus</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">7 to 11 in. Plain brown above with no pattern at all, and a pink belly that wraps onto the lowest scale rows. Head barely wider than the neck.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Under logs, bark and boards in damp woodland soil. Turns up in mulch beds and compost heaps.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Brownsnakes and earthsnakes. Neither has the wormsnake&#39;s pink belly.</div></div>
+          </div>
+          <div class="vs-note">Recorded in more Virginia counties than any other harmless snake, yet almost nobody sees one moving. It lives underground and eats earthworms. If you turn over a board and find one, put the board back.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/eastern-wormsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="northern-black-racer" data-rank="101">
+        <div class="vs-img" data-slug="northern-black-racer">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Northern Black Racer</h3>
+          <em class="vs-sci">Coluber constrictor constrictor</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">3 to 5 ft. Uniform satin black with a white chin and a slate-grey belly. Slender and fast, with large eyes.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Open grassy ground, dry field edges, farmland and suburban yards.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Adult ratsnakes, which are bulkier and show a faint blotched pattern through the black.</div></div>
+          </div>
+          <div class="vs-note">Our most visual snake. It hunts with its head raised above the grass and will see you long before you see it, which is why most sightings are of one leaving. Eats rodents, lizards and other snakes.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/northern-black-racer/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="northern-rough-greensnake" data-rank="100">
+        <div class="vs-img" data-slug="northern-rough-greensnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Northern Rough Greensnake</h3>
+          <em class="vs-sci">Opheodrys aestivus aestivus</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">22 to 32 in. Bright uniform green above, cream or pale yellow below. Very slender, with keeled scales.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Shrubs, vines and low branches, usually near water. Often draped in vegetation rather than on the ground.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Smooth Greensnake, which is smaller, smooth-scaled and confined to our mountains.</div></div>
+          </div>
+          <div class="vs-note">Eats nothing but insects and spiders, mostly caterpillars. It cannot bite you in any meaningful sense. Fading green after death is why people find them and assume some other species.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/rough-green-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="northern-ring-necked-snake" data-rank="96">
+        <div class="vs-img" data-slug="northern-ring-necked-snake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Northern Ring-necked Snake</h3>
+          <em class="vs-sci">Diadophis punctatus edwardsii</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">10 to 15 in. Slate grey to near black above with a bright yellow or orange collar just behind the head, and a matching belly.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Leaf litter in hardwood and mixed forest, under logs, rocks and landscape timbers.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Southern Ring-necked Snake, which overlaps in the southeast; juvenile brownsnakes and earthsnakes lack the collar.</div></div>
+          </div>
+          <div class="vs-note">The collar is the whole identification. When alarmed some individuals curl the tail to flash the bright underside. Eats earthworms and salamanders.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/northern-ring-necked-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="eastern-hog-nosed-snake" data-rank="95">
+        <div class="vs-img" data-slug="eastern-hog-nosed-snake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Eastern Hog-nosed Snake</h3>
+          <em class="vs-sci">Heterodon platirhinos</em>
+          <span class="vs-flag">Species of Greatest Conservation Need</span>
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">20 to 33 in. Stout, with dark saddle blotches on tan, grey or olive, and a sharply upturned snout you can see from a distance. Some are solid black.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Sandy soil, open fields and the edges where pine meets mixed forest.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Mistaken for a copperhead constantly. A copperhead has hourglass bands pinched at the spine; this has scattered saddles and that unmistakable snout.</div></div>
+          </div>
+          <div class="vs-note">The best actor in Virginia. Threatened, it flattens its neck, hisses and strikes with its mouth shut. If that fails it rolls over, gapes and plays dead. Neither is a bite. Eats toads almost exclusively.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/eastern-hog-nosed-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="red-bellied-snake" data-rank="73">
+        <div class="vs-img" data-slug="red-bellied-snake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Red-bellied Snake</h3>
+          <em class="vs-sci">Storeria occipitomaculata</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">8 to 10 in. Brown or grey above, with a plain red or orange belly and three pale spots on the neck.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Forest edges, old fields and wetland margins, under logs, bark and debris.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">DeKay&#39;s Brownsnake, which has paired dark spots down the back and no red belly.</div></div>
+          </div>
+          <div class="vs-note">One of our smallest snakes and a slug specialist, which makes it a gardener&#39;s ally. The red belly is unmistakable if you can see it, and harmless if you cannot.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/northern-red-bellied-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="northern-mole-kingsnake" data-rank="71">
+        <div class="vs-img" data-slug="northern-mole-kingsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Northern Mole Kingsnake</h3>
+          <em class="vs-sci">Lampropeltis rhombomaculata</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">30 to 40 in. Tan to light brown with 35 to 55 chestnut blotches, wider than they are long. The pattern fades with age.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Underground most of the year. Turns up in farm fields and pine woods, usually after ploughing or heavy rain.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Corn snakes and milksnakes; also blamed as a copperhead because of the brown blotches.</div></div>
+          </div>
+          <div class="vs-note">A kingsnake that spends its life burrowing, so a sighting is genuinely uncommon despite a wide range. Constricts small mammals, birds and lizards.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/mole-kingsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="queensnake" data-rank="64">
+        <div class="vs-img" data-slug="queensnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Queensnake</h3>
+          <em class="vs-sci">Regina septemvittata</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">15 to 24 in. Olive brown with a cream stripe low on each side and three faint dark stripes down the back. Belly cream with four brown stripes.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Shallow rocky streams with clean water. Basks on branches over the water and drops in when disturbed.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Northern Watersnake and gartersnakes, both of which are common near the same streams.</div></div>
+          </div>
+          <div class="vs-note">Eats freshly moulted crayfish and essentially nothing else, which makes it a good indicator of stream health. Siltation and damming are its real threats.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/queen-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="eastern-smooth-earthsnake" data-rank="62">
+        <div class="vs-img" data-slug="eastern-smooth-earthsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Eastern Smooth Earthsnake</h3>
+          <em class="vs-sci">Virginia valeriae valeriae</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">7 to 10 in. Uniform reddish brown to dark grey with faint black flecks, smooth scales, and a plain cream belly.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Hardwood and pine forest, old fields and moist lowlands, under rocks, logs and boards.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Rough Earthsnake, which has keeled scales; also wormsnakes and small brownsnakes.</div></div>
+          </div>
+          <div class="vs-note">Small, plain and easy to overlook, which is why it is recorded in half the state yet rarely reported. Eats worms.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/eastern-smooth-earthsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="common-ribbonsnake" data-rank="59">
+        <div class="vs-img" data-slug="common-ribbonsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Common Ribbonsnake</h3>
+          <em class="vs-sci">Thamnophis saurita saurita</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">18 to 26 in. Very slender, dark brown or black with three crisp yellow stripes and a notably long tail.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Marsh edges, floodplains and vegetated stream banks, usually within sight of water.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Eastern Gartersnake, which is heavier bodied with duller stripes and often dark checkering.</div></div>
+          </div>
+          <div class="vs-note">Think of it as a gartersnake built for speed near water. Eats frogs, tadpoles and small fish. Harmless, and quick to leave.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/common-ribbonsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="red-cornsnake" data-rank="55">
+        <div class="vs-img" data-slug="red-cornsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Red Cornsnake</h3>
+          <em class="vs-sci">Pantherophis guttatus</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">30 to 48 in. Orange to grey ground with red-brown blotches outlined in black, a spear-point mark on the head, and a bold black-and-white checkerboard belly.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Open hardwood, field edges, barns and outbuildings.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Copperhead, because of the reddish blotches. The checkerboard belly settles it instantly; a copperhead has nothing like it.</div></div>
+          </div>
+          <div class="vs-note">One of the most useful rodent hunters you can have near a barn, and one of the most frequently killed by mistake. Constricts its prey and is not venomous.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/corn-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="eastern-milksnake" data-rank="52">
+        <div class="vs-img" data-slug="eastern-milksnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Eastern Milksnake</h3>
+          <em class="vs-sci">Lampropeltis triangulum</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">24 to 36 in. Grey or tan with reddish-brown blotches edged in black, a pale Y or V on the back of the head, and a checkerboard belly.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Under rocks, logs and boards; barns, old foundations and rock walls.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Corn snake in the west of the state and Scarlet Kingsnake in the southeast; also blamed as a copperhead.</div></div>
+          </div>
+          <div class="vs-note">Named for the myth that it milks cows, which it does not and cannot. It is in barns for the same reason everything else is: mice.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/eastern-milksnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="southern-ring-necked-snake" data-rank="30">
+        <div class="vs-img" data-slug="southern-ring-necked-snake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Southern Ring-necked Snake</h3>
+          <em class="vs-sci">Diadophis punctatus punctatus</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">10 to 14 in. As the northern form but with the neck collar often interrupted, and a row of black half-moons down the belly.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Moist lowlands, floodplain forest and leaf litter in the southeast of the state.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Northern Ring-necked Snake, which it grades into where the two ranges meet.</div></div>
+          </div>
+          <div class="vs-note">The southeastern counterpart of our common ring-neck. Same habits, same harmlessness, same diet of earthworms and salamanders.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/southern-ring-necked-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="northern-scarletsnake" data-rank="29">
+        <div class="vs-img" data-slug="northern-scarletsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Northern Scarletsnake</h3>
+          <em class="vs-sci">Cemophora coccinea copei</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">14 to 20 in. Red blotches edged in black on a white to grey ground, with a pointed red snout. The belly is plain white.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Loose sandy soil in pine-dominated woods. Almost entirely nocturnal and burrowing.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Scarlet Kingsnake and milksnake. On the scarletsnake the belly is unmarked and the red never fully rings the body.</div></div>
+          </div>
+          <div class="vs-note">Eats reptile eggs, slitting them open with enlarged rear teeth. Harmless to people and rarely seen above ground.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/northern-scarletsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="rough-earthsnake" data-rank="20">
+        <div class="vs-img" data-slug="rough-earthsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Rough Earthsnake</h3>
+          <em class="vs-sci">Haldea striatula</em>
+          <span class="vs-flag">Now placed in genus Haldea</span>
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">7 to 10 in. Plain grey brown with keeled scales, a cone-shaped head, and a pale belly. Juveniles show a light neck collar.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Suburban yards, open pine and hardwood; under boards, bricks and garden debris around Richmond and southeast.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Eastern Smooth Earthsnake, which has smooth scales; also wormsnakes and ring-necked juveniles.</div></div>
+          </div>
+          <div class="vs-note">One of the snakes most often found by people gardening in our area, and one of the least capable of harming anyone. Eats earthworms.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/rough-earthsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="brown-watersnake" data-rank="18">
+        <div class="vs-img" data-slug="brown-watersnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Brown Watersnake</h3>
+          <em class="vs-sci">Nerodia taxispilota</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">30 to 60 in. Heavy bodied, light brown with roughly 25 to 35 square chocolate blotches arranged in alternating rows.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Large rivers, reservoirs and tidal creeks in the southeast. Basks on branches overhanging deep water.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Northern Watersnake, which has crossbands at the front and half-moon belly marks; also blamed as a cottonmouth.</div></div>
+          </div>
+          <div class="vs-note">A fish eater, mostly catfish. Drops from branches when startled, which is how it earns its reputation for jumping into boats. It is trying to reach the water, not you.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/brown-watersnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="smooth-greensnake" data-rank="17">
+        <div class="vs-img" data-slug="smooth-greensnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Smooth Greensnake</h3>
+          <em class="vs-sci">Opheodrys vernalis</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">11 to 20 in. Uniform light green above with smooth scales and a white to pale yellow belly.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">High-elevation grassy balds, meadows and open mixed forest in the Blue Ridge and Ridge and Valley.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Northern Rough Greensnake, which is longer, keel-scaled and found statewide at lower elevations.</div></div>
+          </div>
+          <div class="vs-note">A mountain specialist and the harder of our two green snakes to find. Eats caterpillars, spiders and small insects.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/smooth-green-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="common-rainbow-snake" data-rank="16">
+        <div class="vs-img" data-slug="common-rainbow-snake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Common Rainbow Snake</h3>
+          <em class="vs-sci">Farancia erytrogramma erytrogramma</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">27 to 48 in. Glossy blue-black with three red stripes running the length of the body, and a red belly. Ends in a hard, harmless tail spine.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Freshwater creeks, rivers and cypress swamp in the Coastal Plain. Highly aquatic and seldom seen.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Eastern Mudsnake, which is black above with a red-barred belly and no stripes.</div></div>
+          </div>
+          <div class="vs-note">Arguably the most beautiful snake in Virginia and one almost nobody encounters. Eats American eels almost exclusively. The tail spine cannot sting.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/common-rainbow-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="scarlet-kingsnake" data-rank="14">
+        <div class="vs-img" data-slug="scarlet-kingsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Scarlet Kingsnake</h3>
+          <em class="vs-sci">Lampropeltis elapsoides</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">14 to 20 in. Red, black and yellow rings encircling the body, with a red snout. Each red ring is bordered by black.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Under pine bark, rotting logs and debris in the Piedmont and southeast. Secretive and mostly nocturnal.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Coralsnake, which does not occur in Virginia at all. Also milksnake and scarletsnake.</div></div>
+          </div>
+          <div class="vs-note">Virginia has no coralsnake, so a ringed red-black-yellow snake here is this or a milksnake. Small, harmless, and eats lizards and their eggs.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/scarlet-kingsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="eastern-mudsnake" data-rank="12">
+        <div class="vs-img" data-slug="eastern-mudsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Eastern Mudsnake</h3>
+          <em class="vs-sci">Farancia abacura abacura</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">40 to 54 in. Glossy black above with red or pink bars rising from the belly onto the sides. Ends in a hard, harmless tail spine.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Swamps, forested wetlands and slow mud-bottomed creeks in the southeast.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Rainbow snake, which has red stripes rather than belly bars; also blamed as a cottonmouth.</div></div>
+          </div>
+          <div class="vs-note">Large, docile and almost entirely aquatic. Eats amphiumas and sirens, which are giant aquatic salamanders. The tail spine is used to grip prey, not to sting.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/eastern-mudsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="red-bellied-watersnake" data-rank="12">
+        <div class="vs-img" data-slug="red-bellied-watersnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Red-bellied Watersnake</h3>
+          <em class="vs-sci">Nerodia erythrogaster erythrogaster</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">30 to 48 in. Plain reddish brown above with no pattern as an adult, an orange to red belly, and a two-tone head.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Swamps, ditches and cypress margins in the southeast. Wanders further from water than our other watersnakes.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Cottonmouth, constantly. This has a slender head, round pupil and no facial pit, and it flees rather than stands its ground.</div></div>
+          </div>
+          <div class="vs-note">The plain adult colour is the giveaway; no other large watersnake here is patternless. Eats fish, frogs and crayfish.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/plain-bellied-watersnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="southeastern-crowned-snake" data-rank="11">
+        <div class="vs-img" data-slug="southeastern-crowned-snake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Southeastern Crowned Snake</h3>
+          <em class="vs-sci">Tantilla coronata</em>
+          <span class="vs-flag">Status undetermined in Virginia</span>
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">8 to 10 in. Tan to reddish brown with a black cap on the head and a black band across the neck.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Oak and pine woods on the Coastal Plain and southwest Piedmont, under leaf litter, bark and stones.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Ring-necked snakes, which have a complete bright collar and a yellow or orange belly.</div></div>
+          </div>
+          <div class="vs-note">Tiny, secretive and recorded from only a handful of counties, so a photograph is genuinely useful. Eats centipedes, beetle larvae and other small invertebrates.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/southeastern-crowned-snake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="eastern-pinesnake" data-rank="4">
+        <div class="vs-img" data-slug="eastern-pinesnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Eastern Pinesnake</h3>
+          <em class="vs-sci">Pituophis melanoleucus</em>
+          <span class="vs-flag">USFWS Category 2 - report sightings</span>
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">48 to 66 in. Large and heavy, cream or white with bold irregular black blotches, and a pointed snout for digging.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Dry open ridges and sandy mountain slopes. Verified in only four Virginia counties.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Nothing else here looks like it. Its loud hiss gets it mistaken for a rattlesnake by ear.</div></div>
+          </div>
+          <div class="vs-note">Our rarest large snake, and one most Virginians will never see. It hisses explosively and vibrates its tail when threatened, which is a bluff. If you find one, photograph it and report it.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/northern-pinesnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="eastern-black-kingsnake" data-rank="3">
+        <div class="vs-img" data-slug="eastern-black-kingsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Eastern Black Kingsnake</h3>
+          <em class="vs-sci">Lampropeltis nigra</em>
+          
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">36 to 45 in. Black with thin white or yellow crossbars, sometimes reduced to speckling.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Known in Virginia only from Lee, Scott and Washington counties in the far southwest.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Eastern Kingsnake, which has a bolder chain pattern; also racers and ratsnakes.</div></div>
+          </div>
+          <div class="vs-note">At the very edge of its range here, which is why it appears in only three counties. Like other kingsnakes it eats other snakes, venomous ones included.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/eastern-black-kingsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="eastern-glossy-swampsnake" data-rank="2">
+        <div class="vs-img" data-slug="eastern-glossy-swampsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Eastern Glossy Swampsnake</h3>
+          <em class="vs-sci">Liodytes rigida rigida</em>
+          <span class="vs-flag">Candidate for state listing</span>
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">14 to 24 in. Small, dark and glossy chocolate brown with two faint black stripes, large eyes and a blunt snout.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Tidal freshwater marsh with bald cypress and bottomland hardwood. Known from one county and one city.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Queensnake and small watersnakes, which share the same marshes.</div></div>
+          </div>
+          <div class="vs-note">The rarest snake on this page. VHS notes that if no further Virginia populations are found it should be considered for listing. A photograph with a location genuinely matters.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/glossy-swampsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+      <article class="vs-card" data-cat="harmless" data-slug="mountain-earthsnake" data-rank="1">
+        <div class="vs-img" data-slug="mountain-earthsnake">
+          <span class="vs-badge">Harmless</span>
+        </div>
+        <div class="vs-body">
+          <h3>Mountain Earthsnake</h3>
+          <em class="vs-sci">Virginia valeriae pulchra</em>
+          <span class="vs-flag">Species of special concern</span>
+          <div class="vs-rows">
+            <div><div class="vs-lab">Appearance</div><div class="vs-val">About 11 in. Reddish brown to dark grey with weakly keeled scales in 17 rows, and a plain cream belly.</div></div>
+            <div><div class="vs-lab">Where you&#39;ll see them</div><div class="vs-val">Hardwood and mixed forest in Highland County. That single county is its entire verified Virginia range.</div></div>
+            <div><div class="vs-lab">Lookalike</div><div class="vs-val">Eastern Smooth Earthsnake, which has smooth scales; and Rough Earthsnake, which is strongly keeled.</div></div>
+          </div>
+          <div class="vs-note">Verified from one Virginia county, which makes it the least widely recorded snake in the state. Eats worms. If you are in Highland County and find a small brown snake, it is worth a photograph.</div>
+          <a class="vs-link" href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/mountain-earthsnake/index.php" target="_blank" rel="noopener">Photos and range map at VHS</a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="vs-foot">
+    <div class="vs-credit">
+      <strong>Where these facts come from.</strong> Sizes, ranges, diets and county records are drawn
+      from the <a href="https://www.virginiaherpetologicalsociety.com/reptiles/snakes/index.html"
+      target="_blank" rel="noopener">Virginia Herpetological Society</a>, which maintains the
+      authoritative record of what lives where in this state. The descriptions here are written in
+      our own words. For photographs, range maps and the full scientific account of any species,
+      follow its VHS link above. If you want to go deeper than this page, start there.
+    </div>
+  </div>
+</main>
+<!-- ═══ SITE FOOTER ═══ -->
+<footer style="background:var(--green-deep); padding:2rem 2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:3rem;">
+  <p style="font-family:'Playfair Display',serif; color:#fff; font-size:0.95rem; font-weight:700;">SaveSnakes.org</p>
+  <p style="font-size:0.75rem; color:rgba(255,255,255,0.4);">© 2025 SaveSnakes.org · Richmond, VA · <a href="mailto:savesnakesorg@gmail.com" style="color:inherit;">savesnakesorg@gmail.com</a> · <a href="tel:+18044045594" style="color:inherit;">(804) 404-5594</a></p>
+</footer>
+
+<script>
+  function openDrawer() {
+    document.getElementById('drawer').classList.add('open');
+    document.getElementById('drawerBg').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    document.getElementById('drawer').classList.remove('open');
+    document.getElementById('drawerBg').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+</script>
+
+
+<script>
+(function () {
+  "use strict";
+  var MID = "1__R7DSwXpME1vtvTbOTOBlZXV6CsO3w";
+  var HOME = { lat: "37.52472241048168", lon: "-77.49334295", z: 12 };
+  var frame  = document.getElementById("reloMap");
+  var form   = document.getElementById("mapSearch");
+  var input  = document.getElementById("mapQuery");
+  var status = document.getElementById("mapStatus");
+  if (!frame || !form || !input || !status) return;
+
+  function say(msg, isError) {
+    status.className = "map-status" + (isError ? " is-error" : "");
+    status.textContent = msg;
+  }
+  function recentre(lat, lon, z) {
+    frame.src = "https://www.google.com/maps/d/embed?mid=" + MID +
+                "&ll=" + encodeURIComponent(lat + "," + lon) + "&z=" + (z || 11);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (!q) { recentre(HOME.lat, HOME.lon, HOME.z); say("Back to Richmond, Virginia."); return; }
+    if (typeof window.fetch !== "function") {
+      say("Your browser cannot run the location search - drag or zoom the map instead.", true); return;
+    }
+    say("Looking up " + q + "\u2026");
+    /* Nominatim (OpenStreetMap) - free, no API key. US-biased because the
+       relocator directory is US-based; drop countrycodes to go worldwide. */
+    fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&q=" +
+          encodeURIComponent(q), { headers: { "Accept": "application/json" } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || !d.length) {
+          say("No match for \u201c" + q + "\u201d. Try a city and state, or drag the map instead.", true);
+          return;
+        }
+        recentre(d[0].lat, d[0].lon, 11);
+        say("Showing " + (d[0].display_name || q) + ".");
+      })
+      .catch(function () {
+        say("Location search is unavailable right now - drag or zoom the map instead.", true);
+      });
+  });
+})();
+</script>
+<script>
+/* ---------------------------------------------------------------
+   PHOTO MANIFEST
+   To add a photo for a species:
+     1. save the image as  assets/snakes/<slug>.jpg   (the slug is the
+        data-slug on its card, e.g. eastern-hog-nosed-snake)
+     2. add that slug to the list below
+   Anything not listed keeps its empty photo slot. No other edit needed.
+--------------------------------------------------------------- */
+var SNAKE_PHOTOS = [
+  // "eastern-hog-nosed-snake",
+];
+(function () {
+  var PH = '<svg class="vs-ph" viewBox="0 0 24 24" fill="none" stroke="#6b7a63" stroke-width="1.5"'
+         + ' stroke-linecap="round" aria-hidden="true">'
+         + '<path d="M3 20 C5 11 9 7 13 12 C17 17 21 13 22 5"></path>'
+         + '<circle cx="22" cy="4.4" r="1.3" fill="#6b7a63" stroke="none"></circle></svg>';
+  document.querySelectorAll('.vs-img').forEach(function (el) {
+    var slug = el.getAttribute('data-slug');
+    var name = el.parentNode.querySelector('h3').textContent;
+    if (SNAKE_PHOTOS.indexOf(slug) !== -1) {
+      var img = document.createElement('img');
+      img.src = 'assets/snakes/' + slug + '.jpg';
+      img.alt = name;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      el.classList.add('has-photo');
+      el.appendChild(img);
+    } else {
+      el.insertAdjacentHTML('beforeend', PH);
+    }
+  });
+})();
+</script>
+</body>
+</html>

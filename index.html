@@ -950,12 +950,7 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
     });
   });
 
-  /* ---- track call / whatsapp taps as conversions ---- */
-  $$('[data-cta]').forEach(function(el){
-    el.addEventListener('click',function(){
-      if(window.gtag) gtag('event','contact_click',{method:el.getAttribute('data-cta')});
-    });
-  });
+  /* contact_click is sent by assets/track.js on every page */
 
   /* ---- relocator map: recentre via OpenStreetMap geocoding ---- */
   var MID="1__R7DSwXpME1vtvTbOTOBlZXV6CsO3w", HOME={lat:"37.52472241048168",lon:"-77.49334295",z:11};

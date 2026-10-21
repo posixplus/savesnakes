@@ -17,6 +17,9 @@
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a) return;
+    if (a.hasAttribute('data-cta')) {
+      gtag('event', 'contact_click', { method: a.getAttribute('data-cta'), page: location.pathname });
+    }
     var href = (a.getAttribute('href') || '').split('#')[0].split('?')[0];
     var file = href.split('/').pop();
     if (a.hasAttribute('data-triage')) {

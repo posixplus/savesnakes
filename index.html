@@ -9,10 +9,12 @@
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SaveSnakes.org">
-<meta property="og:title" content="SaveSnakes.org | Free Snake Rescue &amp; Removal in Richmond, VA">
-<meta property="og:description" content="Free no-kill snake rescue and relocation across Greater Richmond, Virginia. Volunteer-run snake identification, removal, and education.">
+<meta property="og:title" content="Snakes are neighbors, not nightmares | SaveSnakes.org, Richmond VA">
+<meta property="og:description" content="Identify it, keep it out of your yard, or get it relocated for free. Snake education and no-kill rescue across Greater Richmond, Virginia.">
 <meta property="og:url" content="https://savesnakes.org/">
 <meta property="og:image" content="https://savesnakes.org/assets/site/i4184f6d2.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"SaveSnakes.org","url":"https://savesnakes.org/",
@@ -153,10 +155,11 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
   transition:transform .18s ease, box-shadow .18s ease; }
 .hero-cta-primary:hover{ transform:translateY(-2px);
   box-shadow:0 14px 38px rgba(217,154,58,.46) !important; }
-#home a[href="#services"]{ background:transparent !important;
+.hero-cta-secondary{ background:transparent !important;
   border-color:rgba(255,255,255,.28) !important; color:rgba(255,255,255,.85) !important;
   padding:18px 26px !important; font-size:16px !important; }
-#home a[data-cta="whatsapp"]{ padding:18px 26px !important; font-size:16px !important; }
+.hero-cta-call{ padding:17px 22px !important; font-size:15.5px !important;
+  border-color:rgba(255,255,255,.28) !important; background:transparent !important; }
 /* The copy column is 640px. Widen the block so the three buttons share one row,
    then hold the headline and paragraph at their original measure. */
 #home > div:nth-of-type(2) > div:first-child{ max-width:790px !important; }
@@ -180,6 +183,18 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
   .hero-cta-primary:hover{ transform:none; }
 }
 </style>
+<style>
+/* --- primary nav: 5 links + one Get Help button --- */
+.nav-links a.nav-cta,.hp-nav-links a.nav-cta{margin-left:6px;padding:8px 15px !important;border:1.5px solid #d99a3a;
+  border-radius:100px;color:#f0d9ad !important;font-weight:700 !important;background:rgba(217,154,58,.12);}
+.nav-links a.nav-cta:hover,.hp-nav-links a.nav-cta:hover{background:#d99a3a;color:#1b1205 !important;}
+.drawer a.drawer-cta,.hp-drawer a.drawer-cta{color:#f0d9ad !important;font-weight:700 !important;}
+</style>
+<style>
+.start-card{transition:transform .2s ease,box-shadow .2s ease;}
+.start-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(21,36,26,.14) !important;}
+@media (prefers-reduced-motion: reduce){.start-card{transition:none;}.start-card:hover{transform:none;}}
+</style>
 </head>
 <body>
 
@@ -198,15 +213,12 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
       </a>
       <div style="display:flex;align-items:center;gap:8px;">
         <div class="hp-nav-links" style="display:flex;align-items:center;gap:2px;flex-wrap:wrap;justify-content:flex-end;">
-        <a href="#home" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Home</a>
-        <a href="#services" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Services</a>
-        <a href="#snakes" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Meet the Snakes</a>
-        <a href="#guides" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Helpful Tips</a>
-        <a href="snakebite-help.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Snake Bite Help</a>
-        <a href="#updates" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Latest Updates</a>
-        <a href="#mission" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Mission</a>
-        <a href="virginia-snakes.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">All Snakes</a>
-        <a href="facebook.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Facebook</a>
+        <a href="snake-identification.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Identify</a>
+        <a href="avoid-snakes.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Prevent</a>
+        <a href="snakebite-help.html" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Snakebite</a>
+        <a href="#updates" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Stories</a>
+        <a href="#mission" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">About</a>
+        <a href="snake-rescue.html" class="nav-cta" style="font-size:14px;font-weight:500;white-space:nowrap;color:rgba(255,255,255,0.82);text-decoration:none;padding:8px 11px;border-radius:7px;" data-hv="hv1">Get Help</a>
         
           <span style="display:inline-flex;align-items:center;gap:4px;"><a href="facebook.html" aria-label="Facebook posts" class="hp-social hp-social-fb" data-cta="social-facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" aria-label="Instagram" class="hp-social hp-social-ig" data-cta="social-instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" aria-label="YouTube" class="hp-social hp-social-yt" data-cta="social-youtube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a></span>
         </div>
@@ -222,13 +234,13 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
   <aside class="hp-drawer" id="hp-drawer">
     <button data-action="closeNav" aria-label="Close menu" style="align-self:flex-end;background:none;border:none;color:rgba(255,255,255,0.65);font-size:26px;line-height:1;cursor:pointer;margin-bottom:8px;">×</button>
     <a href="#home" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Home</a>
-    <a href="#services" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Services</a>
-    <a href="#snakes" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Meet the Snakes</a>
-    <a href="#guides" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Helpful Tips</a>
-    <a href="snakebite-help.html" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Snake Bite Help</a>
-    <a href="#updates" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Latest Updates</a>
-    <a href="#mission" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Mission</a>
-    <a href="facebook.html" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Facebook</a>
+    <a href="snake-identification.html" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Identify a snake</a>
+    <a href="avoid-snakes.html" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Keep snakes out of your yard</a>
+    <a href="snakebite-help.html" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Snakebite first aid</a>
+    <a href="virginia-snakes.html" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">All Virginia snakes</a>
+    <a href="#updates" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Stories and updates</a>
+    <a href="#mission" data-action="closeNav" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">About SaveSnakes</a>
+    <a href="snake-rescue.html" data-action="closeNav" class="drawer-cta" style="font-size:16px;font-weight:600;color:rgba(255,255,255,0.88);text-decoration:none;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,0.08);">Get help with a snake</a>
   
     <span style="display:flex;gap:14px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.12);"><a href="facebook.html" aria-label="Facebook posts" class="hp-social hp-social-lg hp-social-fb" data-cta="social-facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/savesnakesorg" target="_blank" rel="noopener" aria-label="Instagram" class="hp-social hp-social-lg hp-social-ig" data-cta="social-instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="#fff" stroke-width="2.1"/><circle cx="17.2" cy="6.8" r="1.35" fill="#fff"/></svg></a><a href="https://www.youtube.com/@savesnakesorg" target="_blank" rel="noopener" aria-label="YouTube" class="hp-social hp-social-lg hp-social-yt" data-cta="social-youtube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2V7.8L16.8 12z" fill="#fff"/></svg></a></span>
   </aside>
@@ -244,10 +256,9 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
         <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(40px,6.5vw,72px);line-height:1.04;color:#fff;margin:0 0 22px;letter-spacing:-0.01em;">Snakes are neighbors,<br>not nightmares.</h1>
         <p style="font-size:clamp(16px,1.6vw,19px);line-height:1.7;color:rgba(255,255,255,0.82);max-width:520px;margin:0 0 36px;">Transforming human-snake conflicts into coexistence solutions through free rescue, education, and proven intervention strategies - across Greater Richmond.</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="tel:+18044045594" data-cta="call" aria-label="Call SaveSnakes at 804 404 5594" class="hero-cta-primary" style="display:inline-flex;align-items:center;gap:9px;padding:15px 28px;background:#d99a3a;color:#1b1205;font-weight:700;font-size:15.5px;border-radius:10px;text-decoration:none;box-shadow:0 8px 24px rgba(217,154,58,0.28);" data-hv="hv3"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg><span>Get Help Now · (804) 404-5594</span></a>
-          <a href="#services" style="display:inline-flex;align-items:center;gap:9px;padding:15px 28px;background:rgba(255,255,255,0.06);color:#fff;font-weight:600;font-size:15.5px;border-radius:10px;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4);" data-hv="hv4">Our Services</a>
-          
-          <a href="https://wa.me/18044045594?text=Hi%20SaveSnakes%2C%20I%20need%20help%20with%20a%20snake." target="_blank" rel="noopener" data-cta="whatsapp" aria-label="Message SaveSnakes on WhatsApp" style="display:inline-flex;align-items:center;gap:9px;padding:15px 22px;background:#25D366;color:#08300f;font-weight:700;font-size:15.5px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;white-space:nowrap;" data-hv="hvwa"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.700-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.9 2.2-.1 3.5a10 10 0 0 0 4.5 4.2c1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg><span>WhatsApp</span></a>
+          <a href="snake-identification.html" class="hero-cta-primary" data-triage="hero-identify" style="display:inline-flex;align-items:center;gap:9px;padding:15px 28px;background:#d99a3a;color:#1b1205;font-weight:700;font-size:15.5px;border-radius:10px;text-decoration:none;box-shadow:0 8px 24px rgba(217,154,58,0.28);" data-hv="hv3">Is it venomous? Identify it &rarr;</a>
+          <a href="avoid-snakes.html" class="hero-cta-secondary" data-triage="hero-prevent" style="display:inline-flex;align-items:center;gap:9px;padding:15px 28px;background:rgba(255,255,255,0.06);color:#fff;font-weight:600;font-size:15.5px;border-radius:10px;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4);" data-hv="hv4">Keep snakes out of my yard</a>
+          <a href="tel:+18044045594" data-cta="call" data-triage="hero-call" aria-label="Call SaveSnakes at 804 404 5594" class="hero-cta-call" style="display:inline-flex;align-items:center;gap:9px;padding:15px 22px;background:rgba(255,255,255,0.06);color:#fff;font-weight:700;font-size:15.5px;border-radius:10px;text-decoration:none;border:1.5px solid rgba(255,255,255,0.4);white-space:nowrap;" data-hv="hv4"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.2 1l-2.3 2.1z"/></svg><span>Call (804) 404-5594</span></a>
         </div>
         <p style="margin:26px 0 0;font-size:14px;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
           <span style="display:inline-flex;align-items:center;gap:7px;">🐍 No-kill removal &amp; relocation</span>
@@ -259,84 +270,36 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
     </div>
       <span class="hero-cue" aria-hidden="true"></span>
   </section>
-
-  <!-- ══════════ STATS STRIP ══════════ -->
-  <section style="background:#1d3f29;padding:clamp(40px,5vw,60px) clamp(20px,6vw,80px);">
-    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 180px), 1fr));gap:28px;">
-      <div style="text-align:center;">
-        <div style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(38px,5vw,54px);color:#d99a3a;line-height:1;">30+</div>
-        <div style="margin-top:8px;font-size:14.5px;color:rgba(255,255,255,0.72);">Snake species native to Virginia</div>
-      </div>
-      <div style="text-align:center;border-left:1px solid rgba(255,255,255,0.12);">
-        <div style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(38px,5vw,54px);color:#d99a3a;line-height:1;">3</div>
-        <div style="margin-top:8px;font-size:14.5px;color:rgba(255,255,255,0.72);">Of them are venomous</div>
-      </div>
-      <div style="text-align:center;border-left:1px solid rgba(255,255,255,0.12);">
-        <div style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(38px,5vw,54px);color:#d99a3a;line-height:1;">$0</div>
-        <div style="margin-top:8px;font-size:14.5px;color:rgba(255,255,255,0.72);">Cost for rescue &amp; relocation</div>
-      </div>
-      <div style="text-align:center;border-left:1px solid rgba(255,255,255,0.12);">
-        <div style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(38px,5vw,54px);color:#d99a3a;line-height:1;">100%</div>
-        <div style="margin-top:8px;font-size:14.5px;color:rgba(255,255,255,0.72);">No-kill relocation</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ SERVICES ══════════ -->
-  <section id="services" style="padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);">
+<!-- ══════════ START HERE: three paths ══════════ -->
+  <section id="start" style="background:#f5efe3;padding:clamp(40px,6vw,70px) clamp(20px,6vw,80px) 10px;">
     <div style="max-width:1180px;margin:0 auto;">
-      <div style="max-width:620px;margin-bottom:48px;">
-        <span style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b87a22;">What We Do</span>
-        <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#1d3f29;margin:12px 0 16px;">Our Services</h2>
-        <div style="width:54px;height:3px;background:#d99a3a;border-radius:2px;"></div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px;">
+        <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(26px,3.6vw,38px);line-height:1.12;color:#1d3f29;margin:0;">Found a snake? Start here.</h2>
+        <p style="margin:0;font-size:15px;color:#5f6c5e;">Three venomous species in Virginia. Thirty-one harmless ones. Most calls we get are the second kind.</p>
       </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 300px), 1fr));gap:24px;">
-        <!-- Relocation (primary) -->
-        <div style="background:#1d3f29;border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;box-shadow:0 14px 40px rgba(21,36,26,0.16);">
-          <span style="width:52px;height:52px;border-radius:13px;background:rgba(217,154,58,0.18);border:1px solid rgba(217,154,58,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a3a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-6 6-7 9-3s6 2 9-4"></path><path d="M21 21H6a3 3 0 0 1-3-3v-3"></path></svg>
-          </span>
-          <span style="display:inline-block;align-self:flex-start;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1b1205;background:#d99a3a;padding:4px 11px;border-radius:100px;margin-bottom:14px;">Most Requested</span>
-          <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#fff;margin:0 0 12px;">Free Snake Relocation</h3>
-          <p style="font-size:15px;line-height:1.72;color:rgba(255,255,255,0.78);margin:0 0 18px;">Our dedicated rescue team safely removes and relocates snakes found on your premises - ensuring safety for both you and the snake. This service is vital for emergency snake situations.</p>
-          <ul style="list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:9px;">
-            <li style="display:flex;align-items:center;gap:10px;font-size:14.5px;color:rgba(255,255,255,0.85);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d99a3a" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <a href="mailto:savesnakesorg@gmail.com" style="color:#f0d9ad;text-decoration:none;" data-hv="hv5">savesnakesorg@gmail.com</a>
-            </li>
-            <li style="display:flex;align-items:center;gap:10px;font-size:14.5px;color:rgba(255,255,255,0.85);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d99a3a" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"></path></svg>
-              <a href="tel:+18044045594" style="color:#f0d9ad;text-decoration:none;" data-hv="hv5">(804) 404-5594</a>
-            </li>
-          </ul>
-          <a href="#contact" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#d99a3a;color:#1b1205;font-weight:700;font-size:14.5px;border-radius:9px;text-decoration:none;" data-hv="hv2">Request Rescue →</a>
-        </div>
-
-        <!-- ID Help -->
-        <div style="background:#fffdf8;border:1px solid #e4dac4;border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,0.04);">
-          <span style="width:52px;height:52px;border-radius:13px;background:#eef4e6;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2b5a3a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
-          </span>
-          <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#1d3f29;margin:0 0 12px;">Snake ID Help</h3>
-          <p style="font-size:15px;line-height:1.72;color:#5f6c5e;margin:0 0 18px;">Spotted a snake and not sure what it is? Send a photo to this Facebook group and you'll get the identify of your visitor and tell you whether it's harmless, usually within few minutes. No need to guess, and never a reason to harm it.</p>
-          <a href="snake-identification.html" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#2b5a3a;color:#fff;font-weight:700;font-size:14.5px;border-radius:9px;text-decoration:none;" data-hv="hv6">Identify a Snake →</a>
-        </div>
-
-        <!-- Education -->
-        <div style="background:#fffdf8;border:1px solid #e4dac4;border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,0.04);">
-          <span style="width:52px;height:52px;border-radius:13px;background:#eef4e6;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2b5a3a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5z"></path><path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"></path></svg>
-          </span>
-          <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#1d3f29;margin:0 0 12px;">Community Education</h3>
-          <p style="font-size:15px;line-height:1.72;color:#5f6c5e;margin:0 0 18px;">Free talks, school visits, and field demonstrations that turn fear into fascination - for kids and adults alike. Learn how snakes keep our ecosystem (and your yard) healthy.</p>
-          <a href="#contact" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#2b5a3a;color:#fff;font-weight:700;font-size:14.5px;border-radius:9px;text-decoration:none;" data-hv="hv6">Book a Talk →</a>
-        </div>
+      <div class="start-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;">
+        <a href="snake-identification.html" data-triage="identify" class="start-card" style="display:flex;flex-direction:column;gap:10px;padding:24px 24px 22px;background:#fffdf8;border:1px solid #e4dac4;border-top:4px solid #5a9243;border-radius:16px;text-decoration:none;color:inherit;box-shadow:0 4px 18px rgba(0,0,0,.05);">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5a9243;">Step 1</span>
+          <strong style="font-family:'Spectral',serif;font-weight:600;font-size:22px;color:#1d3f29;line-height:1.2;">I want to know what it is</strong>
+          <span style="font-size:14.5px;line-height:1.55;color:#5f6c5e;">Tell the three venomous snakes from the harmless ones they get mistaken for. Or send us a photo and we will tell you, free, anywhere in Virginia.</span>
+          <span style="margin-top:auto;font-weight:700;color:#2b5a3a;font-size:14.5px;">Identify it &rarr;</span>
+        </a>
+        <a href="avoid-snakes.html" data-triage="prevent" class="start-card" style="display:flex;flex-direction:column;gap:10px;padding:24px 24px 22px;background:#fffdf8;border:1px solid #e4dac4;border-top:4px solid #b87a22;border-radius:16px;text-decoration:none;color:inherit;box-shadow:0 4px 18px rgba(0,0,0,.05);">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b87a22;">Step 2</span>
+          <strong style="font-family:'Spectral',serif;font-weight:600;font-size:22px;color:#1d3f29;line-height:1.2;">I want it out of my yard</strong>
+          <span style="font-size:14.5px;line-height:1.55;color:#5f6c5e;">What actually keeps snakes away, what is a waste of money, and why removing one snake does not fix the yard that attracted it.</span>
+          <span style="margin-top:auto;font-weight:700;color:#2b5a3a;font-size:14.5px;">Keep them out &rarr;</span>
+        </a>
+        <a href="snake-rescue.html" data-triage="rescue" class="start-card" style="display:flex;flex-direction:column;gap:10px;padding:24px 24px 22px;background:#1d3f29;border:1px solid #1d3f29;border-top:4px solid #d99a3a;border-radius:16px;text-decoration:none;color:#f5efe3;box-shadow:0 8px 24px rgba(21,36,26,.18);">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f0d9ad;">If you need us</span>
+          <strong style="font-family:'Spectral',serif;font-weight:600;font-size:22px;color:#fff;line-height:1.2;">I need it relocated now</strong>
+          <span style="font-size:14.5px;line-height:1.55;color:rgba(245,239,227,.82);">Venomous and close to people or pets, indoors, trapped, or injured. Free, no-kill, across Greater Richmond. Call <strong style="color:#fff;">(804) 404-5594</strong>.</span>
+          <span style="margin-top:auto;font-weight:700;color:#f0d9ad;font-size:14.5px;">Get help &rarr;</span>
+        </a>
       </div>
     </div>
   </section>
-
-  <!-- ══════════ MEET THE SNAKES ══════════ -->
+<!-- ══════════ MEET THE SNAKES ══════════ -->
   <section id="snakes" style="background:#ece2cf;padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);background-image:radial-gradient(rgba(45,74,40,0.05) 1.4px,transparent 1.4px);background-size:22px 22px;">
     <div style="max-width:1180px;margin:0 auto;">
       <div style="max-width:680px;margin-bottom:34px;">
@@ -595,8 +558,7 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
       </p>
     </div>
   </section>
-
-  <!-- ══════════ TELL THEM APART / SAFETY ══════════ -->
+<!-- ══════════ TELL THEM APART / SAFETY ══════════ -->
   <section id="safety" style="padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);">
     <div style="max-width:1180px;margin:0 auto;">
       <div style="max-width:680px;margin-bottom:48px;">
@@ -655,8 +617,7 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
       </div>
     </div>
   </section>
-
-  <!-- ══════════ HELPFUL GUIDES ══════════ -->
+<!-- ══════════ HELPFUL GUIDES ══════════ -->
   <section id="guides" style="padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);background:#f5efe3;">
     <div style="max-width:1180px;margin:0 auto;">
       <div style="max-width:640px;margin-bottom:44px;">
@@ -692,68 +653,12 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
       </div>
     </div>
   </section>
-
-  <!-- ══════════ MYTHS BUSTED ══════════ -->
-  <section style="background:#1d3f29;padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);position:relative;overflow:hidden;">
-    <div style="max-width:1180px;margin:0 auto;position:relative;">
-      <div style="max-width:640px;margin-bottom:44px;">
-        <span style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#d99a3a;">Did You Know?</span>
-        <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#fff;margin:12px 0 16px;">Snake myths, busted</h2>
-        <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,0.72);margin:0;">A lot of fear comes from a few stubborn myths. Here's the truth - and why the snake next door is more friend than foe.</p>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 280px), 1fr));gap:22px;">
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px 26px;">
-          <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#e8927f;margin-bottom:14px;"><span style="text-decoration:line-through;opacity:.85;">Myth</span></div>
-          <h4 style="font-family:'Spectral',serif;font-weight:600;font-size:19px;color:#fff;margin:0 0 10px;line-height:1.3;">"A triangular head means it's venomous."</h4>
-          <p style="margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.74);">Many harmless snakes flatten their heads into a triangle when scared. Shape alone is never a reliable clue.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px 26px;">
-          <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#e8927f;margin-bottom:14px;"><span style="text-decoration:line-through;opacity:.85;">Myth</span></div>
-          <h4 style="font-family:'Spectral',serif;font-weight:600;font-size:19px;color:#fff;margin:0 0 10px;line-height:1.3;">"Snakes chase people."</h4>
-          <p style="margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.74);">They can't, and they won't. A startled snake flees - sometimes toward the nearest cover, which only looks like a chase.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px 26px;">
-          <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#e8927f;margin-bottom:14px;"><span style="text-decoration:line-through;opacity:.85;">Myth</span></div>
-          <h4 style="font-family:'Spectral',serif;font-weight:600;font-size:19px;color:#fff;margin:0 0 10px;line-height:1.3;">"Baby venomous snakes are deadlier."</h4>
-          <p style="margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.74);">A myth. Neither babies nor adults want to bite you. Give any snake space and it will simply leave.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px 26px;">
-          <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#e8927f;margin-bottom:14px;"><span style="text-decoration:line-through;opacity:.85;">Myth</span></div>
-          <h4 style="font-family:'Spectral',serif;font-weight:600;font-size:19px;color:#fff;margin:0 0 10px;line-height:1.3;">"The only good snake is a dead one."</h4>
-          <p style="margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.74);">Snakes are free pest control, eating the rodents that spread disease. A healthy snake means a healthier yard.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px 26px;">
-          <div style="display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#e8927f;margin-bottom:14px;"><span style="text-decoration:line-through;opacity:.85;">Myth</span></div>
-          <h4 style="font-family:'Spectral',serif;font-weight:600;font-size:19px;color:#fff;margin:0 0 10px;line-height:1.3;">"Vertical pupils mean venomous, round pupils are not venomous."</h4>
-          <p style="margin:0;font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.74);">Sometimes light can cause the pupils appear rounded, and can misidentify a venomous snake as non-venomous.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ MISSION ══════════ -->
-  <section id="mission" style="padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);background:#f5efe3;">
-    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 300px), 1fr));gap:54px;align-items:start;">
-      <div>
-        <span style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b87a22;">Who We Are</span>
-        <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#1d3f29;margin:12px 0 20px;">Our Mission</h2>
-        <blockquote style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.5;color:#2b5a3a;border-left:3px solid #d99a3a;padding-left:22px;margin:0 0 28px;">"Transform human-snake conflicts into coexistence solutions through rescue, education, and proven intervention strategies."</blockquote>
-        <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;background:#2b5a3a;color:#fff;font-weight:700;font-size:15px;border-radius:10px;text-decoration:none;" data-hv="hv6">Get Involved</a>
-      </div>
-      <div style="padding-top:6px;">
-        <p style="font-size:16.5px;line-height:1.85;color:#4a5648;margin:0 0 18px;">Our organization connects community members with free snake removal services and offers essential educational information about local snakes.</p>
-        <p style="font-size:16.5px;line-height:1.85;color:#4a5648;margin:0;">We are volunteer-run and rely on donations to sustain our rescue efforts and outreach programs. Every call we answer, every snake we safely relocate, and every community member we educate brings us closer to a world where humans and snakes can coexist.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ LATEST UPDATES ══════════ -->
+<!-- ══════════ LATEST UPDATES ══════════ -->
   <section id="updates" style="background:#ece2cf;padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);">
     <div style="max-width:1180px;margin:0 auto;">
       <div style="max-width:620px;margin-bottom:44px;">
         <span style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b87a22;">From the Blog</span>
-        <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#1d3f29;margin:12px 0 16px;">Latest Updates</h2>
+        <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#1d3f29;margin:12px 0 16px;">Stories &amp; Updates</h2>
         <div style="width:54px;height:3px;background:#d99a3a;border-radius:2px;"></div>
       </div>
 
@@ -819,8 +724,75 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
       </div>
     </div>
   </section>
+<!-- ══════════ MISSION ══════════ -->
+  <section id="mission" style="padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);background:#f5efe3;">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 300px), 1fr));gap:54px;align-items:start;">
+      <div>
+        <span style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b87a22;">Who We Are</span>
+        <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#1d3f29;margin:12px 0 20px;">Our Mission</h2>
+        <blockquote style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.5;color:#2b5a3a;border-left:3px solid #d99a3a;padding-left:22px;margin:0 0 28px;">"Transform human-snake conflicts into coexistence solutions through rescue, education, and proven intervention strategies."</blockquote>
+        <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;background:#2b5a3a;color:#fff;font-weight:700;font-size:15px;border-radius:10px;text-decoration:none;" data-hv="hv6">Get Involved</a>
+      </div>
+      <div style="padding-top:6px;">
+        <p style="font-size:16.5px;line-height:1.85;color:#4a5648;margin:0 0 18px;">Our organization connects community members with free snake removal services and offers essential educational information about local snakes.</p>
+        <p style="font-size:16.5px;line-height:1.85;color:#4a5648;margin:0;">We are volunteer-run and rely on donations to sustain our rescue efforts and outreach programs. Every call we answer, every snake we safely relocate, and every community member we educate brings us closer to a world where humans and snakes can coexist.</p>
+      </div>
+    </div>
+  </section>
+<!-- ══════════ SERVICES ══════════ -->
+  <section id="services" style="padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="max-width:620px;margin-bottom:48px;">
+        <span style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b87a22;">What We Do</span>
+        <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:clamp(30px,4.5vw,46px);line-height:1.12;color:#1d3f29;margin:12px 0 16px;">Our Services</h2>
+        <div style="width:54px;height:3px;background:#d99a3a;border-radius:2px;"></div>
+      </div>
 
-  <!-- ══════════ CONTACT ══════════ -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 300px), 1fr));gap:24px;">
+        <!-- Relocation (primary) -->
+        <div style="background:#1d3f29;border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;box-shadow:0 14px 40px rgba(21,36,26,0.16);">
+          <span style="width:52px;height:52px;border-radius:13px;background:rgba(217,154,58,0.18);border:1px solid rgba(217,154,58,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a3a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-6 6-7 9-3s6 2 9-4"></path><path d="M21 21H6a3 3 0 0 1-3-3v-3"></path></svg>
+          </span>
+          <span style="display:inline-block;align-self:flex-start;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1b1205;background:#d99a3a;padding:4px 11px;border-radius:100px;margin-bottom:14px;">Most Requested</span>
+          <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#fff;margin:0 0 12px;">Free Snake Relocation</h3>
+          <p style="font-size:15px;line-height:1.72;color:rgba(255,255,255,0.78);margin:0 0 18px;">Our dedicated rescue team safely removes and relocates snakes found on your premises - ensuring safety for both you and the snake. This service is vital for emergency snake situations.</p>
+          <ul style="list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:9px;">
+            <li style="display:flex;align-items:center;gap:10px;font-size:14.5px;color:rgba(255,255,255,0.85);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d99a3a" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:savesnakesorg@gmail.com" style="color:#f0d9ad;text-decoration:none;" data-hv="hv5">savesnakesorg@gmail.com</a>
+            </li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14.5px;color:rgba(255,255,255,0.85);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d99a3a" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"></path></svg>
+              <a href="tel:+18044045594" style="color:#f0d9ad;text-decoration:none;" data-hv="hv5">(804) 404-5594</a>
+            </li>
+          </ul>
+          <a href="#contact" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#d99a3a;color:#1b1205;font-weight:700;font-size:14.5px;border-radius:9px;text-decoration:none;" data-hv="hv2">Request Rescue →</a>
+        </div>
+
+        <!-- ID Help -->
+        <div style="background:#fffdf8;border:1px solid #e4dac4;border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,0.04);">
+          <span style="width:52px;height:52px;border-radius:13px;background:#eef4e6;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2b5a3a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </span>
+          <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#1d3f29;margin:0 0 12px;">Snake ID Help</h3>
+          <p style="font-size:15px;line-height:1.72;color:#5f6c5e;margin:0 0 18px;">Spotted a snake and not sure what it is? Send a photo to this Facebook group and you'll get the identify of your visitor and tell you whether it's harmless, usually within few minutes. No need to guess, and never a reason to harm it.</p>
+          <a href="snake-identification.html" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#2b5a3a;color:#fff;font-weight:700;font-size:14.5px;border-radius:9px;text-decoration:none;" data-hv="hv6">Identify a Snake →</a>
+        </div>
+
+        <!-- Education -->
+        <div style="background:#fffdf8;border:1px solid #e4dac4;border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,0.04);">
+          <span style="width:52px;height:52px;border-radius:13px;background:#eef4e6;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2b5a3a" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5z"></path><path d="M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"></path></svg>
+          </span>
+          <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#1d3f29;margin:0 0 12px;">Community Education</h3>
+          <p style="font-size:15px;line-height:1.72;color:#5f6c5e;margin:0 0 18px;">Free talks, school visits, and field demonstrations that turn fear into fascination - for kids and adults alike. Learn how snakes keep our ecosystem (and your yard) healthy.</p>
+          <a href="#contact" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#2b5a3a;color:#fff;font-weight:700;font-size:14.5px;border-radius:9px;text-decoration:none;" data-hv="hv6">Book a Talk →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ══════════ CONTACT ══════════ -->
   <section id="contact" style="padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);background:#f5efe3;">
     <div style="max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%, 280px), 1fr));gap:54px;align-items:start;">
       <div>
@@ -860,8 +832,7 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
       </div>
     </div>
   </section>
-
-  <!-- ══════════ FOLLOW US ══════════ -->
+<!-- ══════════ FOLLOW US ══════════ -->
   <section id="follow" style="background:#ece2cf;padding:clamp(64px,8vw,110px) clamp(20px,6vw,80px);">
     <div style="max-width:1180px;margin:0 auto;">
       <span style="font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#b87a22;">Stay Connected</span>
@@ -1012,5 +983,6 @@ article[data-cat] > div:last-child > div > div:first-child{ border-top:none; pad
   }
 })();
 </script>
+<script defer src="assets/track.js"></script>
 </body>
 </html>

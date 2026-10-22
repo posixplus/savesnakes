@@ -51,7 +51,7 @@
     .post-hero { background: #1d3f29; padding: clamp(3rem,6vw,5rem) 2rem clamp(2.5rem,4vw,3.5rem); text-align: center; position: relative; overflow: hidden; }
     .post-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 120%, rgba(217,154,58,0.22) 0%, transparent 65%); pointer-events: none; }
     .post-hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
-    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-bottom: 1.3rem; font-size: 0.82rem; }
+    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-bottom: 1.3rem; font-size: 0.82rem; position: static; border: 0; background: none; padding: 0; backdrop-filter: none; } /* it is a <nav>, so undo the sticky header rule above */
     .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
     .breadcrumb a:hover { color: rgba(255,255,255,0.9); }
     .breadcrumb-sep { color: rgba(255,255,255,0.3); }

@@ -57,7 +57,7 @@
     .post-hero { background: #1d3f29; padding: clamp(3rem,6vw,5rem) 2rem clamp(2.5rem,4vw,3.5rem); text-align: center; position: relative; overflow: hidden; }
     .post-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 120%, rgba(217,154,58,0.22) 0%, transparent 65%); pointer-events: none; }
     .post-hero-inner { position: relative; max-width: 800px; margin: 0 auto; }
-    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-bottom: 1.3rem; font-size: 0.82rem; }
+    .breadcrumb { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-bottom: 1.3rem; font-size: 0.82rem; position: static; border: 0; background: none; padding: 0; backdrop-filter: none; } /* it is a <nav>, so undo the sticky header rule above */
     .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
     .breadcrumb a:hover { color: rgba(255,255,255,0.9); }
     .breadcrumb-sep { color: rgba(255,255,255,0.3); }
@@ -310,7 +310,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
           <a class="btn btn-secondary" href="https://wa.me/18044045594?text=Hi%20SaveSnakes%2C%20can%20you%20identify%20this%20snake%3F%20Location%3A%20" target="_blank" rel="noopener" data-cta="whatsapp"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.4 0-.5s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.9 2.2-.1 3.5a10 10 0 0 0 4.5 4.2c1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg><span>WhatsApp</span></a>
         </div>
         <p class="id-note">We answer as soon as we can. If someone has been bitten, do not wait for a reply: <a href="snakebite-help.html">go here</a> and call 911.</p>
-        <p class="id-links">Want to try first? <a href="index.html#snakes">Virginia&#39;s three venomous snakes</a> &middot; <a href="virginia-snakes.html">All 31 harmless species</a></p>
+        <p class="id-links">Want to try first? <a href="index.html#snakes">Virginia&#39;s three venomous snakes</a> &middot; <a href="virginia-snakes.html">All 31 harmless species</a> &middot; <a href="shed-identification.html">Found a shed skin?</a></p>
       </div>
       <div class="res-card">
         <p class="res-card-head">&#128269; Snake ID Help - Community Groups</p>
@@ -346,6 +346,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d99a3a;outline-offset:2p
   <aside class="more-guides" aria-label="More guides">
     <h2>Keep reading</h2>
     <div class="more-grid">
+      <a href="shed-identification.html"><strong>Found a snake skin?</strong><span>Flip it, look under the tail, count the rows. Five checks that tell a copperhead shed from a harmless one.</span></a>
       <a href="avoid-snakes.html"><strong>Keep snakes out of your yard</strong><span>What works, what is a waste of money, and why it matters more than removal.</span></a>
       <a href="snakebite-help.html"><strong>Snakebite first aid</strong><span>The steps that help, the myths that hurt, and who to call.</span></a>
       <a href="virginia-snakes.html"><strong>All 31 harmless snakes</strong><span>A field guide to every harmless species, most to least common.</span></a>

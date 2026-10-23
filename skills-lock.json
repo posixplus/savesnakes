@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "skills": {
+    "fish-audio-api": {
+      "source": "docs.fish.audio",
+      "sourceUrl": "https://docs.fish.audio",
+      "sourceType": "well-known",
+      "computedHash": "17f95b05e0540801938134dcdb54948a19eec47c69ddb5c0710165c74f3b8aa6",
+      "wellKnownDigest": "sha256:2b452073bdfaaceaa82f9601876a25174382efc61188b69706a3a0249f754231"
+    }
+  }
+}
